@@ -7,6 +7,7 @@ export HISTSIZE=999999
 set -o vi
 
 alias python=python3
+alias manage='python $VIRTUAL_ENV/../manage.py'
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
