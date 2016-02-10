@@ -1,0 +1,47 @@
+## ~/.screenrc
+#
+startup_message off
+vbell off
+bell_msg '^G'
+activity "active: %n (%t) [%w:%s]"
+msgwait 5 # 1 second messages
+defscrollback 30000
+
+#caption splitonly "%{= B} %{= G}%{R}%%t"
+# always caption current window
+caption always '%{= M} %= %{= w}%-w%{+b r}%n*%t%{-b r}%{w}%+w %= %{= M}'
+
+autodetach on
+deflogin on
+defflow off
+nethack on
+defutf8 on
+altscreen on
+defbce on
+nonblock on
+defhstatus "screen: ^En (^Et)"
+terminfo urxvt-256color* 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+term "screen-256color"
+
+#hardstatus alwayslastline '%{= M} %H%{= G} %l %= %{= w}%-w%{+b r}%n*%t%{-b r}%{w}%+w %= %{c}%d %D %{B}%c '
+#hardstatus alwayslastline "%{= wd}%?%-Lw%?%{=br WB}%n*%f %t%{=r dw}%?(%u)%?%{= wd}%?%+Lw%?%{=r dw}"
+# programs
+screen -t PROJECTS           0 
+screen -t MAIL           1 alpine
+screen -t IRC           2 irssi
+screen -h 10000 -t TRANSMISSION      3 /home/barbosa/bin/trans.sh
+screen -h 10000 -t MEDIATOMB      4
+screen -t CHAT           5 weechat
+screen -t NEWS           6 newsbeuter
+screen -t TOR             7 rtorrent
+screen -t FILES           8 mc
+screen -t HTOP           9 htop
+screen -t VLC             10 nvlc
+screen -t BASH           11 bash
+
+# keybindinigs
+bindkey "^[@" prev
+bindkey "^@@" next
+bindkey -k k5 prev
+bindkey -k k6 next
+
