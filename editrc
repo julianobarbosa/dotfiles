@@ -1,0 +1,14 @@
+#REM:# Resist the urge to put blanks in this file!
+#REM:# Double-quotes do matter for baskslash escapes.
+#REM:#
+#REM:# Backward-i-search: vi-search-prev behaves better than
+#REM:# ed-search-prev-history and em-inc-search-prev. At least for
+#REM:# someone who is used to the readline/bash ^R.
+asterisk:bind "^R" vi-search-prev
+#REM:#
+#REM:# ^W, same as ALT-BS.
+asterisk:bind "^W" ed-delete-prev-word
+#REM:#
+#REM:# ^left/^right to skip words.
+asterisk:bind "\e[1;5D" vi-prev-word
+asterisk:bind "\e[1;5C" vi-next-word
