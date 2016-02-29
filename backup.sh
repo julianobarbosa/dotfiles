@@ -9,6 +9,10 @@
 
 #MyPassport
 rsync -av --delete --exclude="/.*" "/cygdrive/c/Users/Juliano/Documents/" "/cygdrive/g/Documents"
+rsync -av --delete --exclude="/.*" "/cygdrive/c/Users/Juliano/Downloads/" "/cygdrive/g/Downloads"
+rsync -av --delete --exclude="/.*" "/cygdrive/c/__Projects" "/cygdrive/g/__Projects"
 
 #flexsol01
 rsync -av --delete --exclude="/.*" "/cygdrive/c/Users/Juliano/Documents/" "/cygdrive/y/flex/Documents"
+rsync -av --delete --exclude="/.*" "/cygdrive/c/Users/Juliano/Downloads/" "/cygdrive/y/flex/Downloads"
+rsync -av --delete --exclude="/.*" "/cygdrive/c/__Projects" "/cygdrive/y/flex/__Projects"
