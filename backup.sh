@@ -7,7 +7,7 @@
 
 # Map Y:\flex Letters to flexsol01 Volume: Vol01
 
-#MyPassport
+#MyPassport flex004
 rsync -av --delete --exclude="/.*" "/cygdrive/c/Users/Juliano/Documents/" "/cygdrive/g/Documents"
 rsync -av --delete --exclude="/.*" "/cygdrive/c/Users/Juliano/Downloads/" "/cygdrive/g/Downloads"
 rsync -av --delete --exclude="/.*" "/cygdrive/c/__Projects" "/cygdrive/g/__Projects"
