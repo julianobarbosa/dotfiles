@@ -18,4 +18,7 @@
 [mergetool "threesome"]
     cmd = "vim -f $BASE $LOCAL $REMOTE $MERGED -c 'ThreesomeInit'"
     trustExitCode = true
+[http]
+    sslVerify = false
+    sslCAinfo = /bin/curl-ca-bundle.crt
 # vim: set et :
