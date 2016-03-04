@@ -6,6 +6,9 @@ export HISTSIZE=999999
 
 set -o vi
 
+alias ta='tmux attach'
+alias tl='tmux list-session'
+alias tn='tmux new -s $USER'
 alias python=python3
 alias manage='python $VIRTUAL_ENV/../manage.py'
 
