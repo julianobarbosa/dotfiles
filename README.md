@@ -1,6 +1,27 @@
 # dotfiles
 Linux dotfiles
 
+# Fresh Install Info
+mkdir -P $HOME/Public
+cd ~/Public
+git clone https://github.com/julianobarbosa/dotfiles.git
+mkdir -p ~/Downloads/MyBackup
+mv ~/.bashrc ~/Downloads/MyBackup
+# symlink all files in dotfiles dir to home dir
+cd ~/Public/dotfiles
+
+# link only folders (trailing slash)
+stow -v -t ~ */
+    # delete (-D flag)
+    stow -v -D -t ~ */
+    stow -v -D -t ~ tmux
+    # redo link (-R)
+    stow -v -R -t ~ */
+    stow -v -R -t ~ tmux
+sudo pacman -S zsh zsh-completions
+chsh -s /usr/bin/zsh
+cd ~/Public/dotfiles/zshrc
+git clone https://github.com/robbyrussell/oh-my-zsh.git
 
 # TMUX
 # session management
@@ -11,38 +32,38 @@ tmux attach -t [session name]
 tmux kill-session -t session-name
 
 
-Ctrl-b c Create new window
-Ctrl-b d Detach current client
-Ctrl-b l Move to previously selected window
-Ctrl-b n Move to the next window
-Ctrl-b p Move to the previous window
-Ctrl-b & Kill the current window
-Ctrl-b , Rename the current window
-Ctrl-b q Show pane numbers (used to switch between panes)
-Ctrl-b o Switch to the next pane
-Ctrl-b ? List all keybindings
+Ctrl-a c Create new window
+Ctrl-a d Detach current client
+Ctrl-a l Move to previously selected window
+Ctrl-a n Move to the next window
+Ctrl-a p Move to the previous window
+Ctrl-a & Kill the current window
+Ctrl-a , Rename the current window
+Ctrl-a q Show pane numbers (used to switch between panes)
+Ctrl-a o Switch to the next pane
+Ctrl-a ? List all keybindings
 
 
 # moving between windows
-Ctrl-b n (Move to the next window)
-Ctrl-b p (Move to the previous window)
-Ctrl-b l (Move to the previously selected window)
-Ctrl-b w (List all windows / window numbers)
-Ctrl-b window number (Move to the specified window number, the
+Ctrl-a n (Move to the next window)
+Ctrl-a p (Move to the previous window)
+Ctrl-a l (Move to the previously selected window)
+Ctrl-a w (List all windows / window numbers)
+Ctrl-a window number (Move to the specified window number, the
 default bindings are from 0 -- 9)
 
 # Tiling commands
-Ctrl-b % (Split the window vertically)
-Ctrl-b : "split-window" (Split window horizontally)
-Ctrl-b o (Goto next pane)
-Ctrl-b q (Show pane numbers, when the numbers show up type the key
+Ctrl-a % (Split the window vertically)
+Ctrl-a : "split-window" (Split window horizontally)
+Ctrl-a o (Goto next pane)
+Ctrl-a q (Show pane numbers, when the numbers show up type the key
 to goto that pane)
-Ctrl-b { (Move the current pane left)
-Ctrl-b } (Move the current pane right)
+Ctrl-a { (Move the current pane left)
+Ctrl-a } (Move the current pane right)
 
 
 # Make a pane its own window
-Ctrl-b : "break-pane"
+Ctrl-a : "break-pane"
 
 
 # add to ~/.tmux.conf
