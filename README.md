@@ -7,19 +7,7 @@ mkdir -p $HOME/Public
 cd ~/Public
 git clone https://github.com/julianobarbosa/dotfiles.git
 mkdir -p ~/Downloads/MyBackup
-mv ~/.bashrc ~/Downloads/MyBackup
-# symlink all files in dotfiles dir to home dir
-cd ~/Public/dotfiles
-
-# link only folders (trailing slash)
-
-stow -v -t ~ */
-    # delete (-D flag)
-    stow -v -D -t ~ */
-    stow -v -D -t ~ tmux
-    # redo link (-R)
-    stow -v -R -t ~ */
-    stow -v -R -t ~ tmux
+for i in .*; do  echo $i; ln -s ~/Public/dotfiles/$i ~/$i; done
 
 # TMUX
 # session management
