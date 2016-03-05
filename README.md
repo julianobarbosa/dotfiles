@@ -4,9 +4,11 @@ Linux dotfiles
 # Fresh Install Info
 
 mkdir -p $HOME/Public
+mkdir -p ~/Downloads/MyBackup
+
 cd ~/Public
 git clone https://github.com/julianobarbosa/dotfiles.git
-mkdir -p ~/Downloads/MyBackup
+cd dotfiles
 for i in .*; do  echo $i; mv ~/$i ~/Downloads/MyBackup; ln -s ~/Public/dotfiles/$i ~/$i; done
 mv /etc/editrc ~/Downloads/MyBackup
 ln -s ~/Public/dotfiles/editrc /etc
