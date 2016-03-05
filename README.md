@@ -7,7 +7,9 @@ mkdir -p $HOME/Public
 cd ~/Public
 git clone https://github.com/julianobarbosa/dotfiles.git
 mkdir -p ~/Downloads/MyBackup
-for i in .*; do  echo $i; ln -s ~/Public/dotfiles/$i ~/$i; done
+for i in .*; do  echo $i; mv ~/$i ~/Downloads/MyBackup; ln -s ~/Public/dotfiles/$i ~/$i; done
+mv /etc/editrc ~/Downloads/MyBackup
+ln -s ~/Public/dotfiles/editrc /etc
 
 # TMUX
 # session management
