@@ -3,7 +3,7 @@ Linux dotfiles
 
 # Fresh Install Info
 
-mkdir -P $HOME/Public
+mkdir -p $HOME/Public
 cd ~/Public
 git clone https://github.com/julianobarbosa/dotfiles.git
 mkdir -p ~/Downloads/MyBackup
@@ -20,10 +20,6 @@ stow -v -t ~ */
     # redo link (-R)
     stow -v -R -t ~ */
     stow -v -R -t ~ tmux
-sudo pacman -S zsh zsh-completions
-chsh -s /usr/bin/zsh
-cd ~/Public/dotfiles/zshrc
-git clone https://github.com/robbyrussell/oh-my-zsh.git
 
 # TMUX
 # session management
