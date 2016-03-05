@@ -2,6 +2,7 @@
 Linux dotfiles
 
 # Fresh Install Info
+
 mkdir -P $HOME/Public
 cd ~/Public
 git clone https://github.com/julianobarbosa/dotfiles.git
@@ -11,6 +12,7 @@ mv ~/.bashrc ~/Downloads/MyBackup
 cd ~/Public/dotfiles
 
 # link only folders (trailing slash)
+
 stow -v -t ~ */
     # delete (-D flag)
     stow -v -D -t ~ */
@@ -25,6 +27,7 @@ git clone https://github.com/robbyrussell/oh-my-zsh.git
 
 # TMUX
 # session management
+
 tmux list-sessions
 tmux new -s session-name
 Ctrl-b d Detach from session
@@ -45,6 +48,7 @@ Ctrl-a ? List all keybindings
 
 
 # moving between windows
+
 Ctrl-a n (Move to the next window)
 Ctrl-a p (Move to the previous window)
 Ctrl-a l (Move to the previously selected window)
@@ -53,6 +57,7 @@ Ctrl-a window number (Move to the specified window number, the
 default bindings are from 0 -- 9)
 
 # Tiling commands
+
 Ctrl-a % (Split the window vertically)
 Ctrl-a : "split-window" (Split window horizontally)
 Ctrl-a o (Goto next pane)
@@ -63,9 +68,11 @@ Ctrl-a } (Move the current pane right)
 
 
 # Make a pane its own window
+
 Ctrl-a : "break-pane"
 
 
 # add to ~/.tmux.conf
+
 bind | split-window -h
 bind - split-window -v
