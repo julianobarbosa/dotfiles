@@ -1,0 +1,894 @@
+2015-12-27 23:02:41		Plugins loaded: alias, aspell, charset, exec, fifo, irc, logger, relay, script, trigger, xfer
+2015-12-27 23:02:48	=!=	irc: unable to add temporary server "freenode" because the addition of temporary servers with command /connect is currently disabled
+2015-12-27 23:02:48	=!=	irc: if you want to add a standard server, use the command "/server add" (see /help server); if you really want to add a temporary server (NOT SAVED), turn on the option irc.look.temporary_servers
+2015-12-27 23:03:36		[core]
+2015-12-27 23:03:36		  away     command  filter   key      plugin   reload   set      version
+2015-12-27 23:03:36		  bar      cursor   help     layout   print    repeat   unset    wait   
+2015-12-27 23:03:36		  buffer   debug    history  mouse    proxy    save     upgrade  window 
+2015-12-27 23:03:36		  color    eval     input    mute     quit     secure   uptime 
+2015-12-27 23:03:36		[alias]
+2015-12-27 23:03:36		  AAWAY    ANICK    CHAT     IG       LEAVE    N        SIGNOFF  V        WII    
+2015-12-27 23:03:36		  alias    BEEP     CL       J        M        Q        T        W        WW     
+2015-12-27 23:03:36		  AME      BYE      CLOSE    K        MSGBUF   REDRAW   UB       WC     
+2015-12-27 23:03:36		  AMSG     C        EXIT     KB       MUB      SAY      UMODE    WI     
+2015-12-27 23:03:36		[aspell]
+2015-12-27 23:03:36		  aspell
+2015-12-27 23:03:36		[charset]
+2015-12-27 23:03:36		  charset
+2015-12-27 23:03:36		[exec]
+2015-12-27 23:03:36		  exec
+2015-12-27 23:03:36		[irc]
+2015-12-27 23:03:36		  admin       devoice     kill        notice      rehash      squery      version   
+2015-12-27 23:03:36		  allchan     die         links       notify      remove      squit       voice     
+2015-12-27 23:03:36		  allpv       disconnect  list        op          restart     stats       wallchops 
+2015-12-27 23:03:36		  allserv     halfop      lusers      oper        sajoin      summon      wallops   
+2015-12-27 23:03:36		  ban         ignore      map         part        samode      time        who       
+2015-12-27 23:03:36		  connect     info        me          ping        sanick      topic       whois     
+2015-12-27 23:03:36		  ctcp        invite      mode        pong        sapart      trace       whowas    
+2015-12-27 23:03:36		  cycle       ison        motd        query       saquit      unban     
+2015-12-27 23:03:36		  dcc         join        msg         quiet       server      unquiet   
+2015-12-27 23:03:36		  dehalfop    kick        names       quote       service     userhost  
+2015-12-27 23:03:36		  deop        kickban     nick        reconnect   servlist    users     
+2015-12-27 23:03:36		[logger]
+2015-12-27 23:03:36		  logger
+2015-12-27 23:03:36		[relay]
+2015-12-27 23:03:36		  relay
+2015-12-27 23:03:36		[script]
+2015-12-27 23:03:36		  script
+2015-12-27 23:03:36		[trigger]
+2015-12-27 23:03:36		  trigger
+2015-12-27 23:03:36		[xfer]
+2015-12-27 23:03:36		  me  xfer
+2015-12-27 23:03:47		No server
+2015-12-27 23:03:53		No server
+2015-12-27 23:04:00	=!=	irc: command "servlist" must be executed on irc buffer (server or channel)
+2015-12-27 23:04:28		irc: server freenode added
+2015-12-27 23:05:49		Option changed: irc.server.freenode.nicks = "barbosa,barbosa2,barbosa3,barbosa4,barbosa5"  (default: (undefined))
+2015-12-27 23:06:11		Option changed: irc.server.freenode.username = "Barbosa"  (default: (undefined))
+2015-12-27 23:06:27		Option changed: irc.server.freenode.realname = "Juliano Barbosa"  (default: (undefined))
+2015-12-27 23:06:36		Option changed: irc.server.freenode.autoconnect = on  (default: (undefined))
+2015-12-27 23:07:04		Option changed: irc.server.freenode.autojoin = "#python,#asterisk"  (default: (undefined))
+2015-12-27 23:23:49		irc: server ubuntu added
+2015-12-27 23:24:05	=!=	irc: command "part" must be executed on irc buffer (server or channel)
+2015-12-27 23:24:18	=!=	irc: server "ubuntu" already exists, can't add it!
+2015-12-27 23:25:03	=!=	irc: command "join" must be executed on connected irc server
+2015-12-27 23:29:01		[core]
+2015-12-27 23:29:01		  away     debug    key      proxy    set      window 
+2015-12-27 23:29:01		  bar      eval     layout   quit     unset  
+2015-12-27 23:29:01		  buffer   filter   mouse    reload   upgrade
+2015-12-27 23:29:01		  color    help     mute     repeat   uptime 
+2015-12-27 23:29:01		  command  history  plugin   save     version
+2015-12-27 23:29:01		  cursor   input    print    secure   wait   
+2015-12-27 23:29:01		[alias]
+2015-12-27 23:29:01		  AAWAY    BYE      IG       MSGBUF   SIGNOFF  WC     
+2015-12-27 23:29:01		  alias    C        J        MUB      T        WI     
+2015-12-27 23:29:01		  AME      CHAT     K        N        UB       WII    
+2015-12-27 23:29:01		  AMSG     CL       KB       Q        UMODE    WW     
+2015-12-27 23:29:01		  ANICK    CLOSE    LEAVE    REDRAW   V      
+2015-12-27 23:29:01		  BEEP     EXIT     M        SAY      W      
+2015-12-27 23:29:01		[aspell]
+2015-12-27 23:29:01		  aspell
+2015-12-27 23:29:01		[charset]
+2015-12-27 23:29:01		  charset
+2015-12-27 23:29:01		[exec]
+2015-12-27 23:29:01		  exec
+2015-12-27 23:29:01		[irc]
+2015-12-27 23:29:01		  admin       ignore      msg         remove      topic     
+2015-12-27 23:29:01		  allchan     info        names       restart     trace     
+2015-12-27 23:29:01		  allpv       invite      nick        sajoin      unban     
+2015-12-27 23:29:01		  allserv     ison        notice      samode      unquiet   
+2015-12-27 23:29:01		  ban         join        notify      sanick      userhost  
+2015-12-27 23:29:01		  connect     kick        op          sapart      users     
+2015-12-27 23:29:01		  ctcp        kickban     oper        saquit      version   
+2015-12-27 23:29:01		  cycle       kill        part        server      voice     
+2015-12-27 23:29:01		  dcc         links       ping        service     wallchops 
+2015-12-27 23:29:01		  dehalfop    list        pong        servlist    wallops   
+2015-12-27 23:29:01		  deop        lusers      query       squery      who       
+2015-12-27 23:29:01		  devoice     map         quiet       squit       whois     
+2015-12-27 23:29:01		  die         me          quote       stats       whowas    
+2015-12-27 23:29:01		  disconnect  mode        reconnect   summon    
+2015-12-27 23:29:01		  halfop      motd        rehash      time      
+2015-12-27 23:29:01		[logger]
+2015-12-27 23:29:01		  logger
+2015-12-27 23:29:01		[relay]
+2015-12-27 23:29:01		  relay
+2015-12-27 23:29:01		[script]
+2015-12-27 23:29:01		  script
+2015-12-27 23:29:01		[trigger]
+2015-12-27 23:29:01		  trigger
+2015-12-27 23:29:01		[xfer]
+2015-12-27 23:29:01		  me  xfer
+2015-12-27 23:29:09		[core]
+2015-12-27 23:29:09		  away     command  filter   key      plugin   reload   set      version
+2015-12-27 23:29:09		  bar      cursor   help     layout   print    repeat   unset    wait   
+2015-12-27 23:29:09		  buffer   debug    history  mouse    proxy    save     upgrade  window 
+2015-12-27 23:29:09		  color    eval     input    mute     quit     secure   uptime 
+2015-12-27 23:29:09		[alias]
+2015-12-27 23:29:09		  AAWAY    BEEP     CLOSE    KB       N        T        WC     
+2015-12-27 23:29:09		  alias    BYE      EXIT     LEAVE    Q        UB       WI     
+2015-12-27 23:29:09		  AME      C        IG       M        REDRAW   UMODE    WII    
+2015-12-27 23:29:09		  AMSG     CHAT     J        MSGBUF   SAY      V        WW     
+2015-12-27 23:29:09		  ANICK    CL       K        MUB      SIGNOFF  W      
+2015-12-27 23:29:09		[aspell]
+2015-12-27 23:29:09		  aspell
+2015-12-27 23:29:09		[charset]
+2015-12-27 23:29:09		  charset
+2015-12-27 23:29:09		[exec]
+2015-12-27 23:29:09		  exec
+2015-12-27 23:29:09		[irc]
+2015-12-27 23:29:09		  admin       disconnect  map         pong        server      users     
+2015-12-27 23:29:09		  allchan     halfop      me          query       service     version   
+2015-12-27 23:29:09		  allpv       ignore      mode        quiet       servlist    voice     
+2015-12-27 23:29:09		  allserv     info        motd        quote       squery      wallchops 
+2015-12-27 23:29:09		  ban         invite      msg         reconnect   squit       wallops   
+2015-12-27 23:29:09		  connect     ison        names       rehash      stats       who       
+2015-12-27 23:29:09		  ctcp        join        nick        remove      summon      whois     
+2015-12-27 23:29:09		  cycle       kick        notice      restart     time        whowas    
+2015-12-27 23:29:09		  dcc         kickban     notify      sajoin      topic     
+2015-12-27 23:29:09		  dehalfop    kill        op          samode      trace     
+2015-12-27 23:29:09		  deop        links       oper        sanick      unban     
+2015-12-27 23:29:09		  devoice     list        part        sapart      unquiet   
+2015-12-27 23:29:09		  die         lusers      ping        saquit      userhost  
+2015-12-27 23:29:09		[logger]
+2015-12-27 23:29:09		  logger
+2015-12-27 23:29:09		[relay]
+2015-12-27 23:29:09		  relay
+2015-12-27 23:29:09		[script]
+2015-12-27 23:29:09		  script
+2015-12-27 23:29:09		[trigger]
+2015-12-27 23:29:09		  trigger
+2015-12-27 23:29:09		[xfer]
+2015-12-27 23:29:09		  me  xfer
+2015-12-27 23:29:19	=!=	irc: command "part" must be executed on irc buffer (server or channel)
+2015-12-27 23:29:29		Plugins loaded: alias, aspell, charset, exec, fifo, irc, logger, relay, script, trigger, xfer
+2015-12-28 11:47:36		[core]
+2015-12-28 11:47:36		  away     buffer   command  debug    filter   history  key      mouse    plugin   proxy    reload   save     set      upgrade  version  window 
+2015-12-28 11:47:36		  bar      color    cursor   eval     help     input    layout   mute     print    quit     repeat   secure   unset    uptime   wait   
+2015-12-28 11:47:36		[alias]
+2015-12-28 11:47:36		  AAWAY    AME      ANICK    BYE      CHAT     CLOSE    IG       K        LEAVE    MSGBUF   N        REDRAW   SIGNOFF  UB       V        WC       WII    
+2015-12-28 11:47:36		  alias    AMSG     BEEP     C        CL       EXIT     J        KB       M        MUB      Q        SAY      T        UMODE    W        WI       WW     
+2015-12-28 11:47:36		[aspell]
+2015-12-28 11:47:36		  aspell
+2015-12-28 11:47:36		[charset]
+2015-12-28 11:47:36		  charset
+2015-12-28 11:47:36		[exec]
+2015-12-28 11:47:36		  exec
+2015-12-28 11:47:36		[irc]
+2015-12-28 11:47:36		  admin       ctcp        die         ison        list        msg         oper        quote       samode      servlist    topic       version     whowas    
+2015-12-28 11:47:36		  allchan     cycle       disconnect  join        lusers      names       part        reconnect   sanick      squery      trace       voice     
+2015-12-28 11:47:36		  allpv       dcc         halfop      kick        map         nick        ping        rehash      sapart      squit       unban       wallchops 
+2015-12-28 11:47:36		  allserv     dehalfop    ignore      kickban     me          notice      pong        remove      saquit      stats       unquiet     wallops   
+2015-12-28 11:47:36		  ban         deop        info        kill        mode        notify      query       restart     server      summon      userhost    who       
+2015-12-28 11:47:36		  connect     devoice     invite      links       motd        op          quiet       sajoin      service     time        users       whois     
+2015-12-28 11:47:36		[logger]
+2015-12-28 11:47:36		  logger
+2015-12-28 11:47:36		[relay]
+2015-12-28 11:47:36		  relay
+2015-12-28 11:47:36		[script]
+2015-12-28 11:47:36		  script
+2015-12-28 11:47:36		[trigger]
+2015-12-28 11:47:36		  trigger
+2015-12-28 11:47:36		[xfer]
+2015-12-28 11:47:36		  me  xfer
+2015-12-28 11:47:48		[core]
+2015-12-28 11:47:48		  away     buffer   command  debug    filter   history  key      mouse    plugin   proxy    reload   save     set      upgrade  version  window 
+2015-12-28 11:47:48		  bar      color    cursor   eval     help     input    layout   mute     print    quit     repeat   secure   unset    uptime   wait   
+2015-12-28 11:47:48		[alias]
+2015-12-28 11:47:48		  AAWAY    AME      ANICK    BYE      CHAT     CLOSE    IG       K        LEAVE    MSGBUF   N        REDRAW   SIGNOFF  UB       V        WC       WII    
+2015-12-28 11:47:48		  alias    AMSG     BEEP     C        CL       EXIT     J        KB       M        MUB      Q        SAY      T        UMODE    W        WI       WW     
+2015-12-28 11:47:48		[aspell]
+2015-12-28 11:47:48		  aspell
+2015-12-28 11:47:48		[charset]
+2015-12-28 11:47:48		  charset
+2015-12-28 11:47:48		[exec]
+2015-12-28 11:47:48		  exec
+2015-12-28 11:47:48		[irc]
+2015-12-28 11:47:48		  admin       connect     deop        ignore      kick        lusers      msg         op          query       remove      sapart      squery      topic       users       who       
+2015-12-28 11:47:48		  allchan     ctcp        devoice     info        kickban     map         names       oper        quiet       restart     saquit      squit       trace       version     whois     
+2015-12-28 11:47:48		  allpv       cycle       die         invite      kill        me          nick        part        quote       sajoin      server      stats       unban       voice       whowas    
+2015-12-28 11:47:48		  allserv     dcc         disconnect  ison        links       mode        notice      ping        reconnect   samode      service     summon      unquiet     wallchops 
+2015-12-28 11:47:48		  ban         dehalfop    halfop      join        list        motd        notify      pong        rehash      sanick      servlist    time        userhost    wallops   
+2015-12-28 11:47:48		[logger]
+2015-12-28 11:47:48		  logger
+2015-12-28 11:47:48		[relay]
+2015-12-28 11:47:48		  relay
+2015-12-28 11:47:48		[script]
+2015-12-28 11:47:48		  script
+2015-12-28 11:47:48		[trigger]
+2015-12-28 11:47:48		  trigger
+2015-12-28 11:47:48		[xfer]
+2015-12-28 11:47:48		  me  xfer
+2015-12-28 11:48:06		Options saved to sec.conf
+2015-12-28 11:48:06		Options saved to weechat.conf
+2015-12-28 11:48:06		Options saved to plugins.conf
+2015-12-28 11:48:06		Options saved to charset.conf
+2015-12-28 11:48:06		Options saved to logger.conf
+2015-12-28 11:48:06		Options saved to exec.conf
+2015-12-28 11:48:06		Options saved to trigger.conf
+2015-12-28 11:48:06		Options saved to aspell.conf
+2015-12-28 11:48:06		Options saved to alias.conf
+2015-12-28 11:48:06		Options saved to xfer.conf
+2015-12-28 11:48:06		Options saved to irc.conf
+2015-12-28 11:48:06		Options saved to relay.conf
+2015-12-28 11:48:06		Options saved to script.conf
+2015-12-28 11:49:35		Plugins loaded: alias, aspell, charset, exec, fifo, irc, logger, relay, script, trigger, xfer
+2015-12-28 11:50:04	=!=	irc: command "msg" must be executed on irc buffer (server or channel)
+2015-12-28 11:51:44		Options saved to sec.conf
+2015-12-28 11:51:44		Options saved to weechat.conf
+2015-12-28 11:51:44		Options saved to plugins.conf
+2015-12-28 11:51:44		Options saved to charset.conf
+2015-12-28 11:51:44		Options saved to logger.conf
+2015-12-28 11:51:44		Options saved to exec.conf
+2015-12-28 11:51:44		Options saved to trigger.conf
+2015-12-28 11:51:44		Options saved to aspell.conf
+2015-12-28 11:51:44		Options saved to alias.conf
+2015-12-28 11:51:44		Options saved to xfer.conf
+2015-12-28 11:51:44		Options saved to irc.conf
+2015-12-28 11:51:44		Options saved to relay.conf
+2015-12-28 11:51:44		Options saved to script.conf
+2015-12-28 11:53:47		Options saved to sec.conf
+2015-12-28 11:53:47		Options saved to weechat.conf
+2015-12-28 11:53:47		Options saved to plugins.conf
+2015-12-28 11:53:47		Options saved to charset.conf
+2015-12-28 11:53:47		Options saved to logger.conf
+2015-12-28 11:53:47		Options saved to exec.conf
+2015-12-28 11:53:47		Options saved to trigger.conf
+2015-12-28 11:53:47		Options saved to aspell.conf
+2015-12-28 11:53:47		Options saved to alias.conf
+2015-12-28 11:53:47		Options saved to xfer.conf
+2015-12-28 11:53:47		Options saved to irc.conf
+2015-12-28 11:53:47		Options saved to relay.conf
+2015-12-28 11:53:47		Options saved to script.conf
+2015-12-28 11:54:40		Options saved to sec.conf
+2015-12-28 11:54:40		Options saved to weechat.conf
+2015-12-28 11:54:40		Options saved to plugins.conf
+2015-12-28 11:54:40		Options saved to charset.conf
+2015-12-28 11:54:40		Options saved to logger.conf
+2015-12-28 11:54:40		Options saved to exec.conf
+2015-12-28 11:54:40		Options saved to trigger.conf
+2015-12-28 11:54:40		Options saved to aspell.conf
+2015-12-28 11:54:40		Options saved to alias.conf
+2015-12-28 11:54:40		Options saved to xfer.conf
+2015-12-28 11:54:40		Options saved to irc.conf
+2015-12-28 11:54:40		Options saved to relay.conf
+2015-12-28 11:54:40		Options saved to script.conf
+2015-12-28 11:57:40		Plugins loaded: alias, aspell, charset, exec, fifo, irc, logger, relay, script, trigger, xfer
+2015-12-28 11:59:20	=!=	No help available, "auth" is not a command or an option
+2015-12-28 11:59:31	=!=	No help available, "auth" is not a command or an option
+2015-12-28 11:59:36	=!=	Error: unknown command "/auth" (type /help for help)
+2015-12-28 11:59:38		[core]
+2015-12-28 11:59:38		  away     color    debug    help     key      mute     proxy    repeat   set      uptime   window 
+2015-12-28 11:59:38		  bar      command  eval     history  layout   plugin   quit     save     unset    version
+2015-12-28 11:59:38		  buffer   cursor   filter   input    mouse    print    reload   secure   upgrade  wait   
+2015-12-28 11:59:38		[alias]
+2015-12-28 11:59:38		  AAWAY    AMSG     BYE      CL       IG       KB       MSGBUF   Q        SIGNOFF  UMODE    WC       WW     
+2015-12-28 11:59:38		  alias    ANICK    C        CLOSE    J        LEAVE    MUB      REDRAW   T        V        WI     
+2015-12-28 11:59:38		  AME      BEEP     CHAT     EXIT     K        M        N        SAY      UB       W        WII    
+2015-12-28 11:59:38		[aspell]
+2015-12-28 11:59:38		  aspell
+2015-12-28 11:59:38		[charset]
+2015-12-28 11:59:38		  charset
+2015-12-28 11:59:38		[exec]
+2015-12-28 11:59:38		  exec
+2015-12-28 11:59:38		[irc]
+2015-12-28 11:59:38		  admin       dcc         info        list        nick        query       samode      squit       userhost    whowas    
+2015-12-28 11:59:38		  allchan     dehalfop    invite      lusers      notice      quiet       sanick      stats       users     
+2015-12-28 11:59:38		  allpv       deop        ison        map         notify      quote       sapart      summon      version   
+2015-12-28 11:59:38		  allserv     devoice     join        me          op          reconnect   saquit      time        voice     
+2015-12-28 11:59:38		  ban         die         kick        mode        oper        rehash      server      topic       wallchops 
+2015-12-28 11:59:38		  connect     disconnect  kickban     motd        part        remove      service     trace       wallops   
+2015-12-28 11:59:38		  ctcp        halfop      kill        msg         ping        restart     servlist    unban       who       
+2015-12-28 11:59:38		  cycle       ignore      links       names       pong        sajoin      squery      unquiet     whois     
+2015-12-28 11:59:38		[logger]
+2015-12-28 11:59:38		  logger
+2015-12-28 11:59:38		[relay]
+2015-12-28 11:59:38		  relay
+2015-12-28 11:59:38		[script]
+2015-12-28 11:59:38		  script
+2015-12-28 11:59:38		[trigger]
+2015-12-28 11:59:38		  trigger
+2015-12-28 11:59:38		[xfer]
+2015-12-28 11:59:38		  me  xfer
+2015-12-28 12:00:03		[irc]  /nick  [-all] <nick>
+2015-12-28 12:00:03		change current nick
+2015-12-28 12:00:03		-all: set new nick for all connected servers
+2015-12-28 12:00:03		nick: new nick
+2015-12-28 12:03:50		Plugins loaded: alias, aspell, charset, exec, fifo, irc, logger, relay, script, trigger, xfer
+2015-12-28 12:05:15		[core]
+2015-12-28 12:05:15		  away     color    debug    help     key      mute     proxy    repeat   set      uptime   window 
+2015-12-28 12:05:15		  bar      command  eval     history  layout   plugin   quit     save     unset    version
+2015-12-28 12:05:15		  buffer   cursor   filter   input    mouse    print    reload   secure   upgrade  wait   
+2015-12-28 12:05:15		[alias]
+2015-12-28 12:05:15		  AAWAY    AMSG     BYE      CL       IG       KB       MSGBUF   Q        SIGNOFF  UMODE    WC       WW     
+2015-12-28 12:05:15		  alias    ANICK    C        CLOSE    J        LEAVE    MUB      REDRAW   T        V        WI     
+2015-12-28 12:05:15		  AME      BEEP     CHAT     EXIT     K        M        N        SAY      UB       W        WII    
+2015-12-28 12:05:15		[aspell]
+2015-12-28 12:05:15		  aspell
+2015-12-28 12:05:15		[charset]
+2015-12-28 12:05:15		  charset
+2015-12-28 12:05:15		[exec]
+2015-12-28 12:05:15		  exec
+2015-12-28 12:05:15		[irc]
+2015-12-28 12:05:15		  admin       dcc         info        list        nick        query       samode      squit       userhost    whowas    
+2015-12-28 12:05:15		  allchan     dehalfop    invite      lusers      notice      quiet       sanick      stats       users     
+2015-12-28 12:05:15		  allpv       deop        ison        map         notify      quote       sapart      summon      version   
+2015-12-28 12:05:15		  allserv     devoice     join        me          op          reconnect   saquit      time        voice     
+2015-12-28 12:05:15		  ban         die         kick        mode        oper        rehash      server      topic       wallchops 
+2015-12-28 12:05:15		  connect     disconnect  kickban     motd        part        remove      service     trace       wallops   
+2015-12-28 12:05:15		  ctcp        halfop      kill        msg         ping        restart     servlist    unban       who       
+2015-12-28 12:05:15		  cycle       ignore      links       names       pong        sajoin      squery      unquiet     whois     
+2015-12-28 12:05:15		[logger]
+2015-12-28 12:05:15		  logger
+2015-12-28 12:05:15		[relay]
+2015-12-28 12:05:15		  relay
+2015-12-28 12:05:15		[script]
+2015-12-28 12:05:15		  script
+2015-12-28 12:05:15		[trigger]
+2015-12-28 12:05:15		  trigger
+2015-12-28 12:05:15		[xfer]
+2015-12-28 12:05:15		  me  xfer
+2015-12-28 12:05:32		script: downloading list of scripts...
+2015-12-28 12:05:33	=!=	script: error downloading list of scripts: curl error 77 (error setting certificate verify locations:
+2015-12-28 12:05:33		  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+2015-12-28 12:05:33		  CApath: none) (URL: "https://weechat.org/files/plugins.xml.gz")
+2015-12-28 12:06:16	=!=	Error with command "/script https://weechat.org/files/scripts/autoauth.py" (help on command: /help script)
+2015-12-28 12:06:29	=!=	Error with command "/script autoauth" (help on command: /help script)
+2015-12-28 12:06:35		[script]  /script  list [-o|-i]
+2015-12-28 12:06:35		                   search <text>
+2015-12-28 12:06:35		                   show <script>
+2015-12-28 12:06:35		                   load|unload|reload <script> [<script>...]
+2015-12-28 12:06:35		                   autoload|noautoload|toggleautoload <script> [<script>...]
+2015-12-28 12:06:35		                   install|remove|installremove|hold [-q] <script> [<script>...]
+2015-12-28 12:06:35		                   upgrade
+2015-12-28 12:06:35		                   update
+2015-12-28 12:06:35		WeeChat scripts manager
+2015-12-28 12:06:35		          list: list loaded scripts (all languages)
+2015-12-28 12:06:35		            -o: send list of loaded scripts to buffer
+2015-12-28 12:06:35		            -i: copy list of loaded scripts in command line (for sending to buffer)
+2015-12-28 12:06:35		        search: search scripts by tags or text and display result on scripts buffer
+2015-12-28 12:06:35		          show: show detailed info about a script
+2015-12-28 12:06:35		          load: load script(s)
+2015-12-28 12:06:35		        unload: unload script(s)
+2015-12-28 12:06:35		        reload: reload script(s)
+2015-12-28 12:06:35		      autoload: autoload the script
+2015-12-28 12:06:35		    noautoload: do not autoload the script
+2015-12-28 12:06:35		toggleautoload: toggle autoload
+2015-12-28 12:06:35		       install: install/upgrade script(s)
+2015-12-28 12:06:35		        remove: remove script(s)
+2015-12-28 12:06:35		 installremove: install or remove script(s), depending on current state
+2015-12-28 12:06:35		          hold: hold/unhold script(s) (a script held will not be upgraded any more and cannot be removed)
+2015-12-28 12:06:35		            -q: quiet mode: do not display messages
+2015-12-28 12:06:35		       upgrade: upgrade all installed scripts which are obsolete (new version available)
+2015-12-28 12:06:35		        update: update local scripts cache
+2015-12-28 12:06:35		Without argument, this command opens a buffer with list of scripts.
+2015-12-28 12:06:35		On script buffer, the possible status for each script are:
+2015-12-28 12:06:35		  * i a H r N
+2015-12-28 12:06:35		  | | | | | |
+2015-12-28 12:06:35		  | | | | | obsolete (new version available)
+2015-12-28 12:06:35		  | | | | running (loaded)
+2015-12-28 12:06:35		  | | | held
+2015-12-28 12:06:35		  | | autoloaded
+2015-12-28 12:06:35		  | installed
+2015-12-28 12:06:35		  popular script
+2015-12-28 12:06:35		Keys on script buffer:
+2015-12-28 12:06:35		  alt+i  install script
+2015-12-28 12:06:35		  alt+r  remove script
+2015-12-28 12:06:35		  alt+l  load script
+2015-12-28 12:06:35		  alt+L  reload script
+2015-12-28 12:06:35		  alt+u  unload script
+2015-12-28 12:06:35		  alt+A  autoload script
+2015-12-28 12:06:35		  alt+h  (un)hold script
+2015-12-28 12:06:35		  alt+v  view script
+2015-12-28 12:06:35		Input allowed on script buffer:
+2015-12-28 12:06:35		  i/r/l/L/u/h  action on script (same as keys above)
+2015-12-28 12:06:35		  q            close buffer
+2015-12-28 12:06:35		  $            refresh buffer
+2015-12-28 12:06:35		  s:x,y        sort buffer using keys x and y (see /help script.look.sort)
+2015-12-28 12:06:35		  s:           reset sort (use default sort)
+2015-12-28 12:06:35		  word(s)      filter scripts: search word(s) in scripts (description, tags, ...)
+2015-12-28 12:06:35		  *            remove filter
+2015-12-28 12:06:35		Mouse actions on script buffer:
+2015-12-28 12:06:35		  wheel         scroll list
+2015-12-28 12:06:35		  left button   select script
+2015-12-28 12:06:35		  right button  install/remove script
+2015-12-28 12:06:35		Examples:
+2015-12-28 12:06:35		  /script search url
+2015-12-28 12:06:35		  /script install iset.pl buffers.pl
+2015-12-28 12:06:35		  /script remove iset.pl
+2015-12-28 12:06:35		  /script hold urlserver.py
+2015-12-28 12:06:35		  /script reload urlserver
+2015-12-28 12:06:35		  /script upgrade
+2015-12-28 12:06:56		script: downloading list of scripts...
+2015-12-28 12:06:56	=!=	script: error downloading list of scripts: curl error 77 (error setting certificate verify locations:
+2015-12-28 12:06:56		  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+2015-12-28 12:06:56		  CApath: none) (URL: "https://weechat.org/files/plugins.xml.gz")
+2015-12-28 12:13:33		script: downloading list of scripts...
+2015-12-28 12:13:34	=!=	script: error downloading list of scripts: curl error 77 (error setting certificate verify locations:
+2015-12-28 12:13:34		  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+2015-12-28 12:13:34		  CApath: none) (URL: "https://weechat.org/files/plugins.xml.gz")
+2015-12-28 12:13:47		script: downloading list of scripts...
+2015-12-28 12:13:47	=!=	script: error downloading list of scripts: curl error 77 (error setting certificate verify locations:
+2015-12-28 12:13:47		  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+2015-12-28 12:13:47		  CApath: none) (URL: "https://weechat.org/files/plugins.xml.gz")
+2015-12-28 12:17:33		script: downloading list of scripts...
+2015-12-28 12:17:33		Plugins loaded: alias, aspell, charset, exec, fifo, irc, logger, relay, script, trigger, xfer
+2015-12-28 12:17:33	=!=	script: error downloading list of scripts: curl error 77 (error setting certificate verify locations:
+2015-12-28 12:17:33		  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+2015-12-28 12:17:33		  CApath: none) (URL: "https://weechat.org/files/plugins.xml.gz")
+2015-12-28 12:17:45		script: downloading list of scripts...
+2015-12-28 12:17:45	=!=	script: error downloading list of scripts: curl error 77 (error setting certificate verify locations:
+2015-12-28 12:17:45		  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+2015-12-28 12:17:45		  CApath: none) (URL: "https://weechat.org/files/plugins.xml.gz")
+2015-12-28 12:18:08		[script]  /script  list [-o|-i]
+2015-12-28 12:18:08		                   search <text>
+2015-12-28 12:18:08		                   show <script>
+2015-12-28 12:18:08		                   load|unload|reload <script> [<script>...]
+2015-12-28 12:18:08		                   autoload|noautoload|toggleautoload <script> [<script>...]
+2015-12-28 12:18:08		                   install|remove|installremove|hold [-q] <script> [<script>...]
+2015-12-28 12:18:08		                   upgrade
+2015-12-28 12:18:08		                   update
+2015-12-28 12:18:08		WeeChat scripts manager
+2015-12-28 12:18:08		          list: list loaded scripts (all languages)
+2015-12-28 12:18:08		            -o: send list of loaded scripts to buffer
+2015-12-28 12:18:08		            -i: copy list of loaded scripts in command line (for sending to buffer)
+2015-12-28 12:18:08		        search: search scripts by tags or text and display result on scripts buffer
+2015-12-28 12:18:08		          show: show detailed info about a script
+2015-12-28 12:18:08		          load: load script(s)
+2015-12-28 12:18:08		        unload: unload script(s)
+2015-12-28 12:18:08		        reload: reload script(s)
+2015-12-28 12:18:08		      autoload: autoload the script
+2015-12-28 12:18:08		    noautoload: do not autoload the script
+2015-12-28 12:18:08		toggleautoload: toggle autoload
+2015-12-28 12:18:08		       install: install/upgrade script(s)
+2015-12-28 12:18:08		        remove: remove script(s)
+2015-12-28 12:18:08		 installremove: install or remove script(s), depending on current state
+2015-12-28 12:18:08		          hold: hold/unhold script(s) (a script held will not be upgraded any more and cannot be removed)
+2015-12-28 12:18:08		            -q: quiet mode: do not display messages
+2015-12-28 12:18:08		       upgrade: upgrade all installed scripts which are obsolete (new version available)
+2015-12-28 12:18:08		        update: update local scripts cache
+2015-12-28 12:18:08		Without argument, this command opens a buffer with list of scripts.
+2015-12-28 12:18:08		On script buffer, the possible status for each script are:
+2015-12-28 12:18:08		  * i a H r N
+2015-12-28 12:18:08		  | | | | | |
+2015-12-28 12:18:08		  | | | | | obsolete (new version available)
+2015-12-28 12:18:08		  | | | | running (loaded)
+2015-12-28 12:18:08		  | | | held
+2015-12-28 12:18:08		  | | autoloaded
+2015-12-28 12:18:08		  | installed
+2015-12-28 12:18:08		  popular script
+2015-12-28 12:18:08		Keys on script buffer:
+2015-12-28 12:18:08		  alt+i  install script
+2015-12-28 12:18:08		  alt+r  remove script
+2015-12-28 12:18:08		  alt+l  load script
+2015-12-28 12:18:08		  alt+L  reload script
+2015-12-28 12:18:08		  alt+u  unload script
+2015-12-28 12:18:08		  alt+A  autoload script
+2015-12-28 12:18:08		  alt+h  (un)hold script
+2015-12-28 12:18:08		  alt+v  view script
+2015-12-28 12:18:08		Input allowed on script buffer:
+2015-12-28 12:18:08		  i/r/l/L/u/h  action on script (same as keys above)
+2015-12-28 12:18:08		  q            close buffer
+2015-12-28 12:18:08		  $            refresh buffer
+2015-12-28 12:18:08		  s:x,y        sort buffer using keys x and y (see /help script.look.sort)
+2015-12-28 12:18:08		  s:           reset sort (use default sort)
+2015-12-28 12:18:08		  word(s)      filter scripts: search word(s) in scripts (description, tags, ...)
+2015-12-28 12:18:08		  *            remove filter
+2015-12-28 12:18:08		Mouse actions on script buffer:
+2015-12-28 12:18:08		  wheel         scroll list
+2015-12-28 12:18:08		  left button   select script
+2015-12-28 12:18:08		  right button  install/remove script
+2015-12-28 12:18:08		Examples:
+2015-12-28 12:18:08		  /script search url
+2015-12-28 12:18:08		  /script install iset.pl buffers.pl
+2015-12-28 12:18:08		  /script remove iset.pl
+2015-12-28 12:18:08		  /script hold urlserver.py
+2015-12-28 12:18:08		  /script reload urlserver
+2015-12-28 12:18:08		  /script upgrade
+2015-12-28 12:18:27		script: downloading list of scripts...
+2015-12-28 12:18:27	=!=	script: error downloading list of scripts: curl error 77 (error setting certificate verify locations:
+2015-12-28 12:18:27		  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+2015-12-28 12:18:27		  CApath: none) (URL: "https://weechat.org/files/plugins.xml.gz")
+2015-12-28 12:24:26		script: downloading list of scripts...
+2015-12-28 12:24:26	=!=	script: error downloading list of scripts: curl error 77 (error setting certificate verify locations:
+2015-12-28 12:24:26		  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+2015-12-28 12:24:26		  CApath: none) (URL: "https://weechat.org/files/plugins.xml.gz")
+2015-12-28 12:24:27		script: downloading list of scripts...
+2015-12-28 12:24:28	=!=	script: error downloading list of scripts: curl error 77 (error setting certificate verify locations:
+2015-12-28 12:24:28		  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+2015-12-28 12:24:28		  CApath: none) (URL: "https://weechat.org/files/plugins.xml.gz")
+2015-12-28 12:24:28		script: downloading list of scripts...
+2015-12-28 12:24:29	=!=	script: error downloading list of scripts: curl error 77 (error setting certificate verify locations:
+2015-12-28 12:24:29		  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+2015-12-28 12:24:29		  CApath: none) (URL: "https://weechat.org/files/plugins.xml.gz")
+2015-12-28 12:24:29		script: downloading list of scripts...
+2015-12-28 12:24:30	=!=	script: error downloading list of scripts: curl error 77 (error setting certificate verify locations:
+2015-12-28 12:24:30		  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+2015-12-28 12:24:30		  CApath: none) (URL: "https://weechat.org/files/plugins.xml.gz")
+2015-12-28 19:08:05	=!=	irc: command "part" must be executed on irc buffer (server or channel)
+2015-12-28 19:38:48		script: downloading list of scripts...
+2015-12-28 19:38:48		Plugins loaded: alias, aspell, charset, exec, fifo, irc, logger, relay, script, trigger, xfer
+2015-12-28 19:38:49	=!=	script: error downloading list of scripts: curl error 77 (error setting certificate verify locations:
+2015-12-28 19:38:49		  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+2015-12-28 19:38:49		  CApath: none) (URL: "https://weechat.org/files/plugins.xml.gz")
+2015-12-28 19:39:28		script: downloading list of scripts...
+2015-12-28 19:39:28	=!=	script: error downloading list of scripts: curl error 77 (error setting certificate verify locations:
+2015-12-28 19:39:28		  CAfile: /etc/pki/tls/certs/ca-bundle.crt
+2015-12-28 19:39:28		  CApath: none) (URL: "https://weechat.org/files/plugins.xml.gz")
+2015-12-28 19:46:45		script: downloading list of scripts...
+2015-12-28 19:46:47		script: 299 scripts for WeeChat 1.3
+2015-12-28 19:46:47		script: script "beep.pl" can not be installed because plugin "perl" is not loaded
+2015-12-28 19:46:47		script: script "beep.pl" can not be installed because plugin "perl" is not loaded
+2015-12-28 19:48:11		script: script "beep.pl" can not be installed because plugin "perl" is not loaded
+2015-12-28 19:48:51		script: script "autoauth.py" can not be installed because plugin "python" is not loaded
+2015-12-28 19:50:21	=!=	Error: unknown command "/python" (type /help for help)
+2015-12-28 19:50:30	=!=	No help available, "python" is not a command or an option
+2015-12-28 19:56:42		python: stdout/stderr: Traceback (most recent call last):
+2015-12-28 19:56:42		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/wee_slack.py", line 10, in <module>
+2015-12-28 19:56:42		python: stdout/stderr:     from websocket import create_connection
+2015-12-28 19:56:42		python: stdout/stderr: ImportError: No module named websocket
+2015-12-28 19:56:42	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/wee_slack.py"
+2015-12-28 19:56:42		python scripts loaded: autoauth
+2015-12-28 19:56:42		script: 299 scripts for WeeChat 1.3
+2015-12-28 19:56:42		Plugins loaded: alias, aspell, charset, exec, fifo, irc, logger, perl, python, relay, script, trigger, xfer
+2015-12-28 19:57:12		python: loading script "/home/Juliano/.weechat/python/autoauth.py"
+2015-12-28 19:57:12	=!=	python: unable to register script "autoauth" (another script already exists with this name)
+2015-12-28 19:57:12	=!=	python: unable to call function "hook_signal", script is not initialized (script: -)
+2015-12-28 19:57:12	=!=	python: unable to call function "hook_command", script is not initialized (script: -)
+2015-12-28 19:57:12	=!=	python: function "register" not found (or failed) in file "/home/Juliano/.weechat/python/autoauth.py"
+2015-12-28 19:57:50		perl: loading script "/home/Juliano/.weechat/perl/beep.pl"
+2015-12-28 19:57:50		perl: registered script "beep", version 1.1 (Beep (terminal bell) and/or run command on highlight/private message or new DCC)
+2015-12-28 19:59:18		Option changed: irc.server.freenode.sasl_password = "eXE9qR46yQYXvt3J1Oaa"  (default: (undefined))
+2015-12-28 19:59:39		Option changed: irc.server.freenode.sasl_username = "C1ph3r"  (default: (undefined))
+2015-12-28 19:59:42		Options saved to sec.conf
+2015-12-28 19:59:42		Options saved to weechat.conf
+2015-12-28 19:59:42		Options saved to plugins.conf
+2015-12-28 19:59:42		Options saved to charset.conf
+2015-12-28 19:59:42		Options saved to logger.conf
+2015-12-28 19:59:42		Options saved to exec.conf
+2015-12-28 19:59:42		Options saved to trigger.conf
+2015-12-28 19:59:42		Options saved to aspell.conf
+2015-12-28 19:59:42		Options saved to alias.conf
+2015-12-28 19:59:42		Options saved to xfer.conf
+2015-12-28 19:59:42		Options saved to irc.conf
+2015-12-28 19:59:42		Options saved to relay.conf
+2015-12-28 19:59:42		Options saved to script.conf
+2015-12-28 20:00:32		Options saved to sec.conf
+2015-12-28 20:00:32		Options saved to weechat.conf
+2015-12-28 20:00:32		Options saved to plugins.conf
+2015-12-28 20:00:32		Options saved to charset.conf
+2015-12-28 20:00:32		Options saved to logger.conf
+2015-12-28 20:00:32		Options saved to exec.conf
+2015-12-28 20:00:32		Options saved to trigger.conf
+2015-12-28 20:00:32		Options saved to aspell.conf
+2015-12-28 20:00:32		Options saved to alias.conf
+2015-12-28 20:00:32		Options saved to xfer.conf
+2015-12-28 20:00:32		Options saved to irc.conf
+2015-12-28 20:00:32		Options saved to relay.conf
+2015-12-28 20:00:32		Options saved to script.conf
+2015-12-28 20:01:02		perl: loading script "/home/Juliano/.weechat/perl/buffers.pl"
+2015-12-28 20:01:02		perl: registered script "buffers", version 5.1 (Sidebar with list of buffers)
+2015-12-28 20:01:02		New key binding (context "mouse"): @bar(buffers):ctrl-wheeldown => hsignal:buffers_mouse
+2015-12-28 20:01:02		New key binding (context "mouse"): @bar(buffers):ctrl-wheelup => hsignal:buffers_mouse
+2015-12-28 20:01:02		New key binding (context "mouse"): @item(buffers):button2* => hsignal:buffers_mouse
+2015-12-28 20:01:02		New key binding (context "mouse"): @item(buffers):button1* => hsignal:buffers_mouse
+2015-12-28 20:01:12		script: autoload enabled for script "buffers.pl"
+2015-12-28 20:01:22		perl: loading script "/home/Juliano/.weechat/perl/iset.pl"
+2015-12-28 20:01:22		perl: registered script "iset", version 4.0 (Interactive Set for configuration options)
+2015-12-28 20:01:22		New key binding (context "mouse"): @chat(perl.iset):button1 => hsignal:iset_mouse
+2015-12-28 20:01:22		New key binding (context "mouse"): @chat(perl.iset):button2* => hsignal:iset_mouse
+2015-12-28 20:01:22		New key binding (context "mouse"): @chat(perl.iset):wheeldown => /repeat 5 /iset **down
+2015-12-28 20:01:22		New key binding (context "mouse"): @chat(perl.iset):wheelup => /repeat 5 /iset **up
+2015-12-28 20:01:33		script: autoload enabled for script "iset.pl"
+2015-12-28 20:03:08		python: loading script "/home/Juliano/.weechat/python/urlgrab.py"
+2015-12-28 20:03:08		python: registered script "urlgrab", version 2.7 (Url functionality Loggin, opening of browser, selectable links)
+2015-12-28 20:03:16		script: autoload enabled for script "urlgrab.py"
+2015-12-28 20:03:30		python: loading script "/home/Juliano/.weechat/python/colorize_nicks.py"
+2015-12-28 20:03:30		python: registered script "colorize_nicks", version 21 (Use the weechat nick colors in the chat area)
+2015-12-28 20:03:37		script: autoload enabled for script "colorize_nicks.py"
+2015-12-28 20:03:57		Option changed: weechat.bar.title.color_bg = black  (default: blue)
+2015-12-28 20:04:08		Option changed: weechat.bar.status.color_bg = black  (default: blue)
+2015-12-28 20:04:17		Option changed: weechat.bar.status.color_bg = blue
+2015-12-28 20:04:38		Options saved to sec.conf
+2015-12-28 20:04:38		Options saved to weechat.conf
+2015-12-28 20:04:38		Options saved to plugins.conf
+2015-12-28 20:04:38		Options saved to charset.conf
+2015-12-28 20:04:38		Options saved to logger.conf
+2015-12-28 20:04:38		Options saved to exec.conf
+2015-12-28 20:04:38		Options saved to trigger.conf
+2015-12-28 20:04:38		Options saved to aspell.conf
+2015-12-28 20:04:38		Options saved to alias.conf
+2015-12-28 20:04:38		Options saved to xfer.conf
+2015-12-28 20:04:38		Options saved to irc.conf
+2015-12-28 20:04:38		Options saved to relay.conf
+2015-12-28 20:04:38		Options saved to script.conf
+2015-12-28 20:04:38		Options saved to buffers.conf
+2015-12-28 20:04:38		Options saved to iset.conf
+2015-12-28 20:04:38		Options saved to urlgrab.conf
+2015-12-28 20:04:38		Options saved to colorize_nicks.conf
+2015-12-28 20:05:46		Options saved to sec.conf
+2015-12-28 20:05:46		Options saved to weechat.conf
+2015-12-28 20:05:46		Options saved to plugins.conf
+2015-12-28 20:05:46		Options saved to charset.conf
+2015-12-28 20:05:46		Options saved to logger.conf
+2015-12-28 20:05:46		Options saved to exec.conf
+2015-12-28 20:05:46		Options saved to trigger.conf
+2015-12-28 20:05:46		Options saved to aspell.conf
+2015-12-28 20:05:46		Options saved to alias.conf
+2015-12-28 20:05:46		Options saved to xfer.conf
+2015-12-28 20:05:46		Options saved to irc.conf
+2015-12-28 20:05:46		Options saved to relay.conf
+2015-12-28 20:05:46		Options saved to script.conf
+2015-12-28 20:05:46		Options saved to buffers.conf
+2015-12-28 20:05:46		Options saved to iset.conf
+2015-12-28 20:05:46		Options saved to urlgrab.conf
+2015-12-28 20:05:46		Options saved to colorize_nicks.conf
+2015-12-28 20:05:48		python: scripts unloaded
+2015-12-28 20:05:48		perl: scripts unloaded
+2015-12-28 20:06:04		perl scripts loaded: beep, buffers, iset
+2015-12-28 20:06:04	=!=	python: unable to register script "autoauth" (another script already exists with this name)
+2015-12-28 20:06:04	=!=	python: unable to call function "hook_signal", script is not initialized (script: -)
+2015-12-28 20:06:04	=!=	python: unable to call function "hook_command", script is not initialized (script: -)
+2015-12-28 20:06:04	=!=	python: function "register" not found (or failed) in file "/home/Juliano/.weechat/python/autoload/wee_autoauth.py"
+2015-12-28 20:06:04		python: stdout/stderr: Traceback (most recent call last):
+2015-12-28 20:06:04		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/wee_slack.py", line 10, in <module>
+2015-12-28 20:06:04		python: stdout/stderr:     from websocket import create_connection
+2015-12-28 20:06:04		python: stdout/stderr: ImportError: No module named websocket
+2015-12-28 20:06:04	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/wee_slack.py"
+2015-12-28 20:06:04		python scripts loaded: autoauth, colorize_nicks, urlgrab
+2015-12-28 20:06:05		script: 299 scripts for WeeChat 1.3
+2015-12-28 20:06:05		Plugins loaded: alias, aspell, charset, exec, fifo, irc, logger, perl, python, relay, script, trigger, xfer
+2015-12-28 20:09:48		Options saved to sec.conf
+2015-12-28 20:09:48		Options saved to weechat.conf
+2015-12-28 20:09:48		Options saved to plugins.conf
+2015-12-28 20:09:48		Options saved to charset.conf
+2015-12-28 20:09:48		Options saved to logger.conf
+2015-12-28 20:09:48		Options saved to exec.conf
+2015-12-28 20:09:48		Options saved to trigger.conf
+2015-12-28 20:09:48		Options saved to aspell.conf
+2015-12-28 20:09:48		Options saved to alias.conf
+2015-12-28 20:09:48		Options saved to xfer.conf
+2015-12-28 20:09:48		Options saved to irc.conf
+2015-12-28 20:09:48		Options saved to relay.conf
+2015-12-28 20:09:48		Options saved to buffers.conf
+2015-12-28 20:09:48		Options saved to iset.conf
+2015-12-28 20:09:48		Options saved to colorize_nicks.conf
+2015-12-28 20:09:48		Options saved to urlgrab.conf
+2015-12-28 20:09:48		Options saved to script.conf
+2015-12-28 20:09:54		Options saved to sec.conf
+2015-12-28 20:09:54		Options saved to weechat.conf
+2015-12-28 20:09:54		Options saved to plugins.conf
+2015-12-28 20:09:54		Options saved to charset.conf
+2015-12-28 20:09:54		Options saved to logger.conf
+2015-12-28 20:09:54		Options saved to exec.conf
+2015-12-28 20:09:54		Options saved to trigger.conf
+2015-12-28 20:09:54		Options saved to aspell.conf
+2015-12-28 20:09:54		Options saved to alias.conf
+2015-12-28 20:09:54		Options saved to xfer.conf
+2015-12-28 20:09:54		Options saved to irc.conf
+2015-12-28 20:09:54		Options saved to relay.conf
+2015-12-28 20:09:54		Options saved to buffers.conf
+2015-12-28 20:09:54		Options saved to iset.conf
+2015-12-28 20:09:54		Options saved to colorize_nicks.conf
+2015-12-28 20:09:54		Options saved to urlgrab.conf
+2015-12-28 20:09:54		Options saved to script.conf
+2015-12-28 20:11:11	=!=	Error: unknown command "/get" (type /help for help)
+2015-12-28 20:12:22		python: scripts unloaded
+2015-12-28 20:12:22		perl: scripts unloaded
+2015-12-28 20:13:16		perl scripts loaded: beep, buffers, iset
+2015-12-28 20:13:16	=!=	python: unable to register script "autoauth" (another script already exists with this name)
+2015-12-28 20:13:16	=!=	python: unable to call function "hook_signal", script is not initialized (script: -)
+2015-12-28 20:13:16	=!=	python: unable to call function "hook_command", script is not initialized (script: -)
+2015-12-28 20:13:16	=!=	python: function "register" not found (or failed) in file "/home/Juliano/.weechat/python/autoload/wee_autoauth.py"
+2015-12-28 20:13:17		python: stdout/stderr: Traceback (most recent call last):
+2015-12-28 20:13:17		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/wee_slack.py", line 10, in <module>
+2015-12-28 20:13:17		python: stdout/stderr:     from websocket import create_connection
+2015-12-28 20:13:17		python: stdout/stderr: ImportError: No module named websocket
+2015-12-28 20:13:17	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/wee_slack.py"
+2015-12-28 20:13:17		python scripts loaded: autoauth, colorize_nicks, urlgrab
+2015-12-28 20:13:17		script: 299 scripts for WeeChat 1.3
+2015-12-28 20:13:17		Plugins loaded: alias, aspell, charset, exec, fifo, irc, logger, perl, python, relay, script, trigger, xfer
+2015-12-28 20:35:09		python: loading script "/home/Juliano/.weechat/python/lnotify.py"
+2015-12-28 20:35:09		python: registered script "lnotify", version 0.3.0 (lnotify - A libnotify script for weechat)
+2015-12-28 20:35:18		script: autoload enabled for script "lnotify.py"
+2015-12-28 20:35:26		Options saved to sec.conf
+2015-12-28 20:35:26		Options saved to weechat.conf
+2015-12-28 20:35:26		Options saved to plugins.conf
+2015-12-28 20:35:26		Options saved to charset.conf
+2015-12-28 20:35:26		Options saved to logger.conf
+2015-12-28 20:35:26		Options saved to exec.conf
+2015-12-28 20:35:26		Options saved to trigger.conf
+2015-12-28 20:35:26		Options saved to aspell.conf
+2015-12-28 20:35:26		Options saved to alias.conf
+2015-12-28 20:35:26		Options saved to xfer.conf
+2015-12-28 20:35:26		Options saved to irc.conf
+2015-12-28 20:35:26		Options saved to relay.conf
+2015-12-28 20:35:26		Options saved to buffers.conf
+2015-12-28 20:35:26		Options saved to iset.conf
+2015-12-28 20:35:26		Options saved to colorize_nicks.conf
+2015-12-28 20:35:26		Options saved to urlgrab.conf
+2015-12-28 20:35:26		Options saved to script.conf
+2015-12-28 20:35:42		Options saved to irc.conf
+2015-12-28 20:35:42		Unknown configuration file "?"
+2015-12-28 20:35:51		[core]  /save  [<file> [<file>...]]
+2015-12-28 20:35:51		save configuration files to disk
+2015-12-28 20:35:51		file: configuration file to save (without extension ".conf")
+2015-12-28 20:35:51		Without argument, all files (WeeChat and plugins) are saved.
+2015-12-29 11:34:20		fifo: removing old fifo pipe "/home/Juliano/.weechat/weechat_fifo_9596"
+2015-12-29 11:34:21		perl scripts loaded: beep, buffers, iset
+2015-12-29 11:34:21	=!=	python: unable to register script "autoauth" (another script already exists with this name)
+2015-12-29 11:34:21	=!=	python: unable to call function "hook_signal", script is not initialized (script: -)
+2015-12-29 11:34:21	=!=	python: unable to call function "hook_command", script is not initialized (script: -)
+2015-12-29 11:34:21	=!=	python: function "register" not found (or failed) in file "/home/Juliano/.weechat/python/autoload/wee_autoauth.py"
+2015-12-29 11:34:22		python: stdout/stderr: Traceback (most recent call last):
+2015-12-29 11:34:22		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/wee_slack.py", line 10, in <module>
+2015-12-29 11:34:22		python: stdout/stderr:     from websocket import create_connection
+2015-12-29 11:34:22		python: stdout/stderr: ImportError: No module named websocket
+2015-12-29 11:34:22	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/wee_slack.py"
+2015-12-29 11:34:22		python scripts loaded: autoauth, colorize_nicks, lnotify, urlgrab
+2015-12-29 11:34:22		script: 299 scripts for WeeChat 1.3
+2015-12-29 11:34:22		Plugins loaded: alias, aspell, charset, exec, fifo, irc, logger, perl, python, relay, script, trigger, xfer
+2015-12-30 15:09:20		[alias]  /W  
+2015-12-30 15:09:20		who
+2015-12-30 19:58:49		python: scripts unloaded
+2015-12-30 19:58:49		perl: scripts unloaded
+2016-01-04 08:23:07		perl scripts loaded: beep, buffers, iset
+2016-01-04 08:23:08	=!=	python: unable to register script "autoauth" (another script already exists with this name)
+2016-01-04 08:23:08	=!=	python: unable to call function "hook_signal", script is not initialized (script: -)
+2016-01-04 08:23:08	=!=	python: unable to call function "hook_command", script is not initialized (script: -)
+2016-01-04 08:23:08	=!=	python: function "register" not found (or failed) in file "/home/Juliano/.weechat/python/autoload/wee_autoauth.py"
+2016-01-04 08:23:08		python: stdout/stderr: Traceback (most recent call last):
+2016-01-04 08:23:08		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/wee_slack.py", line 10, in <module>
+2016-01-04 08:23:08		python: stdout/stderr:     from websocket import create_connection
+2016-01-04 08:23:08		python: stdout/stderr: ImportError: No module named websocket
+2016-01-04 08:23:08	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/wee_slack.py"
+2016-01-04 08:23:08		python scripts loaded: autoauth, colorize_nicks, lnotify, urlgrab
+2016-01-04 08:23:08		script: downloading list of scripts...
+2016-01-04 08:23:08		Plugins loaded: alias, aspell, charset, exec, fifo, irc, logger, perl, python, relay, script, trigger, xfer
+2016-01-04 08:23:10		script: 299 scripts for WeeChat 1.3
+2016-01-04 08:23:23		python: scripts unloaded
+2016-01-04 08:23:23		perl: scripts unloaded
+2016-01-04 08:24:47		perl scripts loaded: beep, buffers, iset
+2016-01-04 08:24:47	=!=	python: unable to register script "autoauth" (another script already exists with this name)
+2016-01-04 08:24:47	=!=	python: unable to call function "hook_signal", script is not initialized (script: -)
+2016-01-04 08:24:47	=!=	python: unable to call function "hook_command", script is not initialized (script: -)
+2016-01-04 08:24:47	=!=	python: function "register" not found (or failed) in file "/home/Juliano/.weechat/python/autoload/wee_autoauth.py"
+2016-01-04 08:24:48		python: stdout/stderr: Traceback (most recent call last):
+2016-01-04 08:24:48		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/wee_slack.py", line 10, in <module>
+2016-01-04 08:24:48		python: stdout/stderr:     from websocket import create_connection
+2016-01-04 08:24:48		python: stdout/stderr: ImportError: No module named websocket
+2016-01-04 08:24:48	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/wee_slack.py"
+2016-01-04 08:24:48		python scripts loaded: autoauth, colorize_nicks, lnotify, urlgrab
+2016-01-04 08:24:48		script: 299 scripts for WeeChat 1.3
+2016-01-04 08:24:48		Plugins loaded: alias, aspell, charset, exec, fifo, irc, logger, perl, python, relay, script, trigger, xfer
+2016-01-25 23:34:09		fifo: removing old fifo pipe "/home/Juliano/.weechat/weechat_fifo_1776"
+2016-01-25 23:34:09		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/autoauth.py", line 1
+2016-01-25 23:34:09		python: stdout/stderr: SyntaxError: Non-ASCII character '\xff' in file /home/Juliano/.weechat/python/autoload/autoauth.py on line 1, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2016-01-25 23:34:09	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/autoauth.py"
+2016-01-25 23:34:09		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/colorize_nicks.py", line 1
+2016-01-25 23:34:09		python: stdout/stderr: SyntaxError: Non-ASCII character '\xff' in file /home/Juliano/.weechat/python/autoload/colorize_nicks.py on line 1, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2016-01-25 23:34:09	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/colorize_nicks.py"
+2016-01-25 23:34:09		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/lnotify.py", line 1
+2016-01-25 23:34:09		python: stdout/stderr: SyntaxError: Non-ASCII character '\xff' in file /home/Juliano/.weechat/python/autoload/lnotify.py on line 1, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2016-01-25 23:34:09	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/lnotify.py"
+2016-01-25 23:34:09		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/urlgrab.py", line 1
+2016-01-25 23:34:09		python: stdout/stderr: SyntaxError: Non-ASCII character '\xff' in file /home/Juliano/.weechat/python/autoload/urlgrab.py on line 1, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2016-01-25 23:34:09	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/urlgrab.py"
+2016-01-25 23:34:09		python: stdout/stderr: Traceback (most recent call last):
+2016-01-25 23:34:09		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/wee_slack.py", line 10, in <module>
+2016-01-25 23:34:09		python: stdout/stderr:     from websocket import create_connection
+2016-01-25 23:34:09		python: stdout/stderr: ImportError: No module named websocket
+2016-01-25 23:34:09	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/wee_slack.py"
+2016-01-25 23:34:09		python scripts loaded: autoauth
+2016-01-25 23:34:09		script: downloading list of scripts...
+2016-01-25 23:34:09		Plugins loaded: alias, aspell, charset, exec, fifo, irc, logger, lua, python, relay, ruby, script, trigger, xfer
+2016-01-25 23:34:12		script: 299 scripts for WeeChat 1.3
+2016-01-25 23:34:26		python: scripts unloaded
+2016-01-26 12:13:18		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/autoauth.py", line 1
+2016-01-26 12:13:18		python: stdout/stderr: SyntaxError: Non-ASCII character '\xff' in file /home/Juliano/.weechat/python/autoload/autoauth.py on line 1, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2016-01-26 12:13:18	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/autoauth.py"
+2016-01-26 12:13:18		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/colorize_nicks.py", line 1
+2016-01-26 12:13:18		python: stdout/stderr: SyntaxError: Non-ASCII character '\xff' in file /home/Juliano/.weechat/python/autoload/colorize_nicks.py on line 1, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2016-01-26 12:13:18	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/colorize_nicks.py"
+2016-01-26 12:13:18		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/lnotify.py", line 1
+2016-01-26 12:13:18		python: stdout/stderr: SyntaxError: Non-ASCII character '\xff' in file /home/Juliano/.weechat/python/autoload/lnotify.py on line 1, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2016-01-26 12:13:18	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/lnotify.py"
+2016-01-26 12:13:18		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/urlgrab.py", line 1
+2016-01-26 12:13:18		python: stdout/stderr: SyntaxError: Non-ASCII character '\xff' in file /home/Juliano/.weechat/python/autoload/urlgrab.py on line 1, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2016-01-26 12:13:18	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/urlgrab.py"
+2016-01-26 12:13:18		python: stdout/stderr: Traceback (most recent call last):
+2016-01-26 12:13:18		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/wee_slack.py", line 10, in <module>
+2016-01-26 12:13:18		python: stdout/stderr:     from websocket import create_connection
+2016-01-26 12:13:18		python: stdout/stderr: ImportError: No module named websocket
+2016-01-26 12:13:18	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/wee_slack.py"
+2016-01-26 12:13:18		python scripts loaded: autoauth
+2016-01-26 12:13:19		script: 299 scripts for WeeChat 1.3
+2016-01-26 12:13:19		Plugins loaded: alias, aspell, charset, exec, fifo, irc, logger, lua, python, relay, ruby, script, trigger, xfer
+2016-01-26 21:34:15		python: scripts unloaded
+2016-01-26 21:35:10		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/autoauth.py", line 1
+2016-01-26 21:35:10		python: stdout/stderr: SyntaxError: Non-ASCII character '\xff' in file /home/Juliano/.weechat/python/autoload/autoauth.py on line 1, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2016-01-26 21:35:10	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/autoauth.py"
+2016-01-26 21:35:10		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/colorize_nicks.py", line 1
+2016-01-26 21:35:10		python: stdout/stderr: SyntaxError: Non-ASCII character '\xff' in file /home/Juliano/.weechat/python/autoload/colorize_nicks.py on line 1, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2016-01-26 21:35:10	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/colorize_nicks.py"
+2016-01-26 21:35:10		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/lnotify.py", line 1
+2016-01-26 21:35:10		python: stdout/stderr: SyntaxError: Non-ASCII character '\xff' in file /home/Juliano/.weechat/python/autoload/lnotify.py on line 1, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2016-01-26 21:35:10	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/lnotify.py"
+2016-01-26 21:35:10		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/urlgrab.py", line 1
+2016-01-26 21:35:10		python: stdout/stderr: SyntaxError: Non-ASCII character '\xff' in file /home/Juliano/.weechat/python/autoload/urlgrab.py on line 1, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2016-01-26 21:35:10	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/urlgrab.py"
+2016-01-26 21:35:11		python: stdout/stderr: Traceback (most recent call last):
+2016-01-26 21:35:11		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/wee_slack.py", line 10, in <module>
+2016-01-26 21:35:11		python: stdout/stderr:     from websocket import create_connection
+2016-01-26 21:35:11		python: stdout/stderr: ImportError: No module named websocket
+2016-01-26 21:35:11	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/wee_slack.py"
+2016-01-26 21:35:11		python scripts loaded: autoauth
+2016-01-26 21:35:11		script: 299 scripts for WeeChat 1.3
+2016-01-26 21:35:11		Plugins loaded: alias, aspell, charset, exec, fifo, irc, logger, lua, python, relay, ruby, script, trigger, xfer
+2016-01-27 13:54:22		fifo: removing old fifo pipe "/home/Juliano/.weechat/weechat_fifo_5244"
+2016-01-27 13:54:22		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/autoauth.py", line 1
+2016-01-27 13:54:22		python: stdout/stderr: SyntaxError: Non-ASCII character '\xff' in file /home/Juliano/.weechat/python/autoload/autoauth.py on line 1, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2016-01-27 13:54:22	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/autoauth.py"
+2016-01-27 13:54:22		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/colorize_nicks.py", line 1
+2016-01-27 13:54:22		python: stdout/stderr: SyntaxError: Non-ASCII character '\xff' in file /home/Juliano/.weechat/python/autoload/colorize_nicks.py on line 1, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2016-01-27 13:54:22	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/colorize_nicks.py"
+2016-01-27 13:54:22		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/lnotify.py", line 1
+2016-01-27 13:54:22		python: stdout/stderr: SyntaxError: Non-ASCII character '\xff' in file /home/Juliano/.weechat/python/autoload/lnotify.py on line 1, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2016-01-27 13:54:22	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/lnotify.py"
+2016-01-27 13:54:22		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/urlgrab.py", line 1
+2016-01-27 13:54:22		python: stdout/stderr: SyntaxError: Non-ASCII character '\xff' in file /home/Juliano/.weechat/python/autoload/urlgrab.py on line 1, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2016-01-27 13:54:22	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/urlgrab.py"
+2016-01-27 13:54:23		python: stdout/stderr: Traceback (most recent call last):
+2016-01-27 13:54:23		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/wee_slack.py", line 10, in <module>
+2016-01-27 13:54:23		python: stdout/stderr:     from websocket import create_connection
+2016-01-27 13:54:23		python: stdout/stderr: ImportError: No module named websocket
+2016-01-27 13:54:23	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/wee_slack.py"
+2016-01-27 13:54:23		python scripts loaded: autoauth
+2016-01-27 13:54:23		script: downloading list of scripts...
+2016-01-27 13:54:23		Plugins loaded: alias, aspell, charset, exec, fifo, irc, logger, lua, python, relay, ruby, script, trigger, xfer
+2016-01-27 13:54:25		script: 299 scripts for WeeChat 1.3
+2016-02-02 15:33:44		python: scripts unloaded
+2016-02-03 23:33:25		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/autoauth.py", line 1
+2016-02-03 23:33:25		python: stdout/stderr: SyntaxError: Non-ASCII character '\xff' in file /home/Juliano/.weechat/python/autoload/autoauth.py on line 1, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2016-02-03 23:33:25	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/autoauth.py"
+2016-02-03 23:33:25		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/colorize_nicks.py", line 1
+2016-02-03 23:33:25		python: stdout/stderr: SyntaxError: Non-ASCII character '\xff' in file /home/Juliano/.weechat/python/autoload/colorize_nicks.py on line 1, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2016-02-03 23:33:25	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/colorize_nicks.py"
+2016-02-03 23:33:25		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/lnotify.py", line 1
+2016-02-03 23:33:25		python: stdout/stderr: SyntaxError: Non-ASCII character '\xff' in file /home/Juliano/.weechat/python/autoload/lnotify.py on line 1, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2016-02-03 23:33:25	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/lnotify.py"
+2016-02-03 23:33:25		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/urlgrab.py", line 1
+2016-02-03 23:33:25		python: stdout/stderr: SyntaxError: Non-ASCII character '\xff' in file /home/Juliano/.weechat/python/autoload/urlgrab.py on line 1, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2016-02-03 23:33:25	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/urlgrab.py"
+2016-02-03 23:33:25		python: stdout/stderr: Traceback (most recent call last):
+2016-02-03 23:33:25		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/wee_slack.py", line 10, in <module>
+2016-02-03 23:33:25		python: stdout/stderr:     from websocket import create_connection
+2016-02-03 23:33:25		python: stdout/stderr: ImportError: No module named websocket
+2016-02-03 23:33:25	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/wee_slack.py"
+2016-02-03 23:33:25		python scripts loaded: autoauth
+2016-02-03 23:33:26		script: downloading list of scripts...
+2016-02-03 23:33:26		Plugins loaded: alias, aspell, charset, exec, fifo, irc, logger, lua, python, relay, ruby, script, trigger, xfer
+2016-02-03 23:33:28		script: 299 scripts for WeeChat 1.3
+2016-02-03 23:37:17	=!=	Too few arguments for command "/query" (help on command: /help query)
+2016-02-05 12:21:48		fifo: removing old fifo pipe "/home/Juliano/.weechat/weechat_fifo_14768"
+2016-02-05 12:21:49		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/autoauth.py", line 1
+2016-02-05 12:21:49		python: stdout/stderr: SyntaxError: Non-ASCII character '\xff' in file /home/Juliano/.weechat/python/autoload/autoauth.py on line 1, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2016-02-05 12:21:49	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/autoauth.py"
+2016-02-05 12:21:49		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/colorize_nicks.py", line 1
+2016-02-05 12:21:49		python: stdout/stderr: SyntaxError: Non-ASCII character '\xff' in file /home/Juliano/.weechat/python/autoload/colorize_nicks.py on line 1, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2016-02-05 12:21:49	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/colorize_nicks.py"
+2016-02-05 12:21:49		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/lnotify.py", line 1
+2016-02-05 12:21:49		python: stdout/stderr: SyntaxError: Non-ASCII character '\xff' in file /home/Juliano/.weechat/python/autoload/lnotify.py on line 1, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2016-02-05 12:21:49	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/lnotify.py"
+2016-02-05 12:21:49		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/urlgrab.py", line 1
+2016-02-05 12:21:49		python: stdout/stderr: SyntaxError: Non-ASCII character '\xff' in file /home/Juliano/.weechat/python/autoload/urlgrab.py on line 1, but no encoding declared; see http://python.org/dev/peps/pep-0263/ for details
+2016-02-05 12:21:49	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/urlgrab.py"
+2016-02-05 12:21:49		python: stdout/stderr: Traceback (most recent call last):
+2016-02-05 12:21:49		python: stdout/stderr:   File "/home/Juliano/.weechat/python/autoload/wee_slack.py", line 10, in <module>
+2016-02-05 12:21:49		python: stdout/stderr:     from websocket import create_connection
+2016-02-05 12:21:49		python: stdout/stderr: ImportError: No module named websocket
+2016-02-05 12:21:49	=!=	python: unable to parse file "/home/Juliano/.weechat/python/autoload/wee_slack.py"
+2016-02-05 12:21:49		python scripts loaded: autoauth
+2016-02-05 12:21:49		script: downloading list of scripts...
+2016-02-05 12:21:49		Plugins loaded: alias, aspell, charset, exec, fifo, irc, logger, lua, python, relay, ruby, script, trigger, xfer
+2016-02-05 12:21:51		script: 299 scripts for WeeChat 1.3
+2016-02-05 12:22:28		python: scripts unloaded

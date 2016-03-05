@@ -1,0 +1,875 @@
+2016-02-01 22:57:35	-->	C1ph3r5 (~C1ph3r@177.96.244.213) has joined #suse
+2016-02-01 22:57:35	--	Topic for #suse is "Welcome to #opensuse | Rules: http://en.opensuse.org/openSUSE:IRC_rules | openSUSE Leap 42.1 is out! https://software.opensuse.org/421/ | Search: http://search.opensuse.org | For off-topic, go to #opensuse-chat | Have a lot of fun!"
+2016-02-01 22:57:35	--	Topic set by microchip_ (~neutrino@opensuse/member/microchip8) on Sat, 16 Jan 2016 13:46:05
+2016-02-01 22:57:35	--	Channel #suse: 302 nicks (0 ops, 0 voices, 302 normals)
+2016-02-01 22:57:35	--	URL for #SuSE: http://en.opensuse.org/Communicate/IRC
+2016-02-01 22:57:38	--	Channel created on Sun, 15 Feb 2004 02:08:29
+2016-02-01 22:57:39	-->	hpj (~hpj@189.188.230.168) has joined #suse
+2016-02-01 23:02:47	<--	shumski_ (~hrvoje@93-139-131-173.adsl.net.t-com.hr) has quit (Remote host closed the connection)
+2016-02-01 23:03:40	-->	turfrex (~py@ool-1826eaa1.dyn.optonline.net) has joined #suse
+2016-02-01 23:03:41	-->	Pazooza (~Pazuzu@cpe-108-183-181-146.maine.res.rr.com) has joined #suse
+2016-02-01 23:04:52	--	gryffus_ is now known as gryffus
+2016-02-01 23:05:57	<--	hpj (~hpj@189.188.230.168) has quit (Quit: Leaving.)
+2016-02-01 23:10:32	<--	kalten (~Thunderbi@24.225.131.48) has quit (Quit: kalten)
+2016-02-01 23:11:17	<--	deadlock (~ddlck@unaffiliated/deadlock) has quit (Ping timeout: 245 seconds)
+2016-02-01 23:11:33	-->	Firefishe (~kvirc@67.158.3.200) has joined #suse
+2016-02-01 23:12:00	Firefishe	I have a usb bluetooth dongle (iogear gbu421 2.x type) that'
+2016-02-01 23:12:26	-->	deadlock (~ddlck@179.211.76.165) has joined #suse
+2016-02-01 23:12:44	Firefishe	I have a usb bluetooth dongle (iogear gbu421 2.x type) that's not turning on when I insert it.  I want to use the 'bluetoothctl' command system to send power to it and turn it on.  lsusb indicates that it's plugged into the bus, but no power is getting to it.  What can I do?
+2016-02-01 23:13:08	<--	deadlock (~ddlck@179.211.76.165) has quit (Changing host)
+2016-02-01 23:13:08	-->	deadlock (~ddlck@unaffiliated/deadlock) has joined #suse
+2016-02-01 23:13:08	--	gryffus is now known as gryffus_
+2016-02-01 23:13:19	<--	tuliom (~tuliom@201-0-106-142.dsl.telesp.net.br) has quit (Quit: Konversation terminated!)
+2016-02-01 23:13:51	Firefishe	Or, in other words, how can I connect the usb dongle on the usb bus to hci0?
+2016-02-01 23:13:59	<--	Lanak_Laidemelet (~lanak@87.167.157.81) has quit (Quit: Konversation terminated!)
+2016-02-01 23:14:12	<--	bladerunner76 (~Thunderbi@50.33.206.17) has quit (Quit: bladerunner76)
+2016-02-01 23:14:33	-->	kalten (~Thunderbi@24.225.131.48) has joined #suse
+2016-02-01 23:16:04	-->	bladerunner76 (~Thunderbi@50.33.206.17) has joined #suse
+2016-02-01 23:16:21	<--	Pazooza (~Pazuzu@cpe-108-183-181-146.maine.res.rr.com) has quit (Quit: Leaving ililililililililililililililililililil)
+2016-02-01 23:16:48	-->	jamtech (~Thunderbi@ip98-160-205-134.lv.lv.cox.net) has joined #suse
+2016-02-01 23:18:11	-->	shumski_ (~hrvoje@93-139-131-173.adsl.net.t-com.hr) has joined #suse
+2016-02-01 23:18:57	<--	bladerunner76 (~Thunderbi@50.33.206.17) has quit (Client Quit)
+2016-02-01 23:20:17	<--	marciocg (~marcio@186.213.214.204) has quit (Quit: Konversation terminated!)
+2016-02-01 23:22:49	-->	bladerunner76 (~Thunderbi@50.33.206.17) has joined #suse
+2016-02-01 23:24:05	<--	kalten (~Thunderbi@24.225.131.48) has quit (Quit: kalten)
+2016-02-01 23:24:17	-->	sjraarke (~ger@2605:6000:3994:8d00:551a:977d:8d56:4ce0) has joined #suse
+2016-02-01 23:34:05	<--	GeorgeOrwell (~theboss@cblmdm72-240-229-197.buckeyecom.net) has quit (Quit: Konversation terminated!)
+2016-02-01 23:34:29	-->	krobzaur_ (~Kyle@c-75-68-113-169.hsd1.nh.comcast.net) has joined #suse
+2016-02-01 23:34:39	-->	Drew33 (~drew3@cpe-72-227-86-169.maine.res.rr.com) has joined #suse
+2016-02-01 23:36:48	<--	sheilau_os (~xpsu@cpe-184-57-239-234.cinci.res.rr.com) has quit (Quit: Konversation terminated!)
+2016-02-01 23:37:05	-->	sheilau_os (~xpsu@cpe-184-57-239-234.cinci.res.rr.com) has joined #suse
+2016-02-01 23:38:15	-->	promulo__ (~quassel@p3E9D2151.dip0.t-ipconnect.de) has joined #suse
+2016-02-01 23:38:39	<--	bladerunner76 (~Thunderbi@50.33.206.17) has quit (Quit: bladerunner76)
+2016-02-01 23:39:35	--	promulo__ is now known as 32NAAAJLT
+2016-02-01 23:39:47	-->	promulo__ (~quassel@p3E9D2151.dip0.t-ipconnect.de) has joined #suse
+2016-02-01 23:39:54	-->	bladerunner76 (~Thunderbi@50.33.206.17) has joined #suse
+2016-02-01 23:41:40	<--	vanrodrgs (~vanrodrgs@2804:7f7:a686:bbbf::4) has quit (Quit: Saindo)
+2016-02-01 23:41:52	<--	promulo (~quassel@p3E9D3D2F.dip0.t-ipconnect.de) has quit (Ping timeout: 240 seconds)
+2016-02-01 23:42:09	<--	promulo_ (~quassel@p3E9D3D2F.dip0.t-ipconnect.de) has quit (Ping timeout: 256 seconds)
+2016-02-01 23:43:13	--	gryffus_ is now known as gryffus
+2016-02-01 23:46:14	<--	linkedinyou (~linkediny@unaffiliated/linkedinyou) has quit (Quit: linkedinyou)
+2016-02-01 23:48:23	-->	shanemikel (~spearlman@c-73-162-96-145.hsd1.ca.comcast.net) has joined #suse
+2016-02-01 23:53:02	-->	Gilbert_ (~Gilbert@cpe-74-77-145-158.buffalo.res.rr.com) has joined #suse
+2016-02-01 23:53:07	--	Gilbert_ is now known as x-man
+2016-02-01 23:53:38	<--	x-man (~Gilbert@cpe-74-77-145-158.buffalo.res.rr.com) has left #suse
+2016-02-01 23:55:49	-->	camilo (~camilo@r167-62-83-11.dialup.adsl.anteldata.net.uy) has joined #suse
+2016-02-01 23:56:50	-->	asif (~asif@43.231.22.14) has joined #suse
+2016-02-02 00:02:13	-->	bugfinder (~Thunderbi@p20030065ED249D00DE5360FFFE09A376.dip0.t-ipconnect.de) has joined #suse
+2016-02-02 00:04:46	-->	}ls{ (~uhelp@unaffiliated/ls/x-8089558) has joined #suse
+2016-02-02 00:04:52	<--	bugfinder (~Thunderbi@p20030065ED249D00DE5360FFFE09A376.dip0.t-ipconnect.de) has quit (Client Quit)
+2016-02-02 00:05:29	<--	strozyka (strozyka@nat/yahoo/x-wnyfbylmoereeprn) has quit (Quit: Leaving)
+2016-02-02 00:06:13	cisc	Firefishe: you can run `journalctl -f` as root to see any error messages when plugging in the device, if any, and see which status messages are being printed when doing so
+2016-02-02 00:06:25	<--	asif (~asif@43.231.22.14) has quit (Quit: Konversation terminated!)
+2016-02-02 00:06:47	Firefishe	cisc:  Thank you.  I'll try that now.
+2016-02-02 00:07:14	cisc	also try different USB port to rule out port issue, and that includes motherboard USB ports not just front ports as those can sometimes have issues
+2016-02-02 00:07:28	Firefishe	It's a laptop
+2016-02-02 00:07:35	cisc	ic
+2016-02-02 00:07:37	-->	fredp (~fredp@unaffiliated/fredp) has joined #suse
+2016-02-02 00:08:31	--	gryffus is now known as gryffus_
+2016-02-02 00:09:20	Firefishe	cisc: Here's the output: http://paste.opensuse.org/97470027
+2016-02-02 00:10:22	Firefishe	cisc: My main issue is that when I plug it in, the light doesn't come on.
+2016-02-02 00:10:38	Firefishe	cisc: I need to send a power on command to it.
+2016-02-02 00:11:41	-->	woose (~woose@c-76-105-83-149.hsd1.ga.comcast.net) has joined #suse
+2016-02-02 00:11:56	<--	woose (~woose@c-76-105-83-149.hsd1.ga.comcast.net) has quit (Changing host)
+2016-02-02 00:11:56	-->	woose (~woose@unaffiliated/woose) has joined #suse
+2016-02-02 00:13:53	cisc	are you able to test the USB device on another Linux PC?
+2016-02-02 00:15:10	<--	camilo (~camilo@r167-62-83-11.dialup.adsl.anteldata.net.uy) has quit (Quit: Konversation terminated!)
+2016-02-02 00:15:40	cisc	is this on Leap or 13.2?
+2016-02-02 00:16:52	cisc	Firefishe: check `systemctl status bluetooth`
+2016-02-02 00:17:02	-->	glin (~glin@203.192.156.9) has joined #suse
+2016-02-02 00:17:06	Firefishe	cisc:  okay
+2016-02-02 00:18:22	Firefishe	cisc: http://paste.opensuse.org/19719831
+2016-02-02 00:18:47	cisc	how about lsmod |grep blue
+2016-02-02 00:22:08	cisc	Firefishe: you can also try `rmmod btusb` and then `modprobe btusb` as root to reload the kernel module
+2016-02-02 00:23:10	pmercado	Hi, I have a general protection kernel message
+2016-02-02 00:23:38	cisc	Firefishe: also if you haven't tried, try rebooting the system
+2016-02-02 00:23:45	-->	SandyBeach (~theboss@cblmdm72-240-229-197.buckeyecom.net) has joined #suse
+2016-02-02 00:24:00	--	SandyBeach is now known as GeorgeOrwell
+2016-02-02 00:25:12	Firefishe	cisc: One variable I need to tell you about:  I used to be on Win7 before I upgraded to 10.  I used a win systemtray bluetooth Right-Click Menu command to turn the dongle off.  I would've tried that way to turn it back on, but I can't uninstall my Win10 bluetooth stack to install anything new.  I keep getting uninstall errors; but this isn't a win help channel, so I won't press.
+2016-02-02 00:25:34	pmercado	!paste
+2016-02-02 00:25:34	SUSEhelp	Please don't paste more than 3 lines in the channel; instead, use one of http://paste.opensuse.org/ , http://pastebin.com/ or http://pastie.org/ -- for pics, use http://img.susepaste.org/ , http://picpaste.com/ or http://min.us/ and/or install susepaste package giving you a cli client to susepaste.org page
+2016-02-02 00:25:42	Firefishe	oops...sowwy
+2016-02-02 00:26:40	Firefishe	cisc: I'm researching that end of it.  However, I see no reason why I can't do something on the 'nix side.  I know it's going to be something simple I'm just overlooking.
+2016-02-02 00:26:41	Stallmanu	your message doesnt count as 3 lines ;)
+2016-02-02 00:26:46	cisc	turning the dongle on or off in Windows has nothing to do with if it will work or not under openSUSE
+2016-02-02 00:27:02	pmercado	http://img.susepaste.org/11670731
+2016-02-02 00:27:04	Firefishe	cisc:  I'd run across this problem before.
+2016-02-02 00:27:28	Firefishe	cisc:  It didn't work when I had turned it off via the menu in win.
+2016-02-02 00:27:35	Firefishe	And tried to use in 'nix.
+2016-02-02 00:27:43	cisc	Firefishe: so the dongle has problems under Windows?
+2016-02-02 00:27:46	cisc	maybe it's a bad device?
+2016-02-02 00:28:17	-->	joelgordon (~jgordon@2605:a601:580:c300:2ab2:bdff:fe6e:5a69) has joined #suse
+2016-02-02 00:28:32	Firefishe	cisc:  It could be, it's old, but it hasn't failed yet.  It has to do with software being used to turn the internal chipset of the dongle off, manually.  I'd always been able to reenable it, however, using the same method.
+2016-02-02 00:29:15	Firefishe	cisc:  However, now, I can't even install the latest win 10 software from the manufacturer.  I keep getting "uninstall current bluetooth software first" errors.
+2016-02-02 00:29:56	Firefishe	cisc:  I *did* that, but the installer believes that something else is there, meaning, something didn't get removed.  I'm probably going to have to dig through the bloody registry.
+2016-02-02 00:30:11	Firefishe	which is why I like suse :-)
+2016-02-02 00:30:33	Firefishe	The thing is, I also like 10.  I use both for different things.
+2016-02-02 00:30:44	<--	curfont (~gt@modularaviation.com) has quit (Ping timeout: 246 seconds)
+2016-02-02 00:30:49	Firefishe	I also enjoy mac.  I'm an os nut, I guess.
+2016-02-02 00:30:54	-->	curfont (~gt@modularaviation.com) has joined #suse
+2016-02-02 00:31:10	Firefishe	Hell, I was running Yellow Dog on an old GS4 power book back in the day ;-).
+2016-02-02 00:32:35	Firefishe	cisc:  I've also tried installing the broadcom (widcomm) software directly from Broadcom, but the installer is a pain.  It tried to detect the hardware first, before installing any software.  If it just installed the software, I wouldn't have an issue.
+2016-02-02 00:32:47	Firefishe	cisc: It's software installation logistics that are kicking my arse right now.
+2016-02-02 00:32:53	cisc	Firefishe: I would google the chipset, BCM2046B1 and start from there. I looked but everything was back in 2009 so its a pretty old device. maybe you should just spend 10 dollars and get a new one
+2016-02-02 00:33:11	Firefishe	cisc: I'm beginning to believe I should, actually.
+2016-02-02 00:33:55	Firefishe	cisc:  4.x bluetooth is better, anyway.  And with the new low power specification, it might even be more efficient.  This computer is vintage 2008, as well.  Really time for an upgrade.
+2016-02-02 00:34:17	Firefishe	cisc:  Anyway, I appreciate your help. :-)  *Tosses You A Coke*
+2016-02-02 00:34:28	Firefishe	You may put rum in it, or not, at your leisure.
+2016-02-02 00:34:49	<--	promulo__ (~quassel@p3E9D2151.dip0.t-ipconnect.de) has quit (Ping timeout: 246 seconds)
+2016-02-02 00:34:50	-->	pmercado_ (~pmercado@186-104-201-107.baf.movistar.cl) has joined #suse
+2016-02-02 00:36:14	<--	Walreason (~walrea@75.151.113.165) has quit (Quit: Konversation terminated!)
+2016-02-02 00:36:59	<--	pmercado (~pmercado@186.104.201.107) has quit (Disconnected by services)
+2016-02-02 00:37:04	--	pmercado_ is now known as pmercado
+2016-02-02 00:37:08	--	fredp is now known as fredp2-away
+2016-02-02 00:38:32	<--	Firefishe (~kvirc@67.158.3.200) has quit (Quit: KVIrc 4.3.1 Aria http://www.kvirc.net/)
+2016-02-02 00:44:33	-->	Berzeck_ (~Berzeck@static-186-121-215-243.acelerate.net) has joined #suse
+2016-02-02 00:44:47	<--	Berzeck (~Berzeck@static-200-105-219-41.acelerate.net) has quit (Ping timeout: 265 seconds)
+2016-02-02 00:48:44	<--	krobzaur_ (~Kyle@c-75-68-113-169.hsd1.nh.comcast.net) has quit (Ping timeout: 264 seconds)
+2016-02-02 00:53:56	<--	woose (~woose@unaffiliated/woose) has quit (Quit: Leaving)
+2016-02-02 00:55:23	-->	Berzeck (~Berzeck@static-186-121-215-243.acelerate.net) has joined #suse
+2016-02-02 00:55:43	<--	Berzeck_ (~Berzeck@static-186-121-215-243.acelerate.net) has quit (Ping timeout: 272 seconds)
+2016-02-02 01:00:51	--	gryffus_ is now known as gryffus
+2016-02-02 01:02:26	-->	krobzaur_ (~Kyle@c-75-68-113-169.hsd1.nh.comcast.net) has joined #suse
+2016-02-02 01:03:01	<--	ovaistariq (~ovaistari@12.22.22.10) has quit (Remote host closed the connection)
+2016-02-02 01:06:07	<--	drFaustroll (~alin@opensuse/member/ealin) has quit (Remote host closed the connection)
+2016-02-02 01:07:00	-->	drFaustroll (~alin@host81-153-195-59.range81-153.btcentralplus.com) has joined #suse
+2016-02-02 01:07:00	<--	drFaustroll (~alin@host81-153-195-59.range81-153.btcentralplus.com) has quit (Changing host)
+2016-02-02 01:07:00	-->	drFaustroll (~alin@opensuse/member/ealin) has joined #suse
+2016-02-02 01:07:32	-->	u0_a498 (~u0_a498@203.87.156.135) has joined #suse
+2016-02-02 01:07:47	<--	kamdard (~kamdard@pool-96-226-235-121.dllstx.fios.verizon.net) has quit (Ping timeout: 250 seconds)
+2016-02-02 01:10:07	<--	joelgordon (~jgordon@2605:a601:580:c300:2ab2:bdff:fe6e:5a69) has quit (Quit: Leaving.)
+2016-02-02 01:11:51	<--	okurz (~okurz@ppp-46-244-248-68.dynamic.mnet-online.de) has quit (Ping timeout: 265 seconds)
+2016-02-02 01:12:12	-->	gpy91 (~gpy91@122.170.167.167) has joined #suse
+2016-02-02 01:12:54	-->	okurz (~okurz@ppp-46-244-230-144.dynamic.mnet-online.de) has joined #suse
+2016-02-02 01:13:14	gpy91	I'm on http://download.opensuse.org/tumbleweed/iso/ looking at TW network install... what's the difference between current.iso and snapshot-date-media.iso?
+2016-02-02 01:13:44	-->	rchavik (~rchavik@unaffiliated/rchavik) has joined #suse
+2016-02-02 01:15:22	Simotek-Work	at a guess current is a symlink
+2016-02-02 01:16:06	-->	ovaistariq (~ovaistari@175.sub-70-197-11.myvzw.com) has joined #suse
+2016-02-02 01:17:28	gpy91	I'll try the forums
+2016-02-02 01:17:35	<--	gpy91 (~gpy91@122.170.167.167) has left #suse ("Leaving")
+2016-02-02 01:18:23	cisc	its the same exact file but he already left..
+2016-02-02 01:18:33	-->	cra1g321 (~craig@5.80.166.163) has joined #suse
+2016-02-02 01:19:54	<--	alban__ (~alban@180.150.131.12) has quit (Quit: Konversation terminated!)
+2016-02-02 01:21:02	<--	drFaustroll (~alin@opensuse/member/ealin) has quit (Remote host closed the connection)
+2016-02-02 01:22:29	-->	Guest77084 (~alin@host81-153-195-59.range81-153.btcentralplus.com) has joined #suse
+2016-02-02 01:28:01	-->	Two_Dogs (~snak-kat@unaffiliated/almoxarife) has joined #suse
+2016-02-02 01:28:28	<--	cisc (~cisc@unaffiliated/cisc) has quit (Quit: Konversation terminated!)
+2016-02-02 01:28:38	<--	Two_Dogs (~snak-kat@unaffiliated/almoxarife) has quit (Client Quit)
+2016-02-02 01:29:37	<--	krobzaur_ (~Kyle@c-75-68-113-169.hsd1.nh.comcast.net) has quit (Ping timeout: 248 seconds)
+2016-02-02 01:29:47	<--	tomcat_berlin (~thomas@x4db3d04b.dyn.telefonica.de) has quit (Quit: Konversation terminated!)
+2016-02-02 01:29:57	<--	isaque (~isaque@187.2.59.156) has quit (Quit: Leaving)
+2016-02-02 01:31:46	--	gryffus is now known as gryffus_
+2016-02-02 01:34:48	<--	deadlock (~ddlck@unaffiliated/deadlock) has quit (Quit: Saindo)
+2016-02-02 01:37:04	-->	electron_shell (~tek@99-194-2-110.dyn.centurytel.net) has joined #suse
+2016-02-02 01:39:02	<--	shanemikel (~spearlman@c-73-162-96-145.hsd1.ca.comcast.net) has quit (Quit: Konversation terminated!)
+2016-02-02 01:39:35	-->	Brandon (~Brandon@186.80.41.203) has joined #suse
+2016-02-02 01:39:58	--	Brandon is now known as Guest34476
+2016-02-02 01:40:18	<--	Guest77084 (~alin@host81-153-195-59.range81-153.btcentralplus.com) has quit (Remote host closed the connection)
+2016-02-02 01:43:54	-->	Two_Dogs (~snak-kat@c-24-18-120-89.hsd1.wa.comcast.net) has joined #suse
+2016-02-02 01:43:54	<--	Two_Dogs (~snak-kat@c-24-18-120-89.hsd1.wa.comcast.net) has quit (Changing host)
+2016-02-02 01:43:54	-->	Two_Dogs (~snak-kat@unaffiliated/almoxarife) has joined #suse
+2016-02-02 01:45:49	-->	cisc (~cisc@unaffiliated/cisc) has joined #suse
+2016-02-02 01:46:17	<--	pmercado (~pmercado@186-104-201-107.baf.movistar.cl) has quit (Quit: Konversation terminated!)
+2016-02-02 01:46:26	cisc	so so I got rid of KTorrent and DL qbittorent, RIP KTorrent
+2016-02-02 01:46:52	cisc	https://www.reddit.com/r/kde/comments/2ckmvm/is_ktorrent_dead/
+2016-02-02 01:48:32	<--	Guest34476 (~Brandon@186.80.41.203) has quit (Quit: Konversation terminated!)
+2016-02-02 01:48:59	cisc	still being maintained though https://quickgit.kde.org/?p=ktorrent.git&a=shortlog
+2016-02-02 01:49:46	<--	electron_shell (~tek@99-194-2-110.dyn.centurytel.net) has left #suse
+2016-02-02 01:54:51	<--	ovaistariq (~ovaistari@175.sub-70-197-11.myvzw.com) has quit (Remote host closed the connection)
+2016-02-02 02:02:37	<--	^2 (~glen@unaffiliated/ridout) has quit (Quit: Lost terminal)
+2016-02-02 02:02:41	<--	rchavik (~rchavik@unaffiliated/rchavik) has quit (Ping timeout: 256 seconds)
+2016-02-02 02:02:51	--	gryffus_ is now known as gryffus
+2016-02-02 02:03:27	<--	plinnell (~mrdocs@opensuse/member/mrdocs) has quit (Quit: Konversation terminated!)
+2016-02-02 02:03:33	<--	lampi (~lampi@nblzone-227-71.nblnetworks.fi) has quit
+2016-02-02 02:04:16	-->	electron_shell (~tek@99-194-2-110.dyn.centurytel.net) has joined #suse
+2016-02-02 02:07:53	Stallmanu	damn people who build packages without enabling all the supported features -_-
+2016-02-02 02:09:05	-->	^CrYpto^ (~^CrYpTo^@64.203.221.65) has joined #suse
+2016-02-02 02:11:22	Simotek-Work	Stallmanu, some upstreams don't like you to do that
+2016-02-02 02:11:28	Stallmanu	yeah I know
+2016-02-02 02:11:39	Stallmanu	just in this case it means I have to build it myself :(
+2016-02-02 02:11:46	Simotek-Work	the defaults should be the sensible ones
+2016-02-02 02:11:57	Simotek-Work	but how hard is it to fork on obs and change a flag?
+2016-02-02 02:11:58	Stallmanu	oh well, at least its an excuse to practice my packaging skills
+2016-02-02 02:12:05	Stallmanu	yeah thats what I am doing now
+2016-02-02 02:12:06	<--	Two_Dogs (~snak-kat@unaffiliated/almoxarife) has quit (Quit: Konversation terminated!)
+2016-02-02 02:12:20	Simotek-Work	which reminds me i was going to build hexchat with appindicator support
+2016-02-02 02:12:22	<--	u0_a498 (~u0_a498@203.87.156.135) has quit (Ping timeout: 240 seconds)
+2016-02-02 02:14:06	<--	waveclaw (~quassel@ip98-162-235-192.ok.ok.cox.net) has quit (Remote host closed the connection)
+2016-02-02 02:14:36	-->	u0_a498 (~u0_a498@203.87.156.135) has joined #suse
+2016-02-02 02:16:07	-->	rchavik (~rchavik@unaffiliated/rchavik) has joined #suse
+2016-02-02 02:26:16	-->	bloke (0184604c@gateway/web/freenode/ip.1.132.96.76) has joined #suse
+2016-02-02 02:26:56	-->	plinnell (~mrdocs@opensuse/member/mrdocs) has joined #suse
+2016-02-02 02:31:29	-->	slk021 (~slk@62.193.157.122) has joined #suse
+2016-02-02 02:31:49	<--	bloke (0184604c@gateway/web/freenode/ip.1.132.96.76) has left #suse
+2016-02-02 02:32:24	-->	mass_fraction (~tek@99-194-2-110.dyn.centurytel.net) has joined #suse
+2016-02-02 02:35:38	<--	klepto (~kleptos@unaffiliated/kleptos) has quit (Quit: WeeChat 1.4)
+2016-02-02 02:37:22	<--	slk021 (~slk@62.193.157.122) has quit (Quit: Одлазим)
+2016-02-02 02:38:21	<--	electron_shell (~tek@99-194-2-110.dyn.centurytel.net) has left #suse
+2016-02-02 02:42:19	<--	bladerunner76 (~Thunderbi@50.33.206.17) has quit (Quit: bladerunner76)
+2016-02-02 02:42:32	-->	LenZGr (~lenz@x50ab2b55.dyn.telefonica.de) has joined #suse
+2016-02-02 02:42:32	<--	LenZGr (~lenz@x50ab2b55.dyn.telefonica.de) has quit (Excess Flood)
+2016-02-02 02:42:50	-->	LenZGr (~lenz@x50ab2b55.dyn.telefonica.de) has joined #suse
+2016-02-02 02:46:22	<--	Lenz (~lenz@x50ab2a95.dyn.telefonica.de) has quit (Ping timeout: 240 seconds)
+2016-02-02 02:48:43	-->	CodeOn (~CodeOn@14.194.71.39) has joined #suse
+2016-02-02 02:50:48	-->	AshishH (ahumbe@nat/redhat/session) has joined #suse
+2016-02-02 02:50:48	<--	AshishH (ahumbe@nat/redhat/session) has quit (Changing host)
+2016-02-02 02:50:48	-->	AshishH (ahumbe@nat/redhat/x-bmbxdrgjjubihwwn) has joined #suse
+2016-02-02 02:51:59	-->	bladerunner76 (~Thunderbi@50.33.206.17) has joined #suse
+2016-02-02 02:53:30	<--	CodeOn (~CodeOn@14.194.71.39) has quit (Ping timeout: 272 seconds)
+2016-02-02 02:56:16	-->	aram_grigoryan (~aram@37.157.222.132) has joined #suse
+2016-02-02 02:59:13	Stallmanu	Simotek-Work: shoot, any idea how to deal with these weird paths (see files and install section) https://build.opensuse.org/package/view_file/home:alanbortu:hydra/hydra/hydra.spec?expand=1
+2016-02-02 03:00:08	Stallmanu	ah do i need to use install -D
+2016-02-02 03:01:33	-->	waveclaw (~quassel@ip98-162-235-192.ok.ok.cox.net) has joined #suse
+2016-02-02 03:02:16	<--	mass_fraction (~tek@99-194-2-110.dyn.centurytel.net) has left #suse ("Leaving")
+2016-02-02 03:02:22	<--	simpsonetti (~simpsonet@ip4d14a3e1.dynamic.kabel-deutschland.de) has quit (Ping timeout: 260 seconds)
+2016-02-02 03:03:30	Simotek-Work	Stallmanu, cp %{buildroot}/%{_mandir}/man1/... %{_mandir}/man1/... would be the correctter way
+2016-02-02 03:04:08	Simotek-Work	nope i got that wrong Stallmanu
+2016-02-02 03:04:24	Stallmanu	In a sane setup I think that makes sense
+2016-02-02 03:04:49	Stallmanu	unfortunately this one is a bit strange :P
+2016-02-02 03:05:04	Simotek-Work	Stallmanu, you want to copy them too %{buildroot}/%{_mandir}/man1/
+2016-02-02 03:05:22	-->	simpsonetti (~simpsonet@ip4d14a3e1.dynamic.kabel-deutschland.de) has joined #suse
+2016-02-02 03:05:27	Simotek-Work	from where ever they are in the source directory
+2016-02-02 03:07:10	-->	crazyraven (~do@221.148.2.152) has joined #suse
+2016-02-02 03:07:45	Stallmanu	I see, so the dest would need buildroot, but what about source? I cant remember what the macro for that was, using just /usr/man/... doesnt work since it looks at the build system root and not inside rpmbuild dir
+2016-02-02 03:08:56	plinnell	Stallmanu: /usr/etc is a weird location for the .csv files
+2016-02-02 03:09:10	plinnell	 /usr/etc is used in BSD
+2016-02-02 03:09:11	Stallmanu	yes I know, its boggling my mind
+2016-02-02 03:09:30	plinnell	and use cp not mv
+2016-02-02 03:09:32	Stallmanu	yep, its hard coded I think, I found it in the configure file using grep
+2016-02-02 03:10:01	plinnell	is it autotooled ?  in other owrds autoconfig.ac ?
+2016-02-02 03:10:06	Stallmanu	Seems its some Sun related thing just from reading the comments near it
+2016-02-02 03:10:24	plinnell	  /usr/etc would be OK on Solaris
+2016-02-02 03:10:41	plinnell	old school Unix way of doing things
+2016-02-02 03:12:46	Stallmanu	plinnell: https://github.com/vanhauser-thc/thc-hydra/blob/master/configure
+2016-02-02 03:13:20	Stallmanu	I think its just a script they wrote...
+2016-02-02 03:13:39	<--	bladerunner76 (~Thunderbi@50.33.206.17) has quit (Ping timeout: 265 seconds)
+2016-02-02 03:13:48	<--	aram_grigoryan (~aram@37.157.222.132) has quit (Quit: Konversation terminated!)
+2016-02-02 03:14:10	plinnell	eew
+2016-02-02 03:14:16	plinnell	thats fugly
+2016-02-02 03:14:48	plinnell	why dont people use standard tools like CMaeke ?  save so much pain long term
+2016-02-02 03:14:55	Stallmanu	if you ctrl+f for /usr/etc you should see it
+2016-02-02 03:15:04	Stallmanu	I think its is a very old project
+2016-02-02 03:15:09	Simotek-Work	Stallmanu, you might be able to cp %{_mandir} %{buildroot} without the leading /
+2016-02-02 03:15:19	Simotek-Work	cmake is wonderful
+2016-02-02 03:16:06	Simotek-Work	theres a couple of python libs and apps that i keep putting off as they don't have proper build scropts
+2016-02-02 03:16:51	plinnell	http://rants.scribus.net/2006/05/20/cmake-rocks/  10 years ago I wrote that ;)
+2016-02-02 03:17:06	Stallmanu	2006 was ten years ago... :S
+2016-02-02 03:17:24	<--	sheilau_os (~xpsu@cpe-184-57-239-234.cinci.res.rr.com) has quit (Ping timeout: 252 seconds)
+2016-02-02 03:17:32	plinnell	we converted in parallel with the KDE folks
+2016-02-02 03:17:47	plinnell	Simotek-Work: im one of the Scribus devs
+2016-02-02 03:17:55	Simotek-Work	ahh thats right
+2016-02-02 03:18:06	Simotek-Work	plinnell, we use it here, but mostly because we build for embedded linux + windows
+2016-02-02 03:18:19	Simotek-Work	and very occasionally android
+2016-02-02 03:18:28	plinnell	we even have it working on OS/2 !
+2016-02-02 03:19:11	plinnell	there is a reason the Scribus team calls auto* autohell ;)
+2016-02-02 03:19:49	Simotek-Work	yeah enlightenment uses it, if theres a build system issue i just raise a bug rather then trying to fix it
+2016-02-02 03:20:33	plinnell	im not a language bigot, but m4 is pain
+2016-02-02 03:20:40	plinnell	like sendmail ;)
+2016-02-02 03:23:35	-->	Walreason (~walrea@75-151-113-165-Washington.hfc.comcastbusiness.net) has joined #suse
+2016-02-02 03:25:56	Stallmanu	hmm cp doesnt seem to work right, it cant seem to find the files 0.o
+2016-02-02 03:26:17	Stallmanu	so this is with cp removed, and no %files section:
+2016-02-02 03:26:29	Stallmanu	Installed (but unpackaged) file(s) found: ... /usr/man/man1/hydra.1.gz
+2016-02-02 03:26:51	Stallmanu	But when I add the cp I get this: cp: cannot stat '/home/abuild/rpmbuild/BUILDROOT/hydra-1453303296.6c1db2a-0.x86_64/usr/man/man1/hydra.1.gz': No such file or directory
+2016-02-02 03:26:53	plinnell	you need to cp from a source directory
+2016-02-02 03:27:08	--	gryffus is now known as gryffus_
+2016-02-02 03:28:00	<--	jamtech (~Thunderbi@ip98-160-205-134.lv.lv.cox.net) has quit (Quit: jamtech)
+2016-02-02 03:28:59	Stallmanu	plinnell: just commited my changes https://build.opensuse.org/package/view_file/home:alanbortu:hydra/hydra/hydra.spec?expand=1
+2016-02-02 03:29:34	Stallmanu	I thought I had to copy from buildroot/usr/... to buildroot/mandir/... and so on?
+2016-02-02 03:30:25	<--	cra1g321 (~craig@5.80.166.163) has quit (Quit: Konversation terminated!)
+2016-02-02 03:31:22	-->	tunage (~kvirc@32.209.66.82) has joined #suse
+2016-02-02 03:32:54	Simotek-Work	Stallmanu, Installed (but unpackaged) file(s) found: ... /usr/man/man1/hydra.1.gz means that its missing from the %files section
+2016-02-02 03:33:08	Stallmanu	yep, I just did that to get the path
+2016-02-02 03:33:28	Stallmanu	oh wait...
+2016-02-02 03:34:32	Stallmanu	hmm no I am not sure where its being stored
+2016-02-02 03:35:22	Simotek-Work	Stallmanu, run it again without doing any "cp's" it seems like the files are already installed to the right place, your just not packaging them
+2016-02-02 03:35:43	<--	^CrYpto^ (~^CrYpTo^@64.203.221.65) has quit (Ping timeout: 246 seconds)
+2016-02-02 03:35:52	Stallmanu	but isnt the path /usr/share/man, not /usr/man ?
+2016-02-02 03:36:10	<--	Christian (~Gizmoe@185.76.97.140) has quit (Ping timeout: 256 seconds)
+2016-02-02 03:36:39	plinnell	 /usr/share/man looks correct
+2016-02-02 03:37:14	Stallmanu	so I have to copy it there then, no?
+2016-02-02 03:37:50	plinnell	yes or mv them
+2016-02-02 03:38:34	plinnell	ls /usr/man
+2016-02-02 03:38:36	plinnell	ls: cannot access /usr/man: No such file or directory
+2016-02-02 03:38:57	Stallmanu	I just went off of what mandir is a macro for :P
+2016-02-02 03:40:11	<--	zacts (~zacts@freebsd/geek/zacts) has left #suse
+2016-02-02 03:41:25	Stallmanu	plinnell: https://build.opensuse.org/package/view_file/home:alanbortu:hydra/hydra/hydra.spec?expand=1
+2016-02-02 03:41:59	Stallmanu	It seems to complain that %{buildroot}/usr/man/man1/hydra.1.gz does not exist
+2016-02-02 03:42:18	-->	nwang (~nick@203.192.156.9) has joined #suse
+2016-02-02 03:45:07	<--	archang (~archang@111.198.29.54) has quit (Remote host closed the connection)
+2016-02-02 03:45:26	-->	ovaistariq (~ovaistari@2601:641:101:73b1:f510:8320:b649:a51b) has joined #suse
+2016-02-02 03:46:06	-->	ovaistar_ (~ovaistari@67.170.251.97) has joined #suse
+2016-02-02 03:49:30	Simotek-Work	you will want to move them, otherwise it will continue to complain you didn't package the ones in the old location
+2016-02-02 03:49:50	<--	ovaistariq (~ovaistari@2601:641:101:73b1:f510:8320:b649:a51b) has quit (Ping timeout: 250 seconds)
+2016-02-02 03:49:56	Stallmanu	Its not letting me move them though :(
+2016-02-02 03:50:22	Stallmanu	It says they dont exist when I run the mv command: https://build.opensuse.org/package/live_build_log/home:alanbortu:hydra/hydra/openSUSE_Leap_42.1/x86_64
+2016-02-02 03:52:39	<--	AlbertoP (~AlbertoP@pdpc/supporter/active/AlbertoP) has quit (Quit: Leaving)
+2016-02-02 03:53:32	-->	hpj (~hpj@189.188.193.163) has joined #suse
+2016-02-02 03:54:59	Simotek-Work	thats strange
+2016-02-02 03:57:22	Simotek-Work	Stallmanu, this is where i add a ls -la %{buildroot}/usr/man/man1
+2016-02-02 03:57:48	Stallmanu	oh good idea
+2016-02-02 03:58:18	Stallmanu	Okay well I made an issue on github for the weird paths, I would prefer they just fix the script
+2016-02-02 03:59:04	Stallmanu	ah.. no .gz file....
+2016-02-02 03:59:40	Stallmanu	Simotek-Work: http://paste.opensuse.org/view/simple/b3b90cda, so what makes the .gz file then?
+2016-02-02 04:00:44	<--	rchavik (~rchavik@unaffiliated/rchavik) has quit (Ping timeout: 264 seconds)
+2016-02-02 04:00:45	Simotek-Work	i'm not sure, what if you  just rm the dirs?
+2016-02-02 04:00:53	Simotek-Work	who needs local man pages anyway :P
+2016-02-02 04:01:10	Stallmanu	lol
+2016-02-02 04:02:23	--	gryffus_ is now known as gryffus
+2016-02-02 04:05:13	-->	weedmic (~weedmic@bzq-218-155-154.cablep.bezeqint.net) has joined #suse
+2016-02-02 04:05:29	Stallmanu	Simotek-Work, plinnell okay well bed time for me. Thanks for all the help, I think its close to done.
+2016-02-02 04:06:15	<--	Stallmanu (~gum@fsf/member/Stallmanu) has quit (Quit: Konversation terminated!)
+2016-02-02 04:07:25	--	gryffus is now known as gryffus_
+2016-02-02 04:09:53	-->	tuxawy (~hamada@114.198.236.100) has joined #suse
+2016-02-02 04:10:04	-->	kalinin_pv (~kalinin_p@mail.transset.ru) has joined #suse
+2016-02-02 04:10:19	--	kalinin_pv is now known as User_Man
+2016-02-02 04:10:41	<--	Conny__ (~Conny@85-22-85-79.ip.dokom21.de) has quit (Ping timeout: 250 seconds)
+2016-02-02 04:10:52	-->	Conny__ (~Conny@85-22-113-245.ip.dokom21.de) has joined #suse
+2016-02-02 04:13:00	-->	rchavik (~rchavik@unaffiliated/rchavik) has joined #suse
+2016-02-02 04:14:31	<--	tuxawy (~hamada@114.198.236.100) has quit (Client Quit)
+2016-02-02 04:14:44	-->	tuxawy (~hamada@114.198.236.100) has joined #suse
+2016-02-02 04:15:53	<--	eadthem (~eadthem@pdpc/supporter/active/eadthem) has quit (Ping timeout: 250 seconds)
+2016-02-02 04:19:14	-->	Two_Dogs (~snak-kat@unaffiliated/almoxarife) has joined #suse
+2016-02-02 04:20:00	<--	hpj (~hpj@189.188.193.163) has quit (Quit: Leaving.)
+2016-02-02 04:26:05	-->	mvidner (~martin@opensuse/member/mvidner) has joined #suse
+2016-02-02 04:27:02	-->	Guest77084 (~alin@host81-153-195-59.range81-153.btcentralplus.com) has joined #suse
+2016-02-02 04:31:50	<--	schtonk (~quassel@ip5b4160a0.dynamic.kabel-deutschland.de) has quit (Ping timeout: 246 seconds)
+2016-02-02 04:32:46	<--	mvidner (~martin@opensuse/member/mvidner) has quit (Ping timeout: 260 seconds)
+2016-02-02 04:32:50	-->	schtonk (~quassel@ip5b4160a0.dynamic.kabel-deutschland.de) has joined #suse
+2016-02-02 04:36:04	<--	Guest77084 (~alin@host81-153-195-59.range81-153.btcentralplus.com) has quit (Remote host closed the connection)
+2016-02-02 04:36:27	-->	Guest77084 (~alin@host81-153-195-59.range81-153.btcentralplus.com) has joined #suse
+2016-02-02 04:37:25	--	gryffus_ is now known as gryffus
+2016-02-02 04:37:44	<--	Two_Dogs (~snak-kat@unaffiliated/almoxarife) has quit (Ping timeout: 265 seconds)
+2016-02-02 04:40:00	<--	fredp2-away (~fredp@unaffiliated/fredp) has quit (Ping timeout: 248 seconds)
+2016-02-02 04:40:13	-->	gabrielsyme (~gabrielsy@84.53.196.110) has joined #suse
+2016-02-02 04:40:46	-->	frispete (~frispete@p54A90274.dip0.t-ipconnect.de) has joined #suse
+2016-02-02 04:41:35	<--	fahadash (uid44972@gateway/web/irccloud.com/x-quopbvndwlfhdfsk) has quit (Quit: Connection closed for inactivity)
+2016-02-02 04:44:58	<--	frispete_ (~frispete@p54A918F2.dip0.t-ipconnect.de) has quit (Ping timeout: 272 seconds)
+2016-02-02 04:48:42	-->	edogawa (~quassel@194-166-194-5.adsl.highway.telekom.at) has joined #suse
+2016-02-02 04:51:04	-->	fredp2-away (~fredp@unaffiliated/fredp) has joined #suse
+2016-02-02 04:51:10	-->	dalgaaf (uid15138@gateway/web/irccloud.com/x-lpvkvqhynesxgrvo) has joined #suse
+2016-02-02 04:51:46	-->	Two_Dogs (~snak-kat@unaffiliated/almoxarife) has joined #suse
+2016-02-02 04:53:51	-->	howi (howardg@nat/novell/x-jynenefkzulrkyek) has joined #suse
+2016-02-02 04:58:46	<--	Guest77084 (~alin@host81-153-195-59.range81-153.btcentralplus.com) has quit (Remote host closed the connection)
+2016-02-02 04:59:11	-->	Guest77084 (~alin@host81-153-195-59.range81-153.btcentralplus.com) has joined #suse
+2016-02-02 05:06:28	-->	Vojtaeus (~vojta@nat-prf25.natur.cuni.cz) has joined #suse
+2016-02-02 05:06:28	<--	Vojtaeus (~vojta@nat-prf25.natur.cuni.cz) has quit (Changing host)
+2016-02-02 05:06:28	-->	Vojtaeus (~vojta@opensuse/member/vojtaeus) has joined #suse
+2016-02-02 05:06:48	--	gryffus is now known as gryffus_
+2016-02-02 05:07:33	-->	aram_g (~aram@37.157.222.132) has joined #suse
+2016-02-02 05:08:27	-->	bladerunner76 (~Thunderbi@50.33.206.17) has joined #suse
+2016-02-02 05:09:22	<--	bladerunner76 (~Thunderbi@50.33.206.17) has quit (Client Quit)
+2016-02-02 05:10:32	-->	bladerunner76 (~Thunderbi@50.33.206.17) has joined #suse
+2016-02-02 05:11:23	<--	Two_Dogs (~snak-kat@unaffiliated/almoxarife) has quit (Ping timeout: 256 seconds)
+2016-02-02 05:17:29	-->	api984 (~api984@bss.uniline.hr) has joined #suse
+2016-02-02 05:19:20	-->	colyli (~colyli@203.192.156.9) has joined #suse
+2016-02-02 05:19:22	-->	eijk_ (~eijk@x55b2cb51.dyn.telefonica.de) has joined #suse
+2016-02-02 05:19:49	-->	eijk (~eijk@x55b2cb51.dyn.telefonica.de) has joined #suse
+2016-02-02 05:20:27	-->	Two_Dogs (~snak-kat@unaffiliated/almoxarife) has joined #suse
+2016-02-02 05:20:53	<--	tuxawy (~hamada@114.198.236.100) has quit (Remote host closed the connection)
+2016-02-02 05:23:27	-->	lescactus (~quassel@62.210.71.176) has joined #suse
+2016-02-02 05:23:36	-->	EugenA (~eugen@217.92.36.234) has joined #suse
+2016-02-02 05:23:45	-->	Holgi (Holgi@nat/suse/x-nhcztkdbxpfqjzym) has joined #suse
+2016-02-02 05:23:50	<--	eijk_ (~eijk@x55b2cb51.dyn.telefonica.de) has quit (Ping timeout: 256 seconds)
+2016-02-02 05:23:51	<--	rchavik (~rchavik@unaffiliated/rchavik) has quit (Ping timeout: 256 seconds)
+2016-02-02 05:26:06	<--	stochastix (~stochasti@unaffiliated/stochastix) has quit (Ping timeout: 240 seconds)
+2016-02-02 05:27:16	<--	edogawa (~quassel@194-166-194-5.adsl.highway.telekom.at) has quit (Remote host closed the connection)
+2016-02-02 05:28:25	-->	sugar_ (~sugar@128-69-188-166.broadband.corbina.ru) has joined #suse
+2016-02-02 05:28:46	<--	gabrielsyme (~gabrielsy@84.53.196.110) has quit (Ping timeout: 245 seconds)
+2016-02-02 05:30:44	u0_a498	  /2
+2016-02-02 05:30:53	-->	arturc (~arturc@87-206-22-88.dynamic.chello.pl) has joined #suse
+2016-02-02 05:31:25	-->	edogawa (~quassel@194-166-194-5.adsl.highway.telekom.at) has joined #suse
+2016-02-02 05:31:47	--	arturc is now known as apqlzm
+2016-02-02 05:33:00	<--	apqlzm (~arturc@87-206-22-88.dynamic.chello.pl) has left #suse
+2016-02-02 05:33:06	-->	apqlzm (~arturc@87-206-22-88.dynamic.chello.pl) has joined #suse
+2016-02-02 05:33:14	-->	Flotho66 (~florent@LStLambert-656-1-183-64.w80-14.abo.wanadoo.fr) has joined #suse
+2016-02-02 05:34:38	-->	mvyskocil (~mvyskocil@31.7.243.238) has joined #suse
+2016-02-02 05:34:38	<--	mvyskocil (~mvyskocil@31.7.243.238) has quit (Changing host)
+2016-02-02 05:34:38	-->	mvyskocil (~mvyskocil@opensuse/member/mvyskocil) has joined #suse
+2016-02-02 05:34:47	howi	does anyone know how to tell zypper to try another mirror :(
+2016-02-02 05:35:08	howi	this one is stuck at < 1k/s and zypper is downloading like a snail
+2016-02-02 05:35:48	LEDfan	Same problem here. I'm refreshing my repos for an hour now.....
+2016-02-02 05:37:19	howi	oi voi
+2016-02-02 05:38:21	--	Conny__ is now known as Conny
+2016-02-02 05:39:25	<--	ovaistar_ (~ovaistari@67.170.251.97) has quit (Remote host closed the connection)
+2016-02-02 05:39:51	<--	Two_Dogs (~snak-kat@unaffiliated/almoxarife) has quit (Ping timeout: 260 seconds)
+2016-02-02 05:40:02	-->	ovaistariq (~ovaistari@67.170.251.97) has joined #suse
+2016-02-02 05:40:04	-->	rchavik (~rchavik@unaffiliated/rchavik) has joined #suse
+2016-02-02 05:40:46	<--	huftis (~huftis@239.92-221-222.customer.lyse.net) has quit
+2016-02-02 05:43:02	-->	fvogt (fabian@nat/novell/x-dklfwnczxygrsenm) has joined #suse
+2016-02-02 05:44:43	<--	ovaistariq (~ovaistari@67.170.251.97) has quit (Ping timeout: 276 seconds)
+2016-02-02 05:45:09	-->	mcaj (quassel@nat/suse/x-uorvxzudkzsxelro) has joined #suse
+2016-02-02 05:45:43	u0_a498	2lp
+2016-02-02 05:46:26	u0_a498	20kbs updates fun
+2016-02-02 05:46:36	<--	curfont (~gt@modularaviation.com) has quit (Ping timeout: 246 seconds)
+2016-02-02 05:46:40	<--	LenZGr (~lenz@x50ab2b55.dyn.telefonica.de) has quit (Quit: Caught signal 11, Segmentation fault)
+2016-02-02 05:47:58	howi	modem ftw
+2016-02-02 05:49:56	-->	curfont (~gt@modularaviation.com) has joined #suse
+2016-02-02 05:54:30	-->	IonutVan (~IonutVan@opensuse/member/IonutVan) has joined #suse
+2016-02-02 05:54:47	<--	apqlzm (~arturc@87-206-22-88.dynamic.chello.pl) has quit (Quit: WeeChat 1.4)
+2016-02-02 05:55:59	<--	Guest77084 (~alin@host81-153-195-59.range81-153.btcentralplus.com) has quit (Quit: Konversation terminated!)
+2016-02-02 05:56:44	-->	apqlzm (~arturc@87-206-22-88.dynamic.chello.pl) has joined #suse
+2016-02-02 05:59:15	<--	fredp2-away (~fredp@unaffiliated/fredp) has quit (Ping timeout: 246 seconds)
+2016-02-02 05:59:17	--	gryffus_ is now known as gryffus
+2016-02-02 05:59:19	-->	fredp (~fredp@unaffiliated/fredp) has joined #suse
+2016-02-02 05:59:19	--	fredp is now known as fredp2-away
+2016-02-02 06:00:42	<--	}ls{ (~uhelp@unaffiliated/ls/x-8089558) has quit (Ping timeout: 240 seconds)
+2016-02-02 06:01:34	-->	vince (~vince@202.104-66-87.adsl-dyn.isp.belgacom.be) has joined #suse
+2016-02-02 06:01:38	-->	}ls{ (~uhelp@p54A9C5D1.dip0.t-ipconnect.de) has joined #suse
+2016-02-02 06:01:54	<--	}ls{ (~uhelp@p54A9C5D1.dip0.t-ipconnect.de) has quit (Changing host)
+2016-02-02 06:01:54	-->	}ls{ (~uhelp@unaffiliated/ls/x-8089558) has joined #suse
+2016-02-02 06:02:15	<--	fredp2-away (~fredp@unaffiliated/fredp) has quit (Client Quit)
+2016-02-02 06:02:30	<--	colyli (~colyli@203.192.156.9) has quit (Quit: See you ...)
+2016-02-02 06:02:40	-->	fredp2-away (~fredp@unaffiliated/fredp) has joined #suse
+2016-02-02 06:04:12	-->	colyli (~colyli@203.192.156.9) has joined #suse
+2016-02-02 06:04:35	<--	Walreason (~walrea@75-151-113-165-Washington.hfc.comcastbusiness.net) has quit (Quit: Konversation terminated!)
+2016-02-02 06:06:25	<--	aram_g (~aram@37.157.222.132) has quit (Quit: Konversation terminated!)
+2016-02-02 06:06:42	-->	guoyunhe (~Thunderbi@wireless-86-50-146-62.open.aalto.fi) has joined #suse
+2016-02-02 06:10:50	<--	Umeaboy (~Umeaboy@c-94-255-156-119.cust.bredband2.com) has quit (Quit: Leaving)
+2016-02-02 06:12:30	-->	dgutu (dgutu@nat/suse/x-ggrixyqcceuugcoj) has joined #suse
+2016-02-02 06:14:43	-->	TomyWork (~tomy@85.199.84.100) has joined #suse
+2016-02-02 06:15:10	-->	TomyLobo2 (~tomy@85.199.84.100) has joined #suse
+2016-02-02 06:15:35	<--	fredp2-away (~fredp@unaffiliated/fredp) has quit
+2016-02-02 06:16:00	-->	fredp2-away (~fredp@unaffiliated/fredp) has joined #suse
+2016-02-02 06:17:41	--	gryffus is now known as gryffus_
+2016-02-02 06:19:38	-->	kuter (~qwerty@gvx82.internetdsl.tpnet.pl) has joined #suse
+2016-02-02 06:23:22	<--	colyli (~colyli@203.192.156.9) has quit (Quit: See you ...)
+2016-02-02 06:26:42	-->	budlight (~richard@208-96-113-242.eastlink.ca) has joined #suse
+2016-02-02 06:29:31	<--	guoyunhe (~Thunderbi@wireless-86-50-146-62.open.aalto.fi) has quit (Ping timeout: 240 seconds)
+2016-02-02 06:30:38	<--	IonutVan (~IonutVan@opensuse/member/IonutVan) has quit (Quit: This computer has gone to sleep)
+2016-02-02 06:31:54	<--	mvyskocil (~mvyskocil@opensuse/member/mvyskocil) has quit (Ping timeout: 250 seconds)
+2016-02-02 06:32:01	<--	baigk (~Thunderbi@205.177.226.236) has quit (Read error: Connection reset by peer)
+2016-02-02 06:34:39	-->	IonutVan (~IonutVan@client244-243.wlan.hu-berlin.de) has joined #suse
+2016-02-02 06:34:39	<--	IonutVan (~IonutVan@client244-243.wlan.hu-berlin.de) has quit (Changing host)
+2016-02-02 06:34:39	-->	IonutVan (~IonutVan@opensuse/member/IonutVan) has joined #suse
+2016-02-02 06:34:40	<--	Bubi (~Bubi@p5DE97587.dip0.t-ipconnect.de) has quit (Ping timeout: 248 seconds)
+2016-02-02 06:35:11	-->	ijzervreter (~stephan@31.160.52.210) has joined #suse
+2016-02-02 06:35:26	-->	imobach_ (~imo@193.145.150.209) has joined #suse
+2016-02-02 06:35:48	<--	imobach_ (~imo@193.145.150.209) has quit (Client Quit)
+2016-02-02 06:35:52	-->	zombah (~zombah@2a02:28:3:1:214:4fff:fe47:5920) has joined #suse
+2016-02-02 06:36:08	<--	EugenA (~eugen@217.92.36.234) has quit (Ping timeout: 252 seconds)
+2016-02-02 06:38:07	<--	TomyWork (~tomy@85.199.84.100) has quit (Remote host closed the connection)
+2016-02-02 06:38:07	<--	TomyLobo2 (~tomy@85.199.84.100) has quit (Remote host closed the connection)
+2016-02-02 06:38:08	-->	oksana_ (~oksana@ipb218dfe5.dynamic.kabel-deutschland.de) has joined #suse
+2016-02-02 06:40:39	-->	mtcos (~quassel@5.14.74.36) has joined #suse
+2016-02-02 06:41:51	-->	ovaistariq (~ovaistari@67.170.251.97) has joined #suse
+2016-02-02 06:41:57	-->	Bubi (~Bubi@p508B68AE.dip0.t-ipconnect.de) has joined #suse
+2016-02-02 06:46:11	<--	ovaistariq (~ovaistari@67.170.251.97) has quit (Ping timeout: 240 seconds)
+2016-02-02 06:46:34	-->	tomcat_berlin (~thomas@natr.physik.hu-berlin.de) has joined #suse
+2016-02-02 06:49:29	<--	howi (howardg@nat/novell/x-jynenefkzulrkyek) has quit (Quit: Leaving.)
+2016-02-02 06:53:57	-->	TomyWork (~tomy@85.199.84.100) has joined #suse
+2016-02-02 06:56:38	-->	rossella_s (~rossella@93-50-134-228.ip152.fastwebnet.it) has joined #suse
+2016-02-02 07:03:31	-->	mvyskocil (~mvyskocil@opensuse/member/mvyskocil) has joined #suse
+2016-02-02 07:05:11	-->	srid (~srid@ip217-77-52-21.sampo.ru) has joined #suse
+2016-02-02 07:05:47	-->	knarfy (~knarf@50.Red-83-57-44.dynamicIP.rima-tde.net) has joined #suse
+2016-02-02 07:06:01	-->	Tiffon (~name@unaffiliated/tiff0n) has joined #suse
+2016-02-02 07:08:46	<--	friedrich (~friedrich@aextron.de) has quit (Ping timeout: 245 seconds)
+2016-02-02 07:09:08	<--	mvyskocil (~mvyskocil@opensuse/member/mvyskocil) has quit (Ping timeout: 252 seconds)
+2016-02-02 07:11:06	-->	friedrich (~friedrich@aextron.de) has joined #suse
+2016-02-02 07:12:55	<--	boombatower (~boombatow@drupal.org/user/214218/view) has quit (Quit: Konversation terminated!)
+2016-02-02 07:13:07	-->	nightfuri (~nightfuri@unaffiliated/nightfuri) has joined #suse
+2016-02-02 07:14:35	<--	TomyWork (~tomy@85.199.84.100) has quit (Remote host closed the connection)
+2016-02-02 07:15:59	-->	guoyunhe (~Thunderbi@wireless-86-50-146-62.open.aalto.fi) has joined #suse
+2016-02-02 07:17:42	-->	YaBob (~Thunderbi@host86-144-11-223.range86-144.btcentralplus.com) has joined #suse
+2016-02-02 07:18:16	-->	TomyWork (~tomy@85.199.84.100) has joined #suse
+2016-02-02 07:19:14	-->	bugfinder (~Thunderbi@p20030065ED26AC00DE5360FFFE09A376.dip0.t-ipconnect.de) has joined #suse
+2016-02-02 07:21:38	-->	mvyskocil (~mvyskocil@opensuse/member/mvyskocil) has joined #suse
+2016-02-02 07:21:46	-->	mark76 (~mark@cpc86279-nfds17-2-0-cust168.8-2.cable.virginm.net) has joined #suse
+2016-02-02 07:24:21	-->	jwhitmore (~jwhitmore@109.77.165.144) has joined #suse
+2016-02-02 07:24:22	<--	lescactus (~quassel@62.210.71.176) has quit (Ping timeout: 250 seconds)
+2016-02-02 07:27:41	-->	lescactus (~quassel@62.210.71.176) has joined #suse
+2016-02-02 07:28:27	<--	dalgaaf (uid15138@gateway/web/irccloud.com/x-lpvkvqhynesxgrvo) has quit (Quit: Connection closed for inactivity)
+2016-02-02 07:31:34	<--	srid (~srid@ip217-77-52-21.sampo.ru) has quit (Quit: Konversation terminated!)
+2016-02-02 07:32:11	<--	guoyunhe (~Thunderbi@wireless-86-50-146-62.open.aalto.fi) has quit (Ping timeout: 240 seconds)
+2016-02-02 07:33:40	-->	_felixsch (felixsch@nat/novell/x-caagyxfzsniiwgwe) has joined #suse
+2016-02-02 07:36:40	-->	mdeniz (~mdeniz@193.145.150.38) has joined #suse
+2016-02-02 07:37:41	<--	apqlzm (~arturc@87-206-22-88.dynamic.chello.pl) has quit (Ping timeout: 260 seconds)
+2016-02-02 07:38:00	-->	howi (howardg@nat/suse/x-esoawccfwiqivkod) has joined #suse
+2016-02-02 07:38:11	-->	Eugene_42 (~kovtunov@109.188.84.145) has joined #suse
+2016-02-02 07:39:57	-->	revealed (~disk@unaffiliated/revealed) has joined #suse
+2016-02-02 07:41:36	<--	bugfinder (~Thunderbi@p20030065ED26AC00DE5360FFFE09A376.dip0.t-ipconnect.de) has quit (Quit: bugfinder)
+2016-02-02 07:41:55	-->	ilyaman (ilya@nat/suse/x-vkgyushtyeeyfajq) has joined #suse
+2016-02-02 07:46:16	<--	rchavik (~rchavik@unaffiliated/rchavik) has quit (Quit: -)
+2016-02-02 07:48:11	<--	Tiffon (~name@unaffiliated/tiff0n) has quit (Remote host closed the connection)
+2016-02-02 07:49:15	-->	rgogunskiy (~rgogunski@195.133.61.197) has joined #suse
+2016-02-02 07:49:52	-->	Tiffon (~name@unaffiliated/tiff0n) has joined #suse
+2016-02-02 07:50:06	-->	apqlzm (~arturc@62-89-76-202.static.ip.netia.com.pl) has joined #suse
+2016-02-02 07:51:01	-->	jamtech (~Thunderbi@ip98-160-205-134.lv.lv.cox.net) has joined #suse
+2016-02-02 07:51:26	<--	curfont (~gt@modularaviation.com) has quit (Ping timeout: 246 seconds)
+2016-02-02 07:51:50	-->	curfont (~gt@modularaviation.com) has joined #suse
+2016-02-02 07:53:55	<--	fredp2-away (~fredp@unaffiliated/fredp) has quit
+2016-02-02 07:54:22	-->	fredp2-away (~fredp@unaffiliated/fredp) has joined #suse
+2016-02-02 07:55:42	<--	jamtech (~Thunderbi@ip98-160-205-134.lv.lv.cox.net) has quit (Ping timeout: 252 seconds)
+2016-02-02 07:59:43	archheretic	Im stuck at Retrieving repository 'openSUSE-13.2-Update' metadata
+2016-02-02 07:59:48	archheretic	is it safe to cancel?
+2016-02-02 08:00:32	-->	randy-sk_ (~randy@188-167-55-152.dynamic.chello.sk) has joined #suse
+2016-02-02 08:00:33	nightfuri	yeah
+2016-02-02 08:00:50	nightfuri	archheretic, usually rebooting solves that metadata problem for me
+2016-02-02 08:01:38	<--	ilyaman (ilya@nat/suse/x-vkgyushtyeeyfajq) has quit (Remote host closed the connection)
+2016-02-02 08:03:03	revealed	Im stuck also. Guess it is tim to try it later time
+2016-02-02 08:03:32	fvogt	"zypper -vvv ref" shows a bit more
+2016-02-02 08:03:42	fvogt	Probably just a slow mirror.
+2016-02-02 08:04:40	revealed	KDE:Applications seems terribly slow atm
+2016-02-02 08:05:16	-->	nuclear_horse (~nuclear_h@83.234.69.145) has joined #suse
+2016-02-02 08:07:51	<--	IsThatAPlanet (~dawgy@unaffiliated/iidot) has quit (Ping timeout: 240 seconds)
+2016-02-02 08:08:57	LEDfan	I think all repos are slow. However the downloading of the packages was fast.
+2016-02-02 08:09:06	-->	ilyaman (ilya@nat/novell/x-uhyepubbvjcevaew) has joined #suse
+2016-02-02 08:10:23	revealed	lol i have "B/s" where i have KB/s usually :D
+2016-02-02 08:10:37	fvogt	As long as it's not negative...
+2016-02-02 08:11:12	revealed	in my case its always slow when i want to update so i might to change my strategy
+2016-02-02 08:11:53	-->	promulo (~quassel@h-213.61.228.26.host.de.colt.net) has joined #suse
+2016-02-02 08:12:01	revealed	i have this repo setup since last year on this machine. Its usually very fast.
+2016-02-02 08:14:23	<--	curfont (~gt@modularaviation.com) has quit (*.net *.split)
+2016-02-02 08:14:23	<--	AshishH (ahumbe@nat/redhat/x-bmbxdrgjjubihwwn) has quit (*.net *.split)
+2016-02-02 08:15:12	howi	leap's slow too :) so you'are not alone
+2016-02-02 08:15:51	nightfuri	same has been reported in facebook too
+2016-02-02 08:16:51	-->	pankaj_ (~pankaj@115.184.85.52) has joined #suse
+2016-02-02 08:16:55	<--	pankaj_ (~pankaj@115.184.85.52) has quit (Client Quit)
+2016-02-02 08:17:59	LEDfan	Maybe it's caused by the recent new servers for OBS? Or are it other servers? :P
+2016-02-02 08:18:43	<--	sjraarke (~ger@2605:6000:3994:8d00:551a:977d:8d56:4ce0) has quit (Quit: Konversation terminated!)
+2016-02-02 08:20:47	-->	bugfinder (Thunderbir@nat/novell/x-ydryjjglecjxrrto) has joined #suse
+2016-02-02 08:21:01	<--	crazyraven (~do@221.148.2.152) has quit (Quit: Leaving.)
+2016-02-02 08:21:45	-->	drFaustroll (~alin@193.62.118.144) has joined #suse
+2016-02-02 08:21:45	<--	drFaustroll (~alin@193.62.118.144) has quit (Changing host)
+2016-02-02 08:21:45	-->	drFaustroll (~alin@opensuse/member/ealin) has joined #suse
+2016-02-02 08:23:46	<--	apqlzm (~arturc@62-89-76-202.static.ip.netia.com.pl) has quit (Ping timeout: 260 seconds)
+2016-02-02 08:24:16	<--	fredp2-away (~fredp@unaffiliated/fredp) has quit (Read error: Connection reset by peer)
+2016-02-02 08:24:31	-->	fredp2-away (~fredp@unaffiliated/fredp) has joined #suse
+2016-02-02 08:27:10	-->	smyows (~smyows@unaffiliated/smyows) has joined #suse
+2016-02-02 08:28:02	-->	abhishek_ (0e8bc403@gateway/web/freenode/ip.14.139.196.3) has joined #suse
+2016-02-02 08:28:24	revealed	LEDfan: Could also be a routing issue. I mean... i remember in that guy. Taking a fibre picktail and licking it off stating it was clean now
+2016-02-02 08:28:25	--	abhishek_ is now known as Guest88117
+2016-02-02 08:29:10	LEDfan	revealed: hehe ok. I'm now trying to manual set a mirror for my repos. Of course i took a backup of repos.d
+2016-02-02 08:29:51	<--	Guest88117 (0e8bc403@gateway/web/freenode/ip.14.139.196.3) has quit (Client Quit)
+2016-02-02 08:29:56	-->	curfont (~gt@87.117.198.60) has joined #suse
+2016-02-02 08:29:56	-->	AshishH (ahumbe@nat/redhat/x-bmbxdrgjjubihwwn) has joined #suse
+2016-02-02 08:30:21	-->	ovaistariq (~ovaistari@67.170.251.97) has joined #suse
+2016-02-02 08:30:41	revealed	eh pigtail
+2016-02-02 08:31:31	<--	nwang (~nick@203.192.156.9) has quit (Read error: Connection reset by peer)
+2016-02-02 08:31:39	<--	rossella_s (~rossella@93-50-134-228.ip152.fastwebnet.it) has quit (Read error: Connection reset by peer)
+2016-02-02 08:32:01	-->	rossella_s (~rossella@93-50-134-228.ip152.fastwebnet.it) has joined #suse
+2016-02-02 08:32:01	--	gryffus_ is now known as gryffus
+2016-02-02 08:32:27	LEDfan	sudo sed -i 's!http://download.opensuse.org!http://ftp5.gwdg.de/pub/opensuse/!g'  *
+2016-02-02 08:32:36	LEDfan	Looks like that does the trick in /etc/zypper/repos.d
+2016-02-02 08:32:52	LEDfan	Take backup and undo it when servers are up again. (And choose an other mirror mabe)
+2016-02-02 08:33:02	<--	curfont (~gt@87.117.198.60) has quit (Max SendQ exceeded)
+2016-02-02 08:34:34	-->	curfont (~gt@modularaviation.com) has joined #suse
+2016-02-02 08:35:03	<--	ovaistariq (~ovaistari@67.170.251.97) has quit (Ping timeout: 265 seconds)
+2016-02-02 08:38:44	-->	apqlzm (~arturc@87-206-22-88.dynamic.chello.pl) has joined #suse
+2016-02-02 08:39:56	<--	glin (~glin@203.192.156.9) has quit (Ping timeout: 272 seconds)
+2016-02-02 08:46:23	alvin	I switched mirrors too.
+2016-02-02 08:47:42	-->	Simotek (~Simotek@opensuse/member/simotek) has joined #suse
+2016-02-02 08:51:48	-->	sideral (~sideral@rockbox/developer/sideral) has joined #suse
+2016-02-02 08:53:26	-->	pt01 (~pt01@static-186-155-230-170.static.etb.net.co) has joined #suse
+2016-02-02 08:54:03	<--	pt01 (~pt01@static-186-155-230-170.static.etb.net.co) has quit (Client Quit)
+2016-02-02 08:54:45	sideral	Refreshing repos from download.opensuse.org (195.135.221.134) is extremely slow for me today. Does anyone else have the same problem as well?
+2016-02-02 08:55:22	nightfuri	yeah many are facing that problem
+2016-02-02 08:56:56	-->	Ronis_BR (~Ronan@150.163.62.206) has joined #suse
+2016-02-02 08:58:08	<--	shumski_ (~hrvoje@93-139-131-173.adsl.net.t-com.hr) has quit (Ping timeout: 248 seconds)
+2016-02-02 08:58:46	revealed	fvogt: https://news.opensuse.org/2016/01/27/obs-welcomes-new-lambkins/ (These?)
+2016-02-02 09:03:26	<--	Simotek (~Simotek@opensuse/member/simotek) has quit (Ping timeout: 260 seconds)
+2016-02-02 09:04:20	-->	ullemb (~ullemb@p549CCF3A.dip0.t-ipconnect.de) has joined #suse
+2016-02-02 09:05:13	-->	shumski_ (~hrvoje@93-139-131-173.adsl.net.t-com.hr) has joined #suse
+2016-02-02 09:05:32	-->	Simotek (~Simotek@opensuse/member/simotek) has joined #suse
+2016-02-02 09:06:08	revealed	128 GB RAM and buildenvironment in tmpfs sounds quite nice :D
+2016-02-02 09:06:56	<--	u0_a498 (~u0_a498@203.87.156.135) has quit (Ping timeout: 260 seconds)
+2016-02-02 09:10:30	<--	salamanderrake (~quassel@v-72-5-195-78.unman-vds.premium-chicago.nfoservers.com) has quit (Ping timeout: 256 seconds)
+2016-02-02 09:12:46	<--	lescactus (~quassel@62.210.71.176) has quit (Remote host closed the connection)
+2016-02-02 09:13:58	--	gryffus is now known as gryffus_
+2016-02-02 09:14:08	<--	Simotek (~Simotek@opensuse/member/simotek) has quit (Ping timeout: 272 seconds)
+2016-02-02 09:15:39	-->	Simotek (~Simotek@opensuse/member/simotek) has joined #suse
+2016-02-02 09:17:51	<--	vince (~vince@202.104-66-87.adsl-dyn.isp.belgacom.be) has quit (Ping timeout: 240 seconds)
+2016-02-02 09:20:22	<--	nuclear_horse (~nuclear_h@83.234.69.145) has quit
+2016-02-02 13:42:30	--	irc: disconnected from server
+2016-02-02 13:43:17	-->	C1ph3r5 (~C1ph3r@177.18.8.131.dynamic.adsl.gvt.net.br) has joined #suse
+2016-02-02 13:43:17	--	Topic for #suse is "Welcome to #opensuse | Rules: http://en.opensuse.org/openSUSE:IRC_rules | openSUSE Leap 42.1 is out! https://software.opensuse.org/421/ | Search: http://search.opensuse.org | For off-topic, go to #opensuse-chat | Have a lot of fun!"
+2016-02-02 13:43:17	--	Topic set by microchip_ (~neutrino@opensuse/member/microchip8) on Sat, 16 Jan 2016 13:46:05
+2016-02-02 13:43:17	--	Channel #suse: 339 nicks (0 ops, 0 voices, 339 normals)
+2016-02-02 13:43:17	--	URL for #SuSE: http://en.opensuse.org/Communicate/IRC
+2016-02-02 13:43:41	--	Channel created on Sun, 15 Feb 2004 02:08:29
+2016-02-02 13:44:04	-->	benvla (546bb526@gateway/web/freenode/ip.84.107.181.38) has joined #suse
+2016-02-02 13:45:53	benvla	again troubles with update repos??
+2016-02-02 13:46:01	<--	ovaistariq (~ovaistari@2601:641:101:73b1:10f1:6ec2:5c90:95c8) has quit (Remote host closed the connection)
+2016-02-02 13:46:38	-->	ovaistariq (~ovaistari@67.170.251.97) has joined #suse
+2016-02-02 13:47:59	<--	aram_ (~aram@37.157.222.132) has quit (Quit: Konversation terminated!)
+2016-02-02 13:48:10	--	_mkubecek_away is now known as mkubecek
+2016-02-02 13:48:38	-->	AlbertoP (~AlbertoP@pdpc/supporter/active/AlbertoP) has joined #suse
+2016-02-02 13:50:43	<--	ovaistariq (~ovaistari@67.170.251.97) has quit (Ping timeout: 245 seconds)
+2016-02-02 13:51:57	-->	regedit|wrk (~regedit@96.56.102.106) has joined #suse
+2016-02-02 13:53:34	-->	stochastix (~stochasti@unaffiliated/stochastix) has joined #suse
+2016-02-02 13:54:05	<--	Hprmedina (~chatzilla@wikipedia/Hprmedina) has quit (Quit: ChatZilla 0.9.91-rdmsoft [XULRunner 32.0.3/20140923175406])
+2016-02-02 13:56:06	<--	Two_Dogs (~snak-kat@unaffiliated/almoxarife) has quit (Ping timeout: 256 seconds)
+2016-02-02 13:58:28	<--	pkennedy (~pkennedy@chippewa-nat.cray.com) has quit (Quit: I have to be at the gym in 26 minutes.)
+2016-02-02 14:01:23	-->	linkedinyou (~linkediny@unaffiliated/linkedinyou) has joined #suse
+2016-02-02 14:02:37	<--	aeszter (~aeszter@gate009.mpibpc.gwdg.de) has quit (Quit: leaving)
+2016-02-02 14:03:01	<--	benvla (546bb526@gateway/web/freenode/ip.84.107.181.38) has quit (Quit: Page closed)
+2016-02-02 14:03:51	-->	kamdard (~kamdard@pool-96-226-235-121.dllstx.fios.verizon.net) has joined #suse
+2016-02-02 14:03:52	<--	orex (~orex@85.143.127.138) has quit (Ping timeout: 240 seconds)
+2016-02-02 14:04:16	<--	Holgi (Holgi@nat/suse/x-nhcztkdbxpfqjzym) has quit (Quit: Leaving)
+2016-02-02 14:05:07	<--	howi (howardg@nat/suse/x-esoawccfwiqivkod) has quit (Quit: Leaving.)
+2016-02-02 14:08:30	<--	kuter (~qwerty@gvx82.internetdsl.tpnet.pl) has quit (Ping timeout: 240 seconds)
+2016-02-02 14:08:59	-->	Two_Dogs (~snak-kat@c-24-18-120-89.hsd1.wa.comcast.net) has joined #suse
+2016-02-02 14:08:59	<--	Two_Dogs (~snak-kat@c-24-18-120-89.hsd1.wa.comcast.net) has quit (Changing host)
+2016-02-02 14:08:59	-->	Two_Dogs (~snak-kat@unaffiliated/almoxarife) has joined #suse
+2016-02-02 14:09:00	<--	kamdard (~kamdard@pool-96-226-235-121.dllstx.fios.verizon.net) has quit (Quit: Leaving)
+2016-02-02 14:09:11	-->	marciocg (~marcio@177.96.252.6.dynamic.adsl.gvt.net.br) has joined #suse
+2016-02-02 14:10:00	-->	Nick007 (~Nick007@122.170.158.215) has joined #suse
+2016-02-02 14:10:24	<--	cousin_luigi (shellful@unaffiliated/cousinluigi/x-395723) has left #suse
+2016-02-02 14:10:48	<--	Nick007 (~Nick007@122.170.158.215) has left #suse
+2016-02-02 14:11:48	<--	stochastix (~stochasti@unaffiliated/stochastix) has quit (Ping timeout: 272 seconds)
+2016-02-02 14:12:54	<--	hans_ (~hans@p5B09063A.dip0.t-ipconnect.de) has quit (Quit: Konversation terminated!)
+2016-02-02 14:13:01	-->	mark76 (~mark@cpc86279-nfds17-2-0-cust168.8-2.cable.virginm.net) has joined #suse
+2016-02-02 14:13:08	-->	hans_ (~hans@p5B09063A.dip0.t-ipconnect.de) has joined #suse
+2016-02-02 14:13:17	-->	kamdard (~kamdard@pool-96-226-235-121.dllstx.fios.verizon.net) has joined #suse
+2016-02-02 14:13:27	-->	joelgordon (~jgordon@2605:a601:580:c300:2ab2:bdff:fe6e:5a69) has joined #suse
+2016-02-02 14:13:33	-->	stochastix (~stochasti@unaffiliated/stochastix) has joined #suse
+2016-02-02 14:15:54	<--	ijzervreter (~stephan@31.160.52.210) has quit (Quit: Konversation terminated!)
+2016-02-02 14:19:38	-->	schtonk (~quassel@ip5b4160a0.dynamic.kabel-deutschland.de) has joined #suse
+2016-02-02 14:22:22	<--	mcaj (quassel@nat/suse/x-uorvxzudkzsxelro) has quit (Quit: http://quassel-irc.org - Chat comfortably. Anywhere.)
+2016-02-02 14:22:24	-->	Pazooza (~Pazuzu@cpe-108-183-181-146.maine.res.rr.com) has joined #suse
+2016-02-02 14:23:07	-->	rohan_ (~rohan@27.255.167.231) has joined #suse
+2016-02-02 14:23:23	<--	marciocg (~marcio@177.96.252.6.dynamic.adsl.gvt.net.br) has quit (Quit: Konversation terminated!)
+2016-02-02 14:23:31	--	rohan_ is now known as Rohan_kumar
+2016-02-02 14:23:41	<--	apqlzm (~arturc@62-89-76-202.static.ip.netia.com.pl) has quit (Ping timeout: 260 seconds)
+2016-02-02 14:23:47	--	Rohan_kumar is now known as Rohan_Kumar
+2016-02-02 14:23:57	--	Rohan_Kumar is now known as Rohan_k
+2016-02-02 14:23:57	-->	evanvarvell (~evanvarve@97-88-184-228.dhcp.stls.mo.charter.com) has joined #suse
+2016-02-02 14:24:17	--	Rohan_k is now known as rohan_kanojia
+2016-02-02 14:25:07	<--	Ground0 (~renlin@80-218-20-245.dclient.hispeed.ch) has quit (Quit: Leaving.)
+2016-02-02 14:26:39	<--	xaphir (~eldric@unaffiliated/eldric) has quit (Ping timeout: 276 seconds)
+2016-02-02 14:28:03	<--	fvogt (fabian@nat/novell/x-dklfwnczxygrsenm) has quit (Quit: Konversation terminated!)
+2016-02-02 14:28:18	-->	Na3iL (~Na3iL@ubuntu/member/na3il) has joined #suse
+2016-02-02 14:28:42	-->	Ground01 (~renlin@80-218-20-245.dclient.hispeed.ch) has joined #suse
+2016-02-02 14:28:47	--	gryffus_ is now known as gryffus
+2016-02-02 14:28:50	--	gryffus is now known as gryffus_
+2016-02-02 14:32:26	<--	Flotho66 (~florent@LStLambert-656-1-183-64.w80-14.abo.wanadoo.fr) has quit (Ping timeout: 252 seconds)
+2016-02-02 14:32:59	-->	rohanKanojia (~rohan@27.255.167.231) has joined #suse
+2016-02-02 14:34:45	-->	MichaelOF (~michael@p4FFF2562.dip0.t-ipconnect.de) has joined #suse
+2016-02-02 14:34:50	-->	revealed (~disk@unaffiliated/revealed) has joined #suse
+2016-02-02 14:35:28	<--	rgogunskiy (~rgogunski@195.133.61.197) has quit (Quit: rgogunskiy)
+2016-02-02 14:36:22	<--	revealed (~disk@unaffiliated/revealed) has quit (Client Quit)
+2016-02-02 14:37:56	<--	chrigu (~chrigu@2a00:c38:10a:124:7482:87f2:659a:a10b) has quit (Remote host closed the connection)
+2016-02-02 14:39:33	<--	rohanKanojia (~rohan@27.255.167.231) has left #suse
+2016-02-02 14:39:46	<--	pmercado (~pmercado@186-104-201-107.baf.movistar.cl) has quit (Ping timeout: 252 seconds)
+2016-02-02 14:39:49	<--	dartakan (~dartakan@185.49.76.188.dynamic.jazztel.es) has quit (Quit: Konversation terminated!)
+2016-02-02 14:40:40	-->	revealed (~disk@unaffiliated/revealed) has joined #suse
+2016-02-02 14:42:24	<--	schtonk (~quassel@ip5b4160a0.dynamic.kabel-deutschland.de) has quit (Remote host closed the connection)
+2016-02-02 14:43:51	-->	scorpion (~scorpion@APuteaux-652-1-33-22.w83-204.abo.wanadoo.fr) has joined #suse
+2016-02-02 14:44:06	<--	trelane (~trelane@Zenoss/CommunityMgr/trelane) has quit (Ping timeout: 260 seconds)
+2016-02-02 14:44:16	--	scorpion is now known as Guest87166
+2016-02-02 14:44:20	<--	Guest87166 (~scorpion@APuteaux-652-1-33-22.w83-204.abo.wanadoo.fr) has quit (Client Quit)
+2016-02-02 14:44:57	revealed	(About downloadspeed for updates) Ok, that intentional wait for the mirrors to settle with my actual setup was a good idea. I changed nothing and now it went fast and fine again ;)
+2016-02-02 14:46:06	tacit	revealed: sunspots
+2016-02-02 14:47:11	revealed	tacit i dont understand properly (guess it is some spokes?) :)
+2016-02-02 14:47:36	<--	Pazooza (~Pazuzu@cpe-108-183-181-146.maine.res.rr.com) has quit (Quit: Leaving ililililililililililililililililililil)
+2016-02-02 14:48:01	-->	shumski (~hrvoje@93-139-223-1.adsl.net.t-com.hr) has joined #suse
+2016-02-02 14:49:26	revealed	ah ok, my other machine still a little slower. The Leap one...
+2016-02-02 14:49:40	-->	Nick007 (~Nick007@122.170.158.215) has joined #suse
+2016-02-02 14:50:04	Nick007	how long does it take for the openSUSE netISO to complete loading the installation system?
+2016-02-02 14:50:12	revealed	Very fast usually
+2016-02-02 14:50:26	revealed	But you may expirience slow downloadspeeds today
+2016-02-02 14:50:30	-->	Somename (~root@static-user-109-124-55-136.tomtelnet.ru) has joined #suse
+2016-02-02 14:50:31	Nick007	well, I've been waiting for about 20 minutes
+2016-02-02 14:51:01	Nick007	revealed, I've been trying for a few days, what' it today?
+2016-02-02 14:51:09	revealed	you can try to point you rinstallation ISO to a different mirror than download.opensuse.org
+2016-02-02 14:51:20	revealed	Where are you from?
+2016-02-02 14:51:34	-->	karakedi (~eAC53C340@78.183.19.30) has joined #suse
+2016-02-02 14:51:34	<--	karakedi (~eAC53C340@78.183.19.30) has quit (Changing host)
+2016-02-02 14:51:34	-->	karakedi (~eAC53C340@unaffiliated/orphan) has joined #suse
+2016-02-02 14:51:37	revealed	(I dont want to visit you or such just to make sugguestion for)
+2016-02-02 14:51:40	revealed	!mirrors
+2016-02-02 14:51:40	SUSEhelp	 For information about openSUSE mirrors, see http://en.opensuse.org/openSUSE:Mirrors
+2016-02-02 14:51:44	<--	shumski_ (~hrvoje@93-139-131-173.adsl.net.t-com.hr) has quit (Ping timeout: 248 seconds)
+2016-02-02 14:51:54	Somename	Hello. I used opensuse 13.2, then I deleted old repos and write new leap repos. After update I have no icons in many places. Any advice?
+2016-02-02 14:52:14	revealed	try create fresh new user if same occurs
+2016-02-02 14:52:20	<--	ivank (~ivank@54.247.85.211) has left #suse
+2016-02-02 14:52:37	revealed	In 13.2 you had KDE4 now you have Plasma5
+2016-02-02 14:52:38	Nick007	revealed, I'll try it, new user? I'm doing a fresh install for the first time
+2016-02-02 14:52:53	-->	xaphir (~eldric@unaffiliated/eldric) has joined #suse
+2016-02-02 14:52:56	revealed	And plasma 4 to 5 can be troublesome without fresh userprofile.
+2016-02-02 14:53:16	revealed	But at all the upgrade should have worked fine.
+2016-02-02 14:53:22	revealed	Or do you have just textkonsole?
+2016-02-02 14:53:25	<--	Two_Dogs (~snak-kat@unaffiliated/almoxarife) has quit (Quit: Konversation terminated!)
+2016-02-02 14:53:35	revealed	And is it about KDE? Sorry i think its about KDE always
+2016-02-02 14:53:43	Nick007	revealed, I'm installing it for the first time...
+2016-02-02 14:53:45	revealed	Theres only KDE in my world
+2016-02-02 14:54:17	revealed	no not fresh install
+2016-02-02 14:54:18	Nick007	revealed, yup even I'm gonna go for KDE, but the installation just wouldn't load
+2016-02-02 14:54:23	revealed	just go to yast users and create new
+2016-02-02 14:54:37	Nick007	revealed, I mean I don't have openSUSE at all right now
+2016-02-02 14:54:54	Nick007	revealed, I'm gonna install it the first time ever
+2016-02-02 14:54:57	revealed	Ah ok. Can you tell something about your hardware?
+2016-02-02 14:55:16	revealed	And about which openSUSE version you are going to install
+2016-02-02 14:55:55	revealed	Theres 13.2 (was delivered with KDE4); Leap - The latest (Stable); And Tumbleweed ( The Rolling release).
+2016-02-02 14:56:06	Nick007	revealed, 8gb ram, nvidia 740, core i7 3.2ghz, broadcom wifi and realted ethernet... would be installing tumbleweed
+2016-02-02 14:56:08	Somename	http://i.imgur.com/PjJZtZl.png
+2016-02-02 14:56:13	Nick007	realtek*
+2016-02-02 14:56:21	revealed	Ok no problem i think from Hardware.
+2016-02-02 14:56:33	revealed	So its about the Mirror is not reachable maybe
+2016-02-02 14:56:45	revealed	Do you get any errors or is it just stuck?
+2016-02-02 14:56:49	revealed	Did you checksum the ISO
+2016-02-02 14:56:50	revealed	?
+2016-02-02 14:56:53	Nick007	just stuck
+2016-02-02 14:57:03	Nick007	checked SHA256 - matches
+2016-02-02 14:57:08	revealed	Ok
+2016-02-02 14:57:17	revealed	did you try setting a mirror as sugguested?
+2016-02-02 14:57:28	-->	ihorse (xxzz@unaffiliated/ihorse) has joined #suse
+2016-02-02 14:57:43	Nick007	it obtained an ip from dhcp, and then gets stuck at loading installation system (1 / 5) - 100%
+2016-02-02 14:57:58	Nick007	nope not yet... I'll be doing it now
+2016-02-02 14:58:05	revealed	Nick007: Please listen: From bootscreen you have that option. Please try this.
+2016-02-02 14:58:30	<--	matejcik (matejcik@nat/suse/x-ezcrlnghkjrpmvaa) has quit (Ping timeout: 240 seconds)
+2016-02-02 14:58:43	revealed	hm, Somename fresh user now or not?
+2016-02-02 14:58:50	--	gryffus_ is now known as gryffus
+2016-02-02 14:59:10	Somename	no, old user
+2016-02-02 14:59:28	revealed	ah ok. How comes you are using konqueror?
+2016-02-02 15:00:13	Nick007	revealed, how do I set a different mirrror?
+2016-02-02 15:00:40	Somename	this problem in konqueror, dolphin, kdemenu...
+2016-02-02 15:00:48	Somename	no icons
+2016-02-02 15:01:13	revealed	Somename: ah ok. Please let me know if fresh testuser has same issue.
+2016-02-02 15:01:39	revealed	Nick007: I think theres an option. When booting the ISO you get that bootloader Screen (Grub)
+2016-02-02 15:01:53	revealed	There the F keys in menu. I think you can choose to enter an URL
+2016-02-02 15:02:18	revealed	Same for language, if this is important for you
+2016-02-02 15:02:36	<--	IonutVan (~IonutVan@opensuse/member/IonutVan) has quit (Quit: This computer has gone to sleep)
+2016-02-02 15:02:41	Nick007	okay, I'll try that
+2016-02-02 15:02:43	-->	hpj (~hpj@189.151.13.120) has joined #suse
+2016-02-02 15:02:43	Nick007	thanks
+2016-02-02 15:02:55	<--	Nick007 (~Nick007@122.170.158.215) has left #suse ("Leaving")
+2016-02-02 15:03:15	revealed	https://en.opensuse.org/SDB:Network_installation#Installing_from_another_local_network_sources
+2016-02-02 15:03:21	revealed	Where it says custom mirror
+2016-02-02 15:03:25	revealed	oh, he left
+2016-02-02 15:03:38	<--	nightfuri (~nightfuri@unaffiliated/nightfuri) has quit (Quit: Leaving)
+2016-02-02 15:03:56	-->	mvyskocil (~mvyskocil@opensuse/member/mvyskocil) has joined #suse
+2016-02-02 15:04:30	-->	shantorn (~Shane@71-222-45-38.ptld.qwest.net) has joined #suse
+2016-02-02 15:04:34	revealed	Somename: Want to show your Repositories for verification?
+2016-02-02 15:04:49	revealed	zypper lr -uP
+2016-02-02 15:04:59	revealed	and here some pasteservices you could use for the output:
+2016-02-02 15:05:01	revealed	!paste
+2016-02-02 15:05:01	SUSEhelp	Please don't paste more than 3 lines in the channel; instead, use one of http://paste.opensuse.org/ , http://pastebin.com/ or http://pastie.org/ -- for pics, use http://img.susepaste.org/ , http://picpaste.com/ or http://min.us/ and/or install susepaste package giving you a cli client to susepaste.org page
+2016-02-02 15:06:05	Somename	revealed: yes, this problem with new user also.
+2016-02-02 15:06:20	revealed	then show me your repos please
+2016-02-02 15:06:50	revealed	i dont know if i can help. I even tryed starting konqueror without such problem.,
+2016-02-02 15:07:15	revealed	But theres a package providing those symbols you are missing there.
+2016-02-02 15:07:21	revealed	KIO i think
+2016-02-02 15:07:29	revealed	so i think, they could be mixed up
+2016-02-02 15:07:31	revealed	or missing
+2016-02-02 15:08:05	Somename	revealed: http://paste.opensuse.org/89191125
+2016-02-02 15:08:29	revealed	 1 | download.opensuse.org-42.1-test | Untested Updates ?? You need this?
+2016-02-02 15:09:15	-->	paka_ (~paka@108-246-208-62.lightspeed.iplsin.sbcglobal.net) has joined #suse
+2016-02-02 15:09:27	revealed	may i please make some sugguestions after these you issue: zypper dup ? I would make that different
+2016-02-02 15:09:40	Somename	I don't know what it is. I think it was add as community repo.
+2016-02-02 15:09:51	Somename	I did not add it manualy
+2016-02-02 15:09:57	revealed	ok i may sort it a bit
+2016-02-02 15:10:14	revealed	zypper mr -p 20 3
+2016-02-02 15:10:21	revealed	zypper mr -p 20 14
+2016-02-02 15:10:22	<--	krobzaur_ (~Kyle@50.247.237.177) has quit (Ping timeout: 240 seconds)
+2016-02-02 15:10:32	-->	Bequimao (~bequimao@2a02:8071:2a0:7f00:5653:edff:fe3a:46df) has joined #suse
+2016-02-02 15:10:37	revealed	zypper mr -p 50 12
+2016-02-02 15:10:40	revealed	zypper mr -p 50 11
+2016-02-02 15:10:46	<--	paka (~paka@opensuse/member/Paka) has quit (Remote host closed the connection)
+2016-02-02 15:10:57	-->	ddemaio_ (b94c60cb@gateway/web/freenode/ip.185.76.96.203) has joined #suse
+2016-02-02 15:11:04	revealed	zypper mr -p 50 13
+2016-02-02 15:11:10	<--	ddemaio_ (b94c60cb@gateway/web/freenode/ip.185.76.96.203) has quit (Client Quit)
+2016-02-02 15:11:36	revealed	zypper mr -p 50 9
+2016-02-02 15:11:48	-->	ani (~ani@81.4.107.147) has joined #suse
+2016-02-02 15:11:56	revealed	zypper mr -p 30 10
+2016-02-02 15:11:58	-->	ddemaio (~ddemaio@185.76.96.203) has joined #suse
+2016-02-02 15:11:59	revealed	zypper mr -p 30 4
+2016-02-02 15:12:33	revealed	And now show this again, please: zypper lr -uP
+2016-02-02 15:13:07	Somename	http://paste.opensuse.org/10896739
+2016-02-02 15:13:08	-->	smica (~smica@host-87-242-15-145.prtelecom.hu) has joined #suse
+2016-02-02 15:13:24	ddemaio	having an organizing team meeting on opensuse-project channel for oSC16 if anyone wants to join
+2016-02-02 15:13:31	-->	krobzaur_ (~Kyle@50.247.237.177) has joined #suse
+2016-02-02 15:14:05	<--	hans_ (~hans@p5B09063A.dip0.t-ipconnect.de) has quit (Quit: Konversation terminated!)
+2016-02-02 15:14:13	-->	huftis (~huftis@239.92-221-222.customer.lyse.net) has joined #suse
+2016-02-02 15:14:13	revealed	Somename: this did not work:
+2016-02-02 15:14:28	revealed	zypper mr -p 30 10
+2016-02-02 15:14:34	revealed	zypper mr -p 30 4
+2016-02-02 15:15:09	revealed	now please do:
+2016-02-02 15:15:16	revealed	zypper dup --from packman
+2016-02-02 15:15:20	revealed	means:
+2016-02-02 15:15:34	revealed	zypper dup --from "Packman Repository"
+2016-02-02 15:15:42	-->	paka (~paka@opensuse/member/Paka) has joined #suse
+2016-02-02 15:15:48	revealed	then zypper clean -a; zypper ref; zypper dup;
+2016-02-02 15:15:49	-->	Flotho66 (~florent@245-10-190-109.dsl.ovh.fr) has joined #suse
+2016-02-02 15:15:54	revealed	And then reboot and try again
+2016-02-02 15:16:31	-->	arunpyasi (~arunpyasi@45.123.222.89) has joined #suse
+2016-02-02 15:16:48	Somename	ok in process...
+2016-02-02 15:16:50	-->	zamba (marius@flage.org) has joined #suse
+2016-02-02 15:17:00	zamba	hi! how is it to upgrade from suse 10.x to a newer version?
+2016-02-02 15:17:08	zamba	i know.. it's so old it's embarassing
+2016-02-02 15:17:22	zamba	do we need to perform a reinstall or can we do an in-place upgrade?
+2016-02-02 15:17:40	revealed	better do a fresh install then, or parallel install and then move to, because you would have to take each newer release in every single step
+2016-02-02 15:17:42	Somename	zamba: copy all needed info to flash drive. format disk and install fresh system :)
+2016-02-02 15:18:06	-->	aiwan_ (~aiwan@85.172.12.222) has joined #suse
+2016-02-02 15:18:08	zamba	hm, ok
+2016-02-02 15:18:26	revealed	you been so long with the 10x ?
+2016-02-02 15:18:27	<--	dalgaaf (uid15138@gateway/web/irccloud.com/x-kjsfcrupqhpcjkvg) has quit (Quit: Connection closed for inactivity)
+2016-02-02 15:18:39	revealed	So much changed :)
+2016-02-02 15:18:48	zamba	another question.. i had to cancel a disk check during booting with ^C.. the system continued to boot and i was brought into X.. hostname set to (none) and i had to manually start services like ssh and vsftp
+2016-02-02 15:18:48	Somename	don't upgrade it. otherwise you will have problems like mine
+2016-02-02 15:18:59	zamba	and also setting the hostname manually
+2016-02-02 15:19:08	zamba	what can i do to check that the system is "sane"?
+2016-02-02 15:19:15	revealed	check the filesystem again
+2016-02-02 15:19:25	zamba	revealed: i manually mounted the filesystem in question
+2016-02-02 15:19:43	zamba	revealed: it was a data partition, so the root fs wasn't on it
+2016-02-02 15:19:47	revealed	touch /force-fsck
+2016-02-02 15:19:53	zamba	revealed: what will that do?
+2016-02-02 15:19:56	revealed	Will issue automated filesystem check on boot
+2016-02-02 15:19:59	revealed	on 10x
+2016-02-02 15:20:08	zamba	sure.. but we don't necessary want to boot now
+2016-02-02 15:20:14	zamba	it's a system that's required for 24/7 operations
+2016-02-02 15:20:19	zamba	so we have to schedule this
+2016-02-02 15:20:22	revealed	then unmounted the named partition and check it
+2016-02-02 15:20:38	revealed	that file will schedule this for next reboot
+2016-02-02 15:20:40	revealed	but remember in
+2016-02-02 15:21:14	zamba	i may have phrased my question wrong.. the fs in question isn't the problem, but the state of the rest of the system, as i had to cancel the disk check during boot
+2016-02-02 15:21:24	revealed	Ah so if it is not root you could unmount it and use man fsck
+2016-02-02 15:21:39	zamba	sorry.. but we can't unmount it.. it's in use
+2016-02-02 15:21:51	zamba	we have to schedule downtime to do that
+2016-02-02 15:21:52	revealed	you can end the processes using it for the check
+2016-02-02 15:21:59	zamba	that's what i did during boot
+2016-02-02 15:22:07	revealed	consider services offline then using the data
+2016-02-02 15:22:14	revealed	or schedule it for the maintainance downtime
+2016-02-02 15:22:15	zamba	so my question is how i can make sure that my system is running "sanely"?
+2016-02-02 15:23:11	zamba	after i had to cancel the boot process
+2016-02-02 15:23:23	<--	Eugene_42 (~kovtunov@109.188.84.145) has quit (Quit: Konversation terminated!)
+2016-02-02 15:23:23	revealed	you can not check running filesystem this way from my state of knowledge
+2016-02-02 15:23:45	revealed	schedule it for next boot
+2016-02-02 15:24:02	zamba	i don't know if it's my english.. but i guess my question is not coming across
+2016-02-02 15:24:06	revealed	Handling this wrong could cause severe damage to your FS
+2016-02-02 15:24:07	zamba	the problem isn't the disk check
+2016-02-02 15:24:47	zamba	the "problem" is the fact that i aborted the disk check while it was running using ctrl + c.. i then skipped the disk check.. and the system seemingly booted ok.. but quite a few services weren't running after the completed boot..
+2016-02-02 15:25:00	-->	Two_Dogs (~snak-kat@unaffiliated/almoxarife) has joined #suse
+2016-02-02 15:25:02	zamba	so i had to start sshd and vsftpd manually afterwards, in addition to setting the hostname manually
+2016-02-02 15:25:17	revealed	I would schedule downtime for now
+2016-02-02 15:25:23	zamba	we need to keep this boat floating for a couple of days, to get the scheduled maintenance sorted..
+2016-02-02 15:25:23	revealed	and do the check, let it finish
+2016-02-02 15:25:25	revealed	and check logs
+2016-02-02 15:25:46	<--	mdeniz (~mdeniz@193.145.150.38) has quit (Ping timeout: 250 seconds)
+2016-02-02 15:26:02	directhex	is the download server considered working enough to install, now? i can't afford to sit here for some unknown number of hours staring at an unmoving green progress bar
+2016-02-02 15:26:10	revealed	Because this may have a big rat tail behind if theres something wrong on the filesystem. You never know for now since you aborted the check.
+2016-02-02 15:26:12	zamba	sure.. i know.. that's the ideal way.. but we can't schedule downtime NOW.. that's a contratiction
+2016-02-02 15:26:28	zamba	contradiction, even
+2016-02-02 15:26:40	revealed	Then i sugguest check your logs if all those services are fine. And pray? (Sorry)
+2016-02-02 15:27:15	revealed	directhex: I expirienced similar today
+2016-02-02 15:27:22	revealed	directhex: try a different mirror
+2016-02-02 15:27:39	revealed	At installtime use these steps: https://en.opensuse.org/SDB:Network_installation#Installing_from_another_local_network_sources
+2016-02-02 15:27:51	revealed	F4 select HTTP and provide URL to mirror
+2016-02-02 15:27:59	<--	aiwan_ (~aiwan@85.172.12.222) has quit (Quit: Konversation terminated!)
+2016-02-02 15:28:30	<--	Na3iL (~Na3iL@ubuntu/member/na3il) has quit (Ping timeout: 240 seconds)
+2016-02-02 15:28:35	revealed	zamba: My english is probably not so good. Im not native english speaker
+2016-02-02 15:29:14	<--	_felixsch (felixsch@nat/novell/x-caagyxfzsniiwgwe) has quit (Ping timeout: 250 seconds)
+2016-02-02 15:29:14	<--	Somename (~root@static-user-109-124-55-136.tomtelnet.ru) has quit (Read error: Connection reset by peer)
+2016-02-02 15:29:21	revealed	Somename: hows progress on the steps taken?
+2016-02-02 15:30:43	-->	Someone2 (~root@static-user-109-124-55-136.tomtelnet.ru) has joined #suse
+2016-02-02 15:31:12	Someone2	I did zypper dup and anything changed
+2016-02-02 15:31:26	directhex	revealed: that already seems rather better
+2016-02-02 15:31:32	revealed	sorry my english (many changes or none?)
+2016-02-02 15:31:36	--	tunage is now known as rancid
+2016-02-02 15:31:44	revealed	directhex: Hope so :)
+2016-02-02 15:31:45	directhex	yeah, installer actually starting now, via warwick university mirror
+2016-02-02 15:31:57	revealed	nice. Glad to help
+2016-02-02 15:32:04	directhex	a dozen miles away, rather than god knows what the default is
+2016-02-02 15:32:17	Someone2	I think it's better to do a fresh installation.
+2016-02-02 15:32:55	-->	Na3iL (~Na3iL@ubuntu/member/na3il) has joined #suse
+2016-02-02 15:33:05	revealed	Someone2: I would not give it up. Where ther many changes now or just some?
+2016-02-02 15:33:24	-->	Roan (~Roan@162.255.185.61) has joined #suse
