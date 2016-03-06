@@ -12,6 +12,9 @@ cd dotfiles
 for i in .*; do  echo $i; mv ~/$i ~/Downloads/MyBackup; ln -s ~/Public/dotfiles/$i ~/$i; done
 mv /etc/editrc ~/Downloads/MyBackup
 ln -s ~/Public/dotfiles/editrc /etc
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+# Open vim then call :PluginInstall
 
 # TMUX
 # session management
