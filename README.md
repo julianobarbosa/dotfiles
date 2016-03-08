@@ -1,6 +1,9 @@
 # dotfiles
 Linux dotfiles
 
+# VIM Download
+https://tuxproject.de/projects/vim/
+
 # Fresh Install Info
 
 mkdir -p $HOME/Public
