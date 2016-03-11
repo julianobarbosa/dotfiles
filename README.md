@@ -20,7 +20,7 @@ git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 # Open vim then call :PluginInstall
 # For YoucompleteMe plugin you needed install
 #  automake gcc gcc-c++ kernel-devel cmake
-#  python-devel python2-devel
+#  python-devel python3-devel
 # cd ~/.vim/bundle/YouCompleteMe
 # ./install.py --clang-completer
 # TMUX
