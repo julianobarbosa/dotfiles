@@ -1,6 +1,7 @@
 "vundle
 set nocompatible
 set visualbell
+set relativenumber
 
 filetype off
 
