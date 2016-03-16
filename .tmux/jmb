@@ -1,0 +1,6 @@
+selectp -t 0 # select the first (0) pane
+selectp -t 1
+selectp -t 2
+selectp -t 3
+selectp -t 4
+selectp -t 0
