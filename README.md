@@ -78,3 +78,4 @@ bind - split-window -v
 
 # Copy from windows clipboard to putty
 shitft+mouse click
+shitt+INS
