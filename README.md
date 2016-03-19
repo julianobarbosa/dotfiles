@@ -29,7 +29,7 @@ cd ~/.vim/bundle/YouCompleteMe
 
 tmux list-sessions
 tmux new -s session-name
-Ctrl-b d Detach from session
+Ctrl-a d Detach from session
 tmux attach -t [session name]
 tmux kill-session -t session-name
 
@@ -75,3 +75,6 @@ Ctrl-a : "break-pane"
 
 bind | split-window -h
 bind - split-window -v
+
+# Copy from windows clipboard to putty
+shitft+mouse click
