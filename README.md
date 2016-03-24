@@ -17,6 +17,8 @@ mv /etc/editrc ~/Downloads/MyBackup
 ln -s ~/Public/dotfiles/editrc /etc
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
+mv /etc/bash_completion.d/tma ~/Downloads/MyBackup
+ln -s ~/Public/dotfiles/tma /etc/bash_completion.d
 # Open vim then call :PluginInstall
 # For YoucompleteMe plugin you needed install
 #  automake gcc gcc-c++ kernel-devel cmake

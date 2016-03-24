@@ -9,6 +9,9 @@ set -o vi
 alias ta='tmux attach -t $1'
 alias tl='tmux list-session'
 alias tn='tmux new -s $USER'
+if [ -f /etc/bash_completion.d/tma ]; then
+	. /etc/bash_completion.d/tma
+fi
 alias python=python3
 alias manage='python $VIRTUAL_ENV/../manage.py'
 
