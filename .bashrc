@@ -6,7 +6,7 @@ export HISTSIZE=999999
 
 set -o vi
 
-alias ta='tmux attach'
+alias ta='tmux attach -t $1'
 alias tl='tmux list-session'
 alias tn='tmux new -s $USER'
 alias python=python3
