@@ -1,6 +1,4 @@
-selectp -t 0 # select the first (0) pane
-selectp -t 1
-selectp -t 2
-selectp -t 3
-selectp -t 4
-selectp -t 0
+new-window -t 2 -n 'ETC'
+new-window -t 4 -n 'CLI' '/usr/sbin/rasterisk -vvvvvvvvvvvvvv'
+new-window -t 5 -n 'HTOP'
+new-window -t 6 -n 'LOGs'
