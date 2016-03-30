@@ -17,6 +17,8 @@ mv /etc/editrc ~/Downloads/MyBackup
 ln -s ~/Public/dotfiles/editrc /etc
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
+mv /etc/bash_completion.d/tma ~/Downloads/MyBackup
+ln -s ~/Public/dotfiles/tma /etc/bash_completion.d
 # Open vim then call :PluginInstall
 # For YoucompleteMe plugin you needed install
 #  automake gcc gcc-c++ kernel-devel cmake
@@ -29,7 +31,7 @@ cd ~/.vim/bundle/YouCompleteMe
 
 tmux list-sessions
 tmux new -s session-name
-Ctrl-b d Detach from session
+Ctrl-a d Detach from session
 tmux attach -t [session name]
 tmux kill-session -t session-name
 
@@ -75,3 +77,7 @@ Ctrl-a : "break-pane"
 
 bind | split-window -h
 bind - split-window -v
+
+# Copy from windows clipboard to putty
+shitft+mouse left click
+shitt+INS
