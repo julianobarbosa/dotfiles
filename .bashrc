@@ -1,3 +1,8 @@
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
+
 export EDITRC=/etc/editrc
 export VISUAL=/usr/bin/vim
 export EDITOR=/usr/bin/vim
