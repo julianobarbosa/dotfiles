@@ -9,6 +9,13 @@ export EDITOR=/usr/bin/vim
 export HISTCONTROL=ignoreboth
 export HISTSIZE=999999
 
+#Python 2.7 
+export VIRTUALENVWRAPPER_PYTHON=`which python`
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=~/_Projects
+
+# . /usr/bin/virtualenvwrapper.sh
+
 set -o vi
 
 alias ta='tmux attach -t $1'
