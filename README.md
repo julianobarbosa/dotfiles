@@ -6,6 +6,7 @@ https://tuxproject.de/projects/vim/
 
 # Fresh Install Info
 
+```console
 mkdir -p $HOME/Public
 mkdir -p ~/Downloads/MyBackup
 
@@ -25,6 +26,7 @@ ln -s ~/Public/dotfiles/tma /etc/bash_completion.d
 #  python-devel python3-devel
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py --clang-completer
+```
 
 # TMUX
 # session management
