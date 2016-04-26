@@ -18,6 +18,9 @@ mv /etc/editrc ~/Downloads/MyBackup
 ln -s ~/Public/dotfiles/editrc /etc
 git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
 mv /etc/bash_completion.d/tma ~/Downloads/MyBackup
 ln -s ~/Public/dotfiles/tma /etc/bash_completion.d
 # Open vim then call :PluginInstall
