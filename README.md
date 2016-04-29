@@ -7,8 +7,19 @@ https://tuxproject.de/projects/vim/
 # Fresh Install Info
 
 ```console
-mkdir -p $HOME/Public
-mkdir -p ~/Downloads/MyBackup
+if [ -d ~/Public ]
+then
+    cd ~/Public/Dotfiles
+    git pull origin master
+else
+    mkdir ~/Public
+    git clone https://github.com/haridas/Dotfiles.git ~/Public/Dotfiles
+fi
+
+if [ -d ~/Downloads/MyBackup ]
+then
+  mkdir -p ~/Downloads/MyBackup
+fi
 
 cd ~/Public
 git clone https://github.com/julianobarbosa/dotfiles.git
