@@ -9,7 +9,7 @@ https://tuxproject.de/projects/vim/
 ```console
 if [ -d ~/Public ]
 then
-    cd ~/Public/Dotfiles
+    cd ~/Public/dotfiles
     git pull origin master
 else
     mkdir ~/Public
