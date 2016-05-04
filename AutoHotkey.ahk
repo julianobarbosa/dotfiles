@@ -31,10 +31,13 @@ else
 	Run C:\ProgramData\chocolatey\lib\sysinternals\tools\procexp.exe
 return
 
+^!s::Run C:\cygwin\bin\mintty.exe -i /Cygwin-Terminal.ico -
+
 ^!v::
 IfWinExist [No Name] - GVIM
 	WinActivate
 else
+	MsgBox, GVIM was started
 	Run gvim
 return
 
