@@ -13,7 +13,7 @@ then
     git pull origin master
 else
     mkdir ~/Public
-    git clone https://github.com/haridas/Dotfiles.git ~/Public/Dotfiles
+    git clone https://github.com/haridas/Dotfiles.git ~/Public/dotfiles
 fi
 
 if [ -d ~/Downloads/MyBackup ]
