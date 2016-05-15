@@ -9,11 +9,11 @@ https://tuxproject.de/projects/vim/
 ```console
 if [ -d ~/Public ]
 then
-    cd ~/Public/dotfiles
+    cd ~/Public/haridas
     git pull origin master
 else
     mkdir ~/Public
-    git clone https://github.com/haridas/Dotfiles.git ~/Public/dotfiles
+    git clone https://github.com/haridas/Dotfiles.git ~/Public/haridas
 fi
 
 if [ -d ~/Downloads/MyBackup ]
