@@ -1,0 +1,4 @@
+Bundle 'ktonga/vim-follow-my-lead'
+Bundle 'ervandew/supertab'
+Bundle 'jmcantrell/vim-virtualenv'
+Bundle 'tmux-plugins/vim-tmux-focus-events'
