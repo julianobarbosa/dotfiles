@@ -113,9 +113,12 @@ set -o nobeep
 set -o vi
 
 alias v='vim $1'
-alias ta='tmux attach -t $1'
+alias ta='tmux attach -t'
 alias tl='tmux list-session'
 alias tn='tmux new -s $USER'
+alias ts='tmux new-session -s'
+alias tksv='tmux kill-server'
+alias tkss='tmux kill-session -t'
 if [ -f /etc/bash_completion.d/tma ]; then
     . /etc/bash_completion.d/tma
 fi
