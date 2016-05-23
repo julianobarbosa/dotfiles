@@ -66,6 +66,30 @@ function zle-line-init zle-keymap-select {
 zle -N zle-line-init
 zle -N zle-keymap-select
 
+#}}}
+#-------- Suffix Alias {{{
+#------------------------------------------------------
+# open file with default program base on extension
+# Ex: 'alias -s avi=mplayer' makes 'file.avi' execute 'mplayer file.avi'
+
+alias -s {avi,flv,mkv,mp4,mpeg,mpg,ogv,wmv}=$PLAYER
+alias -s {flac,mp3,ogg,wav}=$MUSICER
+alias -s {gif,GIF,jpeg,JPEG,jpg,JPG,png,PNG}="background $IMAGEVIEWER"
+alias -s {djvu,pdf,ps}="background $READER"
+alias -s txt=$EDITOR
+alias -s epub="background $EBOOKER"
+alias -s {cbr,cbz}="background $COMICER"
+# might conflict with emacs org mode
+alias -s {at,ch,com,de,net,org}="background $BROWSER"
+
+# archive extractor
+alias -s ace="unace l"
+alias -s rar="unrar l"
+alias -s {tar,bz2,gz,xz}="tar tvf"	#tar.bz2,tar.gz,tar.xz
+alias -s zip="unzip -l"
+
+#}}}
+
 #-------- Keybinding {{{
 #------------------------------------------------------
 # manpages for keybindings: $man zshzle
