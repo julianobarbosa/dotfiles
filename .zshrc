@@ -79,6 +79,14 @@ bindkey '^H' backward-delete-char
 bindkey -M viins '^s' history-incremental-search-backward
 bindkey -M vicmd '^s' history-incremental-search-backward
 
+# print previous command but only the first nth argument
+# Alt+1, Alt+2 ...etc
+bindkey -s '\e1' "!:0 \t"
+bindkey -s '\e2' "!:0-1 \t"
+bindkey -s '\e3' "!:0-2 \t"
+bindkey -s '\e4' "!:0-4 \t"
+bindkey -s '\e5' "!:0-5 \t"
+
 # User configuration
 
   export EDITOR='vim'
