@@ -25,6 +25,7 @@ export PROJECT_HOME=~/_Projects
 
 set -o vi
 
+alias v='vim $1'
 alias ta='tmux attach -t $1'
 alias tl='tmux list-session'
 alias tn='tmux new -s $USER'
@@ -36,3 +37,16 @@ alias manage='python $VIRTUAL_ENV/../manage.py'
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+# enable history verification:
+# bang commands (!, !!, !?) will print to shell and not be auto executed
+# http://superuser.com/a/7416
+shopt -s histverify
+
+# print previous command but only the first nth arguments
+# Alt+1, Alt+2, ...etc
+bind '"\e1": "!:0 \n"'
+bind '"\e2": "!:0-1 \n"'
+bind '"\e3": "!:0-2 \n"'
+bind '"\e4": "!:0-3 \n"'
+bind '"\e5": "!:0-4 \n"'
