@@ -90,6 +90,16 @@ alias -s zip="unzip -l"
 
 #}}}
 
+# }}}
+#-------- Prompt {{{
+#------------------------------------------------------
+# https://wiki.archlinux.org/index.php/Zsh#Prompts
+
+autoload -U promptinit && promptinit
+prompt fade    # set prompt theme (for listing: $ prompt -p)
+
+# }}}
+
 #-------- Keybinding {{{
 #------------------------------------------------------
 # manpages for keybindings: $man zshzle
@@ -124,6 +134,35 @@ bindkey -s '\e`' "!:0- \t"     # all but the last word
 
 
 #}}}
+
+
+# }}}
+#-------- History {{{
+#------------------------------------------------------
+# get more info: $man zshoptions
+
+setopt APPEND_HISTORY
+setopt EXTENDED_HISTORY
+setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_NO_STORE
+setopt HIST_REDUCE_BLANKS
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_FIND_NO_DUPS
+setopt HIST_VERIFY
+setopt SHARE_HISTORY
+setopt INTERACTIVE_COMMENTS        # pound sign in interactive prompt
+HISTFILE=~/.zsh_history            # where to save zsh history
+HISTSIZE=10000
+SAVEHIST=10000
+cfg-history() { $EDITOR $HISTFILE ;}
+
+#
+# }}}
+
 
 # User configuration
 
