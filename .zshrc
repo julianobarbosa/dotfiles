@@ -66,6 +66,10 @@ function zle-line-init zle-keymap-select {
 zle -N zle-line-init
 zle -N zle-keymap-select
 
+#-------- Keybinding {{{
+#------------------------------------------------------
+# manpages for keybindings: $man zshzle
+
 # add missing vim hotkeys
 # fixes backspace deletion issues
 # http://zshwiki.org/home/zle/vi-mode
@@ -79,13 +83,23 @@ bindkey '^H' backward-delete-char
 bindkey -M viins '^s' history-incremental-search-backward
 bindkey -M vicmd '^s' history-incremental-search-backward
 
-# print previous command but only the first nth argument
+# partial history search using up and down arrow keys
+bindkey '^[[A' history-search-backward
+bindkey '^[[B' history-search-forward
+
+# Bang! Previous Command Hotkeys
+# print previous command but only the first nth arguments
 # Alt+1, Alt+2 ...etc
+# http://www.softpanorama.org/Scripting/Shellorama/bash_command_history_reuse.shtml#Bang_commands
 bindkey -s '\e1' "!:0 \t"
 bindkey -s '\e2' "!:0-1 \t"
 bindkey -s '\e3' "!:0-2 \t"
-bindkey -s '\e4' "!:0-4 \t"
-bindkey -s '\e5' "!:0-5 \t"
+bindkey -s '\e4' "!:0-3 \t"
+bindkey -s '\e5' "!:0-4 \t"
+bindkey -s '\e`' "!:0- \t"     # all but the last word
+
+
+#}}}
 
 # User configuration
 
