@@ -6,7 +6,8 @@
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="agnoster"
+#ZSH_THEME="agnoster"
+ZSH_THEME="gallois"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -50,10 +51,33 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(colorize common-aliases djagon git github git_flow gnu-utils history history-substring-search nmap tmux tmuxinator rsync python zsh-syntax-highlighting)
+plugins=(colorize common-aliases command-not-found djagon extract git github git_flow gnu-utils history history-substring-search nmap tmux tmuxinator pip python rsync zsh-syntax-highlighting)
 
-bindkey "^[[A" history-substring-search-up
-bindkey "^[[B" history-substring-search-down
+#enable vim mode on command line
+bindkey -v
+
+# show vim status
+# http://zshwiki.org/home/examples/zlewidgets
+function zle-line-init zle-keymap-select {
+    RPS1="${${KEYMAP/vicmd/-- NORMAL --}/(main|viins)/-- INSERT --}"
+    RPS2=$RPS1
+    zle reset-prompt
+}
+zle -N zle-line-init
+zle -N zle-keymap-select
+
+# add missing vim hotkeys
+# fixes backspace deletion issues
+# http://zshwiki.org/home/zle/vi-mode
+bindkey -a u undo
+bindkey -a '^R' redo
+bindkey '^?' backward-delete-char
+bindkey '^H' backward-delete-char
+
+# history search in vim mode
+# http://zshwiki.org./home/zle/bindkeys#why_isn_t_control-r working_anymore
+bindkey -M viins '^s' history-incremental-search-backward
+bindkey -M vicmd '^s' history-incremental-search-backward
 
 # User configuration
 
