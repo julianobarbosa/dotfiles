@@ -1,6 +1,11 @@
 # Source global definitions
+
 if [ -f /etc/bashrc ]; then
         . /etc/bashrc
+fi
+
+if [ -f $HOME/.zshrc-cygwin-path.sh ]; then
+        . $HOME/.zshrc-cygwin-path.sh
 fi
 
 if [ -f `which powerline-daemon` ]; then

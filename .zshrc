@@ -1,6 +1,11 @@
 # Path to your oh-my-zsh installation.
   export ZSH=$HOME/.oh-my-zsh
 
+# Set PATH for cygwin
+if [[ -f $HOME/.zshrc-cygwin-path.sh ]]; then
+    source $HOME/.zshrc-cygwin-path.sh
+fi
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -96,7 +101,7 @@ alias -s zip="unzip -l"
 # https://wiki.archlinux.org/index.php/Zsh#Prompts
 
 autoload -U promptinit && promptinit
-prompt fade    # set prompt theme (for listing: $ prompt -p)
+prompt bigfade    # set prompt theme (for listing: $ prompt -p)
 
 # }}}
 
@@ -166,9 +171,9 @@ cfg-history() { $EDITOR $HISTFILE ;}
 
 # User configuration
 
-  export EDITOR='vim'
-  export PATH="/root/bin:/usr/local/heroku/bin:/usr/local/heroku/bin:/usr/lib64/mpi/gcc/openmpi/bin:/sbin:/usr/sbin:/usr/local/sbin:/root/bin:/usr/local/bin:/usr/bin:/bin:/usr/X11R6/bin:/usr/games:/usr/lib/mit/bin:/usr/lib/mit/sbin"
-# export MANPATH="/usr/local/man:$MANPATH"
+  # export EDITOR='vim'
+  # export PATH="/root/bin:/usr/local/heroku/bin:/usr/local/heroku/bin:/usr/lib64/mpi/gcc/openmpi/bin:/sbin:/usr/sbin:/usr/local/sbin:/root/bin:/usr/local/bin:/usr/bin:/bin:/usr/X11R6/bin:/usr/games:/usr/lib/mit/bin:/usr/lib/mit/sbin"
+  # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
 
