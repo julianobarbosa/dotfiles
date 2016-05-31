@@ -1,6 +1,9 @@
 # Path to your oh-my-zsh installation.
   export ZSH=$HOME/.oh-my-zsh
 
+export SHELL=/bin/zsh
+export TERM=xterm-256color
+
 # Set PATH for cygwin
 if [[ -f $HOME/.zshrc-cygwin-path.sh ]]; then
     source $HOME/.zshrc-cygwin-path.sh
