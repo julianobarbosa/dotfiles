@@ -38,7 +38,7 @@ mv /etc/editrc ~/Downloads/MyBackup
 ln -s ~/Public/dotfiles/editrc /etc
 
 ```
-# dotfiles Install Info
+# TMUX Plugin Install
 
 ```console
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
