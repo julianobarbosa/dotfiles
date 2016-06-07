@@ -37,12 +37,6 @@ for i in .*; do  echo $i; mv ~/$i ~/Downloads/MyBackup; ln -s ~/Public/dotfiles/
 mv /etc/editrc ~/Downloads/MyBackup
 ln -s ~/Public/dotfiles/editrc /etc
 
-```
-# TMUX Plugin Install
-
-```console
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
 mv /etc/bash_completion.d/tma ~/Downloads/MyBackup
 ln -s ~/Public/dotfiles/tma /etc/bash_completion.d
 # Open vim then call :PluginInstall
@@ -51,6 +45,12 @@ ln -s ~/Public/dotfiles/tma /etc/bash_completion.d
 #  python-devel python3-devel
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py --clang-completer
+```
+# TMUX Plugin Install
+
+```console
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 ```
 
 # TMUX
