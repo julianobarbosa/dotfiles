@@ -37,6 +37,12 @@ for i in .*; do  echo $i; mv ~/$i ~/Downloads/MyBackup; ln -s ~/Public/dotfiles/
 mv /etc/editrc ~/Downloads/MyBackup
 ln -s ~/Public/dotfiles/editrc /etc
 
+```
+# dotfiles Install Info
+
+```console
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 mv /etc/bash_completion.d/tma ~/Downloads/MyBackup
 ln -s ~/Public/dotfiles/tma /etc/bash_completion.d
 # Open vim then call :PluginInstall
