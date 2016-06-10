@@ -7,7 +7,7 @@ https://tuxproject.de/projects/vim/
 # spf13-vim
 ```console
 cd
-curl https://j.mp/spf13-vim3 -L > spf13-vim.sh && sh spf13-vim.sh
+curl http://j.mp/spf13-vim3 -L -o - | sh
 ```
 
 # oh-my-zsh
