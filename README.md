@@ -1,19 +1,28 @@
 # dotfiles
-Linux dotfiles
+My Linux dotfiles
 
 # VIM Download
 https://tuxproject.de/projects/vim/
 
-# Fresh Install Info
+# spf13-vim
+```console
+cd
+curl http://j.mp/spf13-vim3 -L -o - | sh
+```
+
+# oh-my-zsh
+```console
+cd
+sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+rm -rf ~/.zshrc
+```
+
+# dotfiles Install Info
 
 ```console
 if [ -d ~/Public ]
 then
-    cd ~/Public/haridas
-    git pull origin master
-else
     mkdir ~/Public
-    git clone https://github.com/haridas/Dotfiles.git ~/Public/haridas
 fi
 
 if [ -d ~/Downloads/MyBackup ]
@@ -27,13 +36,6 @@ cd dotfiles
 for i in .*; do  echo $i; mv ~/$i ~/Downloads/MyBackup; ln -s ~/Public/dotfiles/$i ~/$i; done
 mv /etc/editrc ~/Downloads/MyBackup
 ln -s ~/Public/dotfiles/editrc /etc
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
-cd ~/.vim/colors
-wget https://raw.githubusercontent.com/thesheff17/youtube/master/vim/wombat256mod.vim
-
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 mv /etc/bash_completion.d/tma ~/Downloads/MyBackup
 ln -s ~/Public/dotfiles/tma /etc/bash_completion.d
@@ -43,6 +45,12 @@ ln -s ~/Public/dotfiles/tma /etc/bash_completion.d
 #  python-devel python3-devel
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py --clang-completer
+```
+# TMUX Plugin Install
+
+```console
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 ```
 
 # TMUX
