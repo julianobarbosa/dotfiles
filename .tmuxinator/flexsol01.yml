@@ -1,6 +1,6 @@
 # ~/.tmuxinator/goxvcd01.yml
 
-name: goxvcd01
+name: flexsol01
 root: ~/
 
 # Optional tmux socket
@@ -36,7 +36,7 @@ windows:
   - CLI: 
       layout: main-horizontal
       panes:
-        - rasterisk -vvvvvvvvvvvvvv
+        - cd /usr/src/docker-glpi
         - tail -f /var/log/astguiclient/screenlog.0
   - logs: tail -f /var/log/messages
-  - jupyter: cd && jupyter notebook
+  - jupyter: jupyter notebook
