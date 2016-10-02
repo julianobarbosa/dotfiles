@@ -7,7 +7,7 @@ https://tuxproject.de/projects/vim/
 # vim-bootstrap
 ```console
 curl 'http://vim-bootstrap.com/generate.vim' --data 'langs=perl&langs=go&langs=python&langs=javascript&langs=php&langs=html&langs=ruby&editor=vim' > ~/.vimrc
-wget -c https://github.com/julianobarbosa/dotfiles/blob/master/.vimrc.local
+wget -c https://raw.githubusercontent.com/julianobarbosa/dotfiles/master/.vimrc.local
 vim +PlugInstall +qall
 ```
 
