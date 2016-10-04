@@ -215,7 +215,6 @@ alias tkss='tmux kill-session -t'
 if [ -f /etc/bash_completion.d/tma ]; then
     . /etc/bash_completion.d/tma
 fi
-alias python=python3
 alias manage='python $VIRTUAL_ENV/../manage.py'
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
