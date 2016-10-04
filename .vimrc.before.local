@@ -1,6 +1,0 @@
-let g:spf13_bundle_groups=['general', 'Ctags', 'Writing', 'html', 'puppet', 'javascript', 'php', 'ruby', 'python', 'programming', 'misc', 'scala', 'youcompleteme']
-let mapleader = ','
-let g:spf13_edit_config_mapping='<Leader>ev'
-let g:spf15_apply_config_mapping='<Leader>sv'
-let g:virtualenv_directory = '$HOME/.VirtualEnvs'
-let g:spf13_no_easyWindows = 1

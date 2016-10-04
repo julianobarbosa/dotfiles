@@ -1,2 +1,8 @@
-set visualbell
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'scrooloose/nerdtree'
+Plug 'ryanoasis/vim-webdevicons'
+
+colorscheme darkblue
+
 set relativenumber
