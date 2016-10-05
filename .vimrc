@@ -7,7 +7,7 @@ endif
 
 let vimplug_exists=expand('~/.vim/autoload/plug.vim')
 
-let g:vim_bootstrap_langs = "ruby,python,c,php,html,perl,go"
+let g:vim_bootstrap_langs = "perl,go,python,javascript,php,html,ruby"
 let g:vim_bootstrap_editor = "vim"				" nvim or vim
 
 if !filereadable(vimplug_exists)
@@ -71,10 +71,11 @@ Plug 'honza/vim-snippets'
 Plug 'tomasr/molokai'
 
 "" Custom bundles
-Plug 'vim-scripts/c.vim'
-
 "" Python Bundle
 Plug 'davidhalter/jedi-vim'
+
+"" Javascript Bundle
+Plug 'jelera/vim-javascript-syntax'
 
 "" Perl Bundle
 Plug 'vim-perl/vim-perl'
@@ -446,10 +447,6 @@ nnoremap <Leader>o :.Gbrowse<CR>
 
 "" Custom configs
 
-autocmd FileType c setlocal tabstop=4 shiftwidth=4 expandtab
-autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 expandtab
-
-
 " vim-python
 augroup vimrc-python
   autocmd!
@@ -474,6 +471,15 @@ let g:syntastic_python_checkers=['python', 'flake8']
 
 " vim-airline
 let g:airline#extensions#virtualenv#enabled = 1
+
+
+let g:javascript_enable_domhtmlcss = 1
+
+" vim-javascript
+augroup vimrc-javascript
+  autocmd!
+  autocmd FileType javascript set tabstop=4|set shiftwidth=4|set expandtab softtabstop=4 smartindent
+augroup END
 
 
 
