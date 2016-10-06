@@ -7,3 +7,5 @@ Plug 'ekalinin/Dockerfile.vim'
 colorscheme darkblue
 
 set relativenumber
+
+set guifont=Monospace\ 13
