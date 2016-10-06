@@ -2,6 +2,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'scrooloose/nerdtree'
 Plug 'ryanoasis/vim-webdevicons'
+Plug 'ekalinin/Dockerfile.vim'
 
 colorscheme darkblue
 
