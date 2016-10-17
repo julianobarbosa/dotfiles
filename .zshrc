@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-  export ZSH=/root/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -8,7 +8,7 @@
 # ZSH_THEME="robbyrussell"
 ZSH_THEME="agnoster"
 
-eval `dircolors ~/.solarized/dircolors.ansi-dark`
+eval `dircolors ~/.solarized/dircolors`
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -61,6 +61,10 @@ plugins=(colorize common-aliases command-not-found docker-compose djagon extract
 
 source $ZSH/oh-my-zsh.sh
 
+export JAVA_HOME=/usr/local/java/jdk1.8.0_20
+export JRE_HOME=/usr/local/java/jre1.8.0_20
+export PATH=$PATH:$JRE_HOME/bin:$JAVA_HOME/bin:/usr/local/go/bin
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -84,7 +88,8 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 set -o nobeep
-set -o vi
+# set -o vi
+set -o emacs
 
 alias v='vim $1'
 alias ta='tmux attach -t'
@@ -101,3 +106,5 @@ alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias diclean='docker images | grep '\''\'' | grep -P '\''[1234567890abcdef]{12}'\'' -o | xargs -L1 docker rmi'
 # alias dclean='docker ps -a | grep -v '\'CONTAINER|_config|_data|_run'\'' | cut -c-12 | xargs docker rm'
+#
+export GOPATH=$HOME/__Projects/gocode
