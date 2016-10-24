@@ -49,6 +49,15 @@ ln -s ~/Public/dotfiles/tma /etc/bash_completion.d
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py --clang-completer
 ```
+
+# Solarized
+```console
+mkdir -p ~/.solarized
+git clone git://github.com/sigurdga/gnome-terminal-colors-solarized.git ~/.solarized
+cd ~/.solarized
+./install.sh
+```
+
 # TMUX Plugin Install
 
 ```console
