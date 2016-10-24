@@ -13,6 +13,8 @@ vim +PlugInstall +qall
 
 # oh-my-zsh
 ```console
+apt install zsh
+chsh -s $(which zsh)
 cd
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 rm -rf ~/.zshrc
