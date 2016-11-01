@@ -30,7 +30,7 @@ eval `dircolors ~/.solarized/dircolors`
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -52,7 +52,8 @@ eval `dircolors ~/.solarized/dircolors`
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(colorize common-aliases command-not-found docker-compose djagon extract git github git_flow gnu-utils heroku history history-substring-search nmap tmux tmuxinator pip python rsync zsh-syntax-highlighting)
+plugins=(colorize common-aliases command-not-found docker-compose djagon extract git github git_flow gnu-utils heroku history history-substring-search nmap tmux tmuxinator pip python rsync zsh-completions zsh-syntax-highlighting)
+autoload -U compinit && compinit
 
 # User configuration
 
