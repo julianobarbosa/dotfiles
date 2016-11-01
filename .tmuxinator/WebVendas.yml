@@ -1,6 +1,6 @@
-# ~/.tmuxinator/project.yml
+# ~/.tmuxinator/WebVendas.yml
 
-name: fam
+name: WebVendas
 root: ~/
 
 # Optional tmux socket
@@ -25,12 +25,13 @@ root: ~/
 # attach: false
 
 # Runs after everything. Use it to attach to tmux with custom options etc.
-# post: tmux -CC attach -t project
+# post: tmux -CC attach -t WebVendas
 
 windows:
-  - TLTXAST01: ssh -p 2222 barbosa@10.1.1.11
-  - TLTXWEB01: ssh -p 2222 barbosa@10.1.1.12
-  - TLTXSQL01: ssh -p 2222 barbosa@10.1.1.13
-  - TLTXSQL02: ssh -p 2222 barbosa@10.1.1.14
-  - TLTXAST05: ssh -p 2222 barbosa@10.1.1.18
-  - TLTXAST06: ssh -p 2222 barbosa@10.1.1.19
+  - editor:
+      layout: main-vertical
+      panes:
+        - vim
+        - guard
+  - server: bundle exec rails s
+  - logs: tail -f log/development.log

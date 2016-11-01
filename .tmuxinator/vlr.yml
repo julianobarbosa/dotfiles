@@ -1,6 +1,6 @@
 # ~/.tmuxinator/project.yml
 
-name: fam
+name: VLR
 root: ~/
 
 # Optional tmux socket
@@ -28,9 +28,4 @@ root: ~/
 # post: tmux -CC attach -t project
 
 windows:
-  - TLTXAST01: ssh -p 2222 barbosa@10.1.1.11
-  - TLTXWEB01: ssh -p 2222 barbosa@10.1.1.12
-  - TLTXSQL01: ssh -p 2222 barbosa@10.1.1.13
-  - TLTXSQL02: ssh -p 2222 barbosa@10.1.1.14
-  - TLTXAST05: ssh -p 2222 barbosa@10.1.1.18
-  - TLTXAST06: ssh -p 2222 barbosa@10.1.1.19
+  - VLRXVCD01: ssh -p 64022 barbosa@valora.no-ip.org

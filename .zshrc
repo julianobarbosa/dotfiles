@@ -63,7 +63,7 @@ source $ZSH/oh-my-zsh.sh
 
 export JAVA_HOME=/usr/local/java/jdk1.8.0_20
 export JRE_HOME=/usr/local/java/jre1.8.0_20
-export PATH=$PATH:$JRE_HOME/bin:$JAVA_HOME/bin:/usr/local/go/bin
+export PATH=.:$PATH:$JRE_HOME/bin:$JAVA_HOME/bin:/usr/local/go/bin
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
