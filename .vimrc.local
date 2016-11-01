@@ -9,3 +9,5 @@ colorscheme darkblue
 set relativenumber
 
 set guifont=Monospace\ 13
+
+set path+=**

@@ -34,8 +34,3 @@ windows:
   - TLTXSQL02: ssh -p 2222 barbosa@10.1.1.14
   - TLTXAST05: ssh -p 2222 barbosa@10.1.1.18
   - TLTXAST06: ssh -p 2222 barbosa@10.1.1.19
-  - server: bundle exec rails s
-  - logs: tail -f /var/log/messages
-  - logs: tail -f /var/log/messages
-  - CLI: rasterisk -vvvvvv
-  - htop: htop

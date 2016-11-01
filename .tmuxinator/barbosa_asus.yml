@@ -36,4 +36,5 @@ windows:
   - server: 
   - logs: tail -f log/development.log
   - CLI: 
+  - MP3: mpsyt
   - htop:
