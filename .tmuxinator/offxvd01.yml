@@ -1,6 +1,6 @@
 # ~/.tmuxinator/offxvcd01.yml
 
-name: goxvcd01
+name: offxvcd01
 root: ~/
 
 # Optional tmux socket
@@ -33,10 +33,13 @@ windows:
       panes:
         - vim
         - guard
+  - ETC:
+  - bash:
   - CLI: 
       layout: main-horizontal
       panes:
         - rasterisk -vvvvvvvvvvvvvv
         - tail -f /var/log/astguiclient/screenlog.0
+  - htop: 
   - logs: tail -f /var/log/messages
   - jupyter: cd && jupyter notebook
