@@ -34,12 +34,15 @@ windows:
         - vim
         - guard
   - ETC:
-  - bash:
+    - cd /etc/asterisk
+  - SHELL:
   - CLI: 
       layout: main-horizontal
       panes:
         - rasterisk -vvvvvvvvvvvvvv
         - tail -f /var/log/astguiclient/screenlog.0
-  - htop: 
-  - logs: tail -f /var/log/messages
+  - HTOP: 
+  - MYSQL:
+    - mysql -u root --database=asterisk
+  - LOGs: tail -f /var/log/messages
   - jupyter: cd && jupyter notebook
