@@ -70,11 +70,11 @@ export PATH=.:$PATH:$JRE_HOME/bin:$JAVA_HOME/bin:/usr/local/go/bin
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='mvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -95,7 +95,7 @@ set -o emacs
 alias v='vim $1'
 alias ta='tmux attach -t'
 alias tl='tmux list-session'
-alias tn='tmux new -s $USER'
+alias tn='tmuxinator $HOST'
 alias ts='tmux new-session -s'
 alias tksv='tmux kill-server'
 alias tkss='tmux kill-session -t'

@@ -33,10 +33,13 @@ windows:
       panes:
         - vim
         - guard
+  - ETC:
+  - bash:
   - CLI: 
       layout: main-horizontal
       panes:
         - rasterisk -vvvvvvvvvvvvvv
         - tail -f /var/log/astguiclient/screenlog.0
+  - htop: 
   - logs: tail -f /var/log/messages
   - jupyter: cd && jupyter notebook
