@@ -106,6 +106,10 @@ alias manage='python $VIRTUAL_ENV/../manage.py'
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias diclean='docker images | grep '\''\'' | grep -P '\''[1234567890abcdef]{12}'\'' -o | xargs -L1 docker rmi'
+alias docker-clean=' \
+  docker ps --no-trunc -aqf "status=exited" | xargs docker rm ; \
+  docker images --no-trunc -aqf "dangling=true" | xargs docker rmi ; \
+  docker volume ls -qf "dangling=true" | xargs docker volume rm'
 # alias dclean='docker ps -a | grep -v '\'CONTAINER|_config|_data|_run'\'' | cut -c-12 | xargs docker rm'
 #
 export GOPATH=$HOME/__Projects/gocode
