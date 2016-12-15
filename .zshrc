@@ -52,7 +52,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(colorize common-aliases command-not-found docker-compose djagon extract git github git_flow gnu-utils heroku history history-substring-search nmap tmux tmuxinator pip python rsync zsh-completions zsh-syntax-highlighting)
+plugins=(colorize common-aliases command-not-found docker docker-compose djagon extract git github git_flow gnu-utils heroku history history-substring-search nmap tmux tmuxinator pip python rsync ubuntu zsh-completions zsh-syntax-highlighting)
 autoload -U compinit && compinit
 
 # User configuration
