@@ -1,6 +1,6 @@
-# ~/.tmuxinator/project.yml
+# ~/.tmuxinator/goxvcd01.yml
 
-name: VLR
+name: vlrxvcd01
 root: ~/
 
 # Optional tmux socket
@@ -25,7 +25,24 @@ root: ~/
 # attach: false
 
 # Runs after everything. Use it to attach to tmux with custom options etc.
-# post: tmux -CC attach -t project
+# post: tmux -CC attach -t jmb
 
 windows:
-  - VLRXVCD01: ssh -p 64022 barbosa@valora.no-ip.org
+  - editor:
+      layout: main-vertical
+      panes:
+        - vim
+        - guard
+  - ETC:
+    - cd /etc/asterisk
+  - SHELL:
+  - CLI: 
+      layout: main-horizontal
+      panes:
+        - rasterisk -vvvvvvvvvvvvvv
+        - tail -f /var/log/astguiclient/screenlog.0
+  - HTOP: 
+  - MYSQL:
+    - mysql -u root --database=asterisk
+  - LOGs: tail -f /var/log/messages
+  - jupyter: cd && jupyter notebook
