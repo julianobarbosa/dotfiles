@@ -27,7 +27,7 @@ eval `dircolors ~/.solarized/dircolors`
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -52,7 +52,7 @@ eval `dircolors ~/.solarized/dircolors`
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(colorize common-aliases command-not-found docker-compose djagon extract git github git_flow gnu-utils heroku history history-substring-search nmap tmux tmuxinator pip python rsync zsh-syntax-highlighting)
+plugins=(colorize common-aliases command-not-found docker-compose djagon extract git github git_flow gnu-utils heroku history history-substring-search nmap tmux tmuxinator pip python rsync ubuntu zsh-syntax-highlighting)
 
 # User configuration
 
@@ -61,6 +61,7 @@ plugins=(colorize common-aliases command-not-found docker-compose djagon extract
 
 source $ZSH/oh-my-zsh.sh
 
+export HOSTALIASES=/etc/host.aliases
 export JAVA_HOME=/usr/local/java/jdk1.8.0_20
 export JRE_HOME=/usr/local/java/jre1.8.0_20
 export PATH=.:$PATH:$JRE_HOME/bin:$JAVA_HOME/bin:/usr/local/go/bin
@@ -69,11 +70,11 @@ export PATH=.:$PATH:$JRE_HOME/bin:$JAVA_HOME/bin:/usr/local/go/bin
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+#if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+#else
+  #export EDITOR='mvim'
+#fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
