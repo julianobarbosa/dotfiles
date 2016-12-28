@@ -7,7 +7,7 @@ endif
 
 let vimplug_exists=expand('~/.vim/autoload/plug.vim')
 
-let g:vim_bootstrap_langs = "perl,go,python,javascript,php,html,ruby"
+let g:vim_bootstrap_langs = "c,perl,go,python,javascript,php,html,ruby"
 let g:vim_bootstrap_editor = "vim"				" nvim or vim
 
 if !filereadable(vimplug_exists)
@@ -71,6 +71,8 @@ Plug 'honza/vim-snippets'
 Plug 'tomasr/molokai'
 
 "" Custom bundles
+Plug 'vim-scripts/c.vim'
+
 "" Python Bundle
 Plug 'davidhalter/jedi-vim'
 
@@ -446,6 +448,10 @@ vnoremap K :m '<-2<CR>gv=gv
 nnoremap <Leader>o :.Gbrowse<CR>
 
 "" Custom configs
+
+autocmd FileType c setlocal tabstop=4 shiftwidth=4 expandtab
+autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 expandtab
+
 
 " vim-python
 augroup vimrc-python
