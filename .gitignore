@@ -90,3 +90,10 @@ ENV/
 
 # Environment
 .env
+
+# Tmux
+.tmux/plugins/
+
+# Tmuxinator
+.tmuxinator/fam-ssh.yml
+.tmuxinator/vlr-remote.yml
