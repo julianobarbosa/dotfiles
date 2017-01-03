@@ -33,10 +33,17 @@ windows:
       panes:
         - vim
         - guard
+  - ETC:
+    - cd /etc
+  - VAR:
+    - cd /var
   - CLI: 
       layout: main-horizontal
       panes:
         - rasterisk -vvvvvvvvvvvvvv
         - tail -f /var/log/astguiclient/screenlog.0
+  - htop: 
+    - cd /etc
+    - htop
   - logs: tail -f /var/log/messages
   - jupyter: cd && jupyter notebook

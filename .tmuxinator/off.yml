@@ -1,4 +1,4 @@
-# ~/.tmuxinator/project.yml
+# ~/.tmuxinator/goxvcd01.yml
 
 name: off
 root: ~/
@@ -25,7 +25,25 @@ root: ~/
 # attach: false
 
 # Runs after everything. Use it to attach to tmux with custom options etc.
-# post: tmux -CC attach -t project
+# post: tmux -CC attach -t jmb
 
 windows:
-  - offxvcd01: ssh -p 2222 barbosa@10.1.1.12
+  - editor:
+      layout: main-vertical
+      panes:
+        - vim
+        - guard
+  - ETC:
+    - cd /etc
+  - VAR:
+    - cd /var
+  - CLI: 
+      layout: main-horizontal
+      panes:
+        - rasterisk -vvvvvvvvvvvvvv
+        - tail -f /var/log/astguiclient/screenlog.0
+  - htop: 
+    - cd /etc
+    - htop
+  - logs: tail -f /var/log/messages
+  - jupyter: cd && jupyter notebook
