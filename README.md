@@ -13,6 +13,8 @@ vim +PlugInstall +qall
 
 # oh-my-zsh
 ```console
+apt install zsh
+chsh -s $(which zsh)
 cd
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 rm -rf ~/.zshrc
@@ -47,6 +49,15 @@ ln -s ~/Public/dotfiles/tma /etc/bash_completion.d
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py --clang-completer
 ```
+
+# Solarized
+```console
+mkdir -p ~/.solarized
+git clone git://github.com/sigurdga/gnome-terminal-colors-solarized.git ~/.solarized
+cd ~/.solarized
+./install.sh
+```
+
 # TMUX Plugin Install
 
 ```console
