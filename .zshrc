@@ -93,10 +93,10 @@ set -o nobeep
 set -o emacs
 
 alias v='vim $1'
-alias ta='tmux attach -t'
-alias tl='tmux list-session'
-alias tn='tmux new -s $USER'
-alias ts='tmux new-session -s'
+alias ta='tmux -2 attach -t'
+alias tl='tmux -2 list-session'
+alias tn='tmux -2 new -s $USER'
+alias ts='tmux -2 new-session -s'
 alias tksv='tmux kill-server'
 alias tkss='tmux kill-session -t'
 if [ -f /etc/bash_completion.d/tma ]; then
