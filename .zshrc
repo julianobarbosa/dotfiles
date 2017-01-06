@@ -64,7 +64,14 @@ source $ZSH/oh-my-zsh.sh
 export HOSTALIASES=/etc/host.aliases
 export JAVA_HOME=/usr/local/java/jdk1.8.0_20
 export JRE_HOME=/usr/local/java/jre1.8.0_20
-export PATH=.:$PATH:$JRE_HOME/bin:$JAVA_HOME/bin:/usr/local/go/bin
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH=.:$PYENV_ROOT/bin:$PATH:$JRE_HOME/bin:$JAVA_HOME/bin:/usr/local/go/bin
+
+export WORKON_HOME=~/.ve
+export PROJECT_HOME=~/__Projects/Envs
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+pyenv virtualenvwrapper_lazy
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
