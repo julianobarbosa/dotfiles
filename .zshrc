@@ -61,6 +61,7 @@ plugins=(colorize common-aliases command-not-found docker-compose djagon extract
 
 source $ZSH/oh-my-zsh.sh
 
+export PYTHONSTARTUP="$HOME/.pyrc"
 export HOSTALIASES=/etc/host.aliases
 export JAVA_HOME=/usr/local/java/jdk1.8.0_20
 export JRE_HOME=/usr/local/java/jre1.8.0_20
