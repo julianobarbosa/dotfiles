@@ -14,7 +14,7 @@ socket_name: asus
 
 # Pass command line options to tmux. Useful for specifying a different tmux.conf.
 # tmux_options: -f ~/.tmux.mac.conf
-tmux_options: -2 
+tmux_options: -2
 
 # Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
 # tmux_command: byobu
@@ -34,8 +34,8 @@ windows:
       panes:
         - vim
         - guard
-  - server: 
+  - server:
   - logs: tail -f log/development.log
-  - CLI: 
+  - CLI:
   - MP3: mpsyt
   - htop:
