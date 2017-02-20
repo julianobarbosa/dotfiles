@@ -33,10 +33,13 @@ windows:
       panes:
         - vim
         - guard
-  - CLI: 
+  - CLI:
       layout: main-horizontal
       panes:
         - cd /usr/src/docker-glpi
         - tail -f /var/log/astguiclient/screenlog.0
   - logs: tail -f /var/log/messages
-  - jupyter: jupyter notebook
+  - telegram:
+    - cd /opt/botTelegram-zabbix/
+    - pyenv activate telegram
+    - python /opt/botTelegram-zabbix/botTelegram-zabbix.py
