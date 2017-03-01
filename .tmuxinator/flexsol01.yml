@@ -41,5 +41,9 @@ windows:
   - logs: tail -f /var/log/messages
   - telegram:
     - cd /opt/botTelegram-zabbix/
+<<<<<<< HEAD
     - pyenv activate botTelegram
+=======
+    - pyenv activate telegram
+>>>>>>> cf340560e0bdd3e8f8240974fbf53af28e78625b
     - python /opt/botTelegram-zabbix/botTelegram-zabbix.py
