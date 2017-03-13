@@ -70,8 +70,12 @@ export PATH=.:$PYENV_ROOT/bin:$PATH:$JRE_HOME/bin:$JAVA_HOME/bin:/usr/local/go/b
 
 export WORKON_HOME=~/.ve
 export PROJECT_HOME=~/__Projects/Envs
+
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+# eval "$(pyenv root)/completions/pyenv.zsh"
+source "$PYENV_ROOT/completions/pyenv.zsh"
+
 pyenv virtualenvwrapper_lazy
 
 # You may need to manually set your language environment
