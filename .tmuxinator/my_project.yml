@@ -1,0 +1,16 @@
+# ~/.tmuxinator/my_project.yml
+# you can make as many tabs as you wish...
+
+project_name: my_project
+project_root: ~/
+tabs:
+  - zsh: ls -l
+  - shell: venvwrapper && workon my_project && cd my_project &&  ./manage.py shell
+  - database: venvwrapper && workon my_project && cd my_project && ./manage.py dbshell
+  - server: venvwrapper && workon my_project && cd my_project && ./manage.py runserver
+  - logs:
+      layout: even-horizonal
+      panes:
+        - tail -f /opt/local/var/log/nginx/access.log
+        - tail -f /opt/local/var/log/nginx/error.log
+        - sudo python -m smtpd -n -c DebuggingServer localhost:25
