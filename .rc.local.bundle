@@ -1,0 +1,17 @@
+Plug 'ryanoasis/vim-webdevicons'
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'michalbachowski/vim-wombat256mod'
+Plug 'keith/tmux.vim'
+Plug 'nvie/vim-flake8'
+Plug 'mattn/emmet-vim'
+
+"colorscheme darkblue
+"colorscheme wombat256mod
+
+let g:snips_author = "Juliano Barbosa <julianomb@gmail.com"
+
+set relativenumber
+
+set guifont=Monospace\ 13
+
+set path+=**
