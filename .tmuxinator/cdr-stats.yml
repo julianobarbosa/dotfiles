@@ -1,0 +1,46 @@
+# ~/.tmuxinator/cdr-stats.yml
+
+name: cdr-stats
+root: ~/__Projects/Envs/cdr-stats
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+pre_window: pyenv activate cdr-stats
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+# startup_window: logs
+
+# Controls whether the tmux session should be attached to automatically. Defaults to true.
+# attach: false
+
+# Runs after everything. Use it to attach to tmux with custom options etc.
+# post: tmux -CC attach -t cdr-stats
+
+windows:
+  - editor:
+      layout: main-vertical
+      panes:
+        - vim
+        - guard
+        - git pull
+  - server:
+    - python manage.py runserver
+  - test:
+    - python manage.py test
+  - shell_plus:
+    - python manage.py shell_plus
+  - database:
+    - python manage.py dbshell
+  - logs: 
+    - tail -f log/development.log
