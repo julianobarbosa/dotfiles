@@ -52,7 +52,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(colorize common-aliases command-not-found docker-compose djagon extract git github git_flow gnu-utils heroku history history-substring-search nmap tmux tmuxinator pip python rsync ubuntu zsh-syntax-highlighting)
+plugins=(colorize common-aliases command-not-found docker-compose djagon extract git github git_flow gnu-utils heroku history history-substring-search nmap tmux tmuxinator pip python rsync ubuntu zsh-completions zsh-syntax-highlighting)
 
 # User configuration
 
@@ -120,4 +120,31 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 alias diclean='docker images | grep '\''\'' | grep -P '\''[1234567890abcdef]{12}'\'' -o | xargs -L1 docker rmi'
 # alias dclean='docker ps -a | grep -v '\'CONTAINER|_config|_data|_run'\'' | cut -c-12 | xargs docker rm'
 #
+# To reduce typing define some shell aliases
+alias ys='yakuake_session'
+
+### URL: https://github.com/pjfl/p5-yakuake-sessions
+# Create some Yakuake sessions. Set each session to a different directory.
+# Run some commands in some of the sessions like an HTTP web development
+# server or tail -f on a log file. Set the tab titles for each session.
+# Now create a profile called dev
+#ys create dev
+
+# Subsequently reload the dev profile
+#ys load dev
+
+# Show the contents of the dev profile
+#ys show dev
+
+# Edit the contents of the dev profile
+#ys edit dev
+
+# Delete the dev profile
+#ys delete dev
+
+# Command line help
+#ys -? | -H | -h [sub-command] | list_methods | dump_self
+
+
+
 export GOPATH=$HOME/__Projects/gocode
