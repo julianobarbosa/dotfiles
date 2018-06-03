@@ -53,7 +53,8 @@ cd ~/.vim/bundle/YouCompleteMe
 # Solarized
 ```console
 mkdir -p ~/.solarized
-git clone git://github.com/sigurdga/gnome-terminal-colors-solarized.git ~/.solarized
+git clone https://github.com/Anthony25/gnome-terminal-colors-solarized.git
+# git clone git://github.com/sigurdga/gnome-terminal-colors-solarized.git ~/.solarized
 cd ~/.solarized
 ./install.sh
 ```
