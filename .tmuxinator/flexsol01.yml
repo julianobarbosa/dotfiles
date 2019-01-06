@@ -31,15 +31,24 @@ windows:
   - editor:
       layout: main-vertical
       panes:
-        - vim
+        - nvim
         - guard
   - CLI:
       layout: main-horizontal
       panes:
-        - cd /usr/src/docker-glpi
+        - cd /usr/src/docker.git
         - tail -f /var/log/astguiclient/screenlog.0
   - logs: tail -f /var/log/messages
+  - Zabbix-in-Telegram:
+    - cd /opt/Zabbix-in-Telegram/
+    - pyenv activate Zabbix-in-Telegram
+    - python /opt/Zabbix-in-Telegram/botTelegram-zabbix.py
   - telegram:
-    - cd /opt/botTelegram-zabbix/
-    - pyenv activate botTelegram
-    - python /opt/botTelegram-zabbix/botTelegram-zabbix.py
+      layout: main-vertical
+      panes:
+        - top:
+          - cd /opt/botTelegram-zabbix/
+          - pyenv activate botTelegram
+          - python /opt/botTelegram-zabbix/botTelegram-zabbix.py
+        - down:
+          - tail -f /opt/botTelegram-zabbix/botTelegram_zabbix.log
