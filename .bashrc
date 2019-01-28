@@ -30,7 +30,9 @@ export PROJECT_HOME=~/_Projects
 
 set -o vi
 
-alias v='vim $1'
+alias v='nvim $1'
+alias vi='nvim $1'
+alias vim='vim $1'
 alias ta='tmux attach -t $1'
 alias tl='tmux list-session'
 alias tn='tmux new -s $USER'
@@ -39,6 +41,8 @@ if [ -f /etc/bash_completion.d/tma ]; then
 fi
 alias python=python3
 alias manage='python $VIRTUAL_ENV/../manage.py'
+
+alias start-script="wget -q -nv -O -  http://gist.github.com/raw/863014/script-skeleton.py | vim - -c 'set filetype=python'"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
