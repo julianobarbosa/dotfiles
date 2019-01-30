@@ -36,13 +36,14 @@ alias vim='vim $1'
 alias ta='tmux attach -t $1'
 alias tl='tmux list-session'
 alias tn='tmux new -s $USER'
-if [ -f /etc/bash_completion.d/tma ]; then
-	. /etc/bash_completion.d/tma
-fi
 alias python=python3
 alias manage='python $VIRTUAL_ENV/../manage.py'
 
 alias start-script="wget -q -nv -O -  http://gist.github.com/raw/863014/script-skeleton.py | vim - -c 'set filetype=python'"
+
+if [ -f /etc/bash_completion.d/tma ]; then
+	. /etc/bash_completion.d/tma
+fi
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
@@ -59,3 +60,7 @@ bind '"\e2": "!:0-1 \n"'
 bind '"\e3": "!:0-2 \n"'
 bind '"\e4": "!:0-3 \n"'
 bind '"\e5": "!:0-4 \n"'
+
+# pyenv
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
