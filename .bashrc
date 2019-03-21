@@ -77,3 +77,4 @@ bind '"\e5": "!:0-4 \n"'
 # pyenv
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+eval "$(ssh-agent)"
