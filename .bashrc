@@ -39,6 +39,19 @@ alias tn='tmux new -s $USER'
 alias python=python3
 alias manage='python $VIRTUAL_ENV/../manage.py'
 
+# Git Aliases
+alias gs='git status '
+alias ga='git add '
+alias gb='git branch '
+alias gc='git commit'
+alias gd='git diff'
+alias go='git checkout '
+alias gk='gitk --all&'
+alias gx='gitx --all'
+
+alias got='git '
+alias get='git '
+
 alias start-script="wget -q -nv -O -  http://gist.github.com/raw/863014/script-skeleton.py | vim - -c 'set filetype=python'"
 
 if [ -f /etc/bash_completion.d/tma ]; then
