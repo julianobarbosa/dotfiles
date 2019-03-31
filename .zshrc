@@ -148,3 +148,28 @@ alias ys='yakuake_session'
 
 
 export GOPATH=$HOME/__Projects/gocode
+# Customise the Powerlevel9k prompts
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
+  dir
+  custom_javascript 
+  vcs
+  newline
+  status
+)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
+POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+
+# Create a custom JavaScript prompt section
+# POWERLEVEL9K_CUSTOM_JAVASCRIPT="echo -n '\ue781' JavaScript"
+# POWERLEVEL9K_CUSTOM_JAVASCRIPT_FOREGROUND="black"
+# POWERLEVEL9K_CUSTOM_JAVASCRIPT_BACKGROUND="yellow"
+
+# Create a custom Python prompt section
+POWERLEVEL9K_CUSTOM_PYTHON="echo -n '\uf81f' Python"
+POWERLEVEL9K_CUSTOM_PYTHON_FOREGROUND="black"
+POWERLEVEL9K_CUSTOM_PYTHON_BACKGROUND="blue"
+
+# Load Nerd Fonts with Powerlevel9k theme for Zsh
+POWERLEVEL9K_MODE='nerdfont-complete'
+source ~/powerlevel9k/powerlevel9k.zsh-theme
+
