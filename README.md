@@ -45,6 +45,12 @@ ln -s ~/Public/dotfiles/tma /etc/bash_completion.d
 # Open vim then call :PluginInstall
 # For YoucompleteMe plugin you needed install
 #  automake gcc gcc-c++ kernel-devel cmake
+# For Windows
+#    Open Visual Studio
+#    Go to Tools -> Get Tools and Features
+#    In the "Workloads" tab enable "Desktop development with C++"
+#    Click Modify at the bottom right
+#
 #  python-devel python3-devel
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py --clang-completer
