@@ -97,3 +97,6 @@ ENV/
 # Tmuxinator
 .tmuxinator/fam-ssh.yml
 .tmuxinator/vlr-remote.yml
+
+# *.log
+.log
