@@ -71,3 +71,6 @@ cd ~/.solarized
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ```
+
+# reference
+[WSL2](https://dev.to/nickymeuleman/wsl2-zsh-and-docker-linux-through-windows-4e4m)
