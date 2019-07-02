@@ -72,7 +72,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ```
 
-[Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro)
+# Font:[Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro)
 
 # reference
 [WSL2](https://dev.to/nickymeuleman/wsl2-zsh-and-docker-linux-through-windows-4e4m)
