@@ -4,7 +4,7 @@ tmux attach -t base || tmux new -c '$HOME' -s base -n EDITOR
 # Select pane 1, set dir to api, run vim
 tmux selectp -t 1
 tmux send-keys "cd $HOME" C-m
-tmux send-keys "nvim" C-m
+# tmux send-keys "nvim" C-m
 
 # Split panel 1, set dir to Project
 tmux splitw -h -p 50 -c '$HOME/__Project/Envs'
