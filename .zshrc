@@ -53,7 +53,18 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(colorize common-aliases command-not-found docker-compose django extract git github git-flow gitignore git-prompt git-remote-branch gnu-utils heroku history history-substring-search nmap tmux tmuxinator pip pyenv pylint python postgres rsync ubuntu)
+
+export PYTHONSTARTUP="$HOME/.pyrc"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH=.:$PYENV_ROOT/bin:$PATH
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+# eval "$(pyenv root)/completions/pyenv.zsh"
+# source "$PYENV_ROOT/completions/pyenv.zsh"
+
+# pyenv virtualenvwrapper_lazy
+
+plugins=(alias-tips colorize common-aliases command-not-found docker-compose django extract git github git-flow gitignore git-prompt git-remote-branch gnu-utils heroku history history-substring-search nmap tmux tmuxinator pip pyenv pylint python postgres rsync ubuntu)
 
 # User configuration
 
@@ -62,22 +73,13 @@ plugins=(colorize common-aliases command-not-found docker-compose django extract
 
 source $ZSH/oh-my-zsh.sh
 
-export PYTHONSTARTUP="$HOME/.pyrc"
 export HOSTALIASES=/etc/host.aliases
 export JAVA_HOME=/usr/local/java/jdk1.8.0_20
 export JRE_HOME=/usr/local/java/jre1.8.0_20
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH=.:$PYENV_ROOT/bin:$PATH:$JRE_HOME/bin:$JAVA_HOME/bin:/usr/local/go/bin
+export PATH=$PATH:$JRE_HOME/bin:$JAVA_HOME/bin:/usr/local/go/bin
 
 export WORKON_HOME=~/.ve
 export PROJECT_HOME=~/__Projects/Envs
-
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-# eval "$(pyenv root)/completions/pyenv.zsh"
-source "$PYENV_ROOT/completions/pyenv.zsh"
-
-pyenv virtualenvwrapper_lazy
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
@@ -172,5 +174,5 @@ POWERLEVEL9K_CUSTOM_PYTHON_BACKGROUND="blue"
 
 # Load Nerd Fonts with Powerlevel9k theme for Zsh
 POWERLEVEL9K_MODE='nerdfont-complete'
-source ~/powerlevel9k/powerlevel9k.zsh-theme
+#source ~/powerlevel9k/powerlevel9k.zsh-theme
 
