@@ -21,8 +21,12 @@ rm -rf ~/.zshrc
 git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
 ```
 
-# dotfiles Install Info
+## oh-my-zsh - Plugins
+```console
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
 
+# dotfiles Install Info
 ```console
 if [ -d ~/Public ]
 then

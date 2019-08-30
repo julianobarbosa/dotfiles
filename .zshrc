@@ -64,7 +64,7 @@ eval "$(pyenv virtualenv-init -)"
 
 # pyenv virtualenvwrapper_lazy
 
-plugins=(alias-tips colorize common-aliases command-not-found docker-compose django extract git github git-flow gitignore git-prompt git-remote-branch gnu-utils heroku history history-substring-search nmap tmux tmuxinator pip pyenv pylint python postgres rsync ubuntu)
+plugins=(alias-tips colorize common-aliases command-not-found docker-compose django extract git github git-flow gitignore git-prompt git-remote-branch gnu-utils heroku history history-substring-search nmap tmux tmuxinator pip pyenv pylint python postgres rsync ubuntu vi-mode zsh-autosuggestions)
 
 # User configuration
 
@@ -176,3 +176,4 @@ POWERLEVEL9K_CUSTOM_PYTHON_BACKGROUND="blue"
 POWERLEVEL9K_MODE='nerdfont-complete'
 #source ~/powerlevel9k/powerlevel9k.zsh-theme
 
+bindkey -v
