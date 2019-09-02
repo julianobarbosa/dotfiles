@@ -47,4 +47,22 @@ alias quit=q
 # KILL
 alias kill_port="fuser -n tcp -k $1"
 
+# TMUX
+alias v='vim $1'
+alias ta='tmux -2 attach -t'
+alias tl='tmux -2 list-session'
+alias tn='tmux -2 new -s $USER'
+alias ts='tmux -2 new-session -s'
+alias tksv='tmux kill-server'
+alias tkss='tmux kill-session -t'
 
+# Django
+alias manage='python $VIRTUAL_ENV/../manage.py'
+
+# oh-my-zsh
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
+
+# Docker
+alias diclean='docker images | grep '\''\'' | grep -P '\''[1234567890abcdef]{12}'\'' -o | xargs -L1 docker rmi'
+#
