@@ -7,7 +7,8 @@ export ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 # ZSH_THEME="robbyrussell"
 # ZSH_THEME="agnoster"
-ZSH_THEME="powerlevel9k/powerlevel9k"
+# ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME=powerlevel10k/powerlevel10k
 
 eval `dircolors ~/.solarized/dircolors`
 
@@ -64,7 +65,7 @@ eval "$(pyenv virtualenv-init -)"
 
 # pyenv virtualenvwrapper_lazy
 
-plugins=(alias-tips colorize common-aliases command-not-found docker-compose django extract git github git-flow gitignore git-prompt git-remote-branch gnu-utils heroku history history-substring-search nmap tmux tmuxinator pip pyenv pylint python postgres rsync ubuntu vi-mode zsh-autosuggestions)
+plugins=(alias-tips colorize common-aliases command-not-found docker-compose django extract hacker-quotes git github git-flow gitignore git-open git-prompt git-remote-branch gnu-utils jsontools heroku history history-substring-search nmap tmux tmuxinator pip pyenv pylint python postgres rand-quote rsync ubuntu sudo vi-mode zsh-autosuggestions)
 
 # User configuration
 
@@ -153,14 +154,21 @@ alias ys='yakuake_session'
 export GOPATH=$HOME/__Projects/gocode
 # Customise the Powerlevel9k prompts
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
+  vi_mode
+  time
   dir
-  custom_javascript 
-  vcs
   newline
+  pyenv
+  vcs
   status
+  newline
 )
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+POWERLEVEL9K_CONTEXT_TEMPLATE="%n@`hostname -f`"
+
+POWERLEVEL9K_VI_INSERT_MODE_STRING="-- INSERT --"
+POWERLEVEL9K_VI_COMMAND_MODE_STRING="-- NORMAL --"
 
 # Create a custom JavaScript prompt section
 # POWERLEVEL9K_CUSTOM_JAVASCRIPT="echo -n '\ue781' JavaScript"
@@ -175,5 +183,5 @@ POWERLEVEL9K_CUSTOM_PYTHON_BACKGROUND="blue"
 # Load Nerd Fonts with Powerlevel9k theme for Zsh
 POWERLEVEL9K_MODE='nerdfont-complete'
 #source ~/powerlevel9k/powerlevel9k.zsh-theme
-
+#
 bindkey -v
