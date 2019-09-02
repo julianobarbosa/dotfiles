@@ -87,9 +87,9 @@ export PROJECT_HOME=~/__Projects/Envs
 
 # Preferred editor for local and remote sessions
 #if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
+#  export EDITOR='vim'
 #else
-  #export EDITOR='mvim'
+  export EDITOR='nvim'
 #fi
 
 # Compilation flags
@@ -105,28 +105,13 @@ export PROJECT_HOME=~/__Projects/Envs
 #
 # Example aliases
 set -o nobeep
-# set -o vi
-set -o emacs
+set -o vi
+# set -o emacs
 
-alias v='vim $1'
-alias ta='tmux -2 attach -t'
-alias tl='tmux -2 list-session'
-alias tn='tmux -2 new -s $USER'
-alias ts='tmux -2 new-session -s'
-alias tksv='tmux kill-server'
-alias tkss='tmux kill-session -t'
 if [ -f /etc/bash_completion.d/tma ]; then
     . /etc/bash_completion.d/tma
 fi
-alias manage='python $VIRTUAL_ENV/../manage.py'
-alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
-alias diclean='docker images | grep '\''\'' | grep -P '\''[1234567890abcdef]{12}'\'' -o | xargs -L1 docker rmi'
-# alias dclean='docker ps -a | grep -v '\'CONTAINER|_config|_data|_run'\'' | cut -c-12 | xargs docker rm'
 #
-# To reduce typing define some shell aliases
-alias ys='yakuake_session'
-
 ### URL: https://github.com/pjfl/p5-yakuake-sessions
 # Create some Yakuake sessions. Set each session to a different directory.
 # Run some commands in some of the sessions like an HTTP web development
