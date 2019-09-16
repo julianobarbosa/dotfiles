@@ -170,3 +170,11 @@ POWERLEVEL9K_MODE='nerdfont-complete'
 #source ~/powerlevel9k/powerlevel9k.zsh-theme
 #
 bindkey -v
+
+# Windows XSrv config
+export $(dbus-launch)
+export LIBGL_ALWAYS_INDIRECT=1
+
+export WSL_VERSION=$(wsl.exe -l -v | grep -a '[*]' | sed 's/[^0-9]*//g')
+export WSL_HOST=$(tail -1 /etc/resolv.conf | cut -d' ' -f2)
+export DISPLAY=$WSL_HOST:0
