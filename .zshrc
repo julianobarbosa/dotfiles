@@ -65,7 +65,7 @@ eval "$(pyenv virtualenv-init -)"
 
 # pyenv virtualenvwrapper_lazy
 
-plugins=(alias-tips colorize common-aliases command-not-found docker-compose django extract hacker-quotes git github git-flow gitignore git-open git-prompt git-remote-branch gnu-utils jsontools heroku history history-substring-search nmap tmux tmuxinator pip pyenv pylint python postgres rand-quote rsync ubuntu sudo vi-mode zsh-autosuggestions)
+plugins=(alias-tips colorize common-aliases command-not-found docker-compose django extract git github git-flow gitignore git-prompt git-remote-branch gnu-utils jsontools heroku history history-substring-search nmap tmux tmuxinator pip pyenv pylint python postgres rsync ubuntu sudo vi-mode zsh-autosuggestions zsh-syntax-highlighting)
 
 # User configuration
 
@@ -134,26 +134,24 @@ fi
 # Command line help
 #ys -? | -H | -h [sub-command] | list_methods | dump_self
 
-
-
 export GOPATH=$HOME/__Projects/gocode
 # Customise the Powerlevel9k prompts
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
-  vi_mode
-  time
-  dir
-  newline
-  pyenv
-  vcs
-  status
-  newline
-)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
-POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-POWERLEVEL9K_CONTEXT_TEMPLATE="%n@`hostname -f`"
+#POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
+  #vi_mode
+  #time
+  #dir
+  #newline
+  #pyenv
+  #vcs
+  #status
+  #newline
+#)
+#POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=()
+#POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
+#POWERLEVEL9K_CONTEXT_TEMPLATE="%n@`hostname -f`"
 
-POWERLEVEL9K_VI_INSERT_MODE_STRING="-- INSERT --"
-POWERLEVEL9K_VI_COMMAND_MODE_STRING="-- NORMAL --"
+#POWERLEVEL9K_VI_INSERT_MODE_STRING="-- INSERT --"
+#POWERLEVEL9K_VI_COMMAND_MODE_STRING="-- NORMAL --"
 
 # Create a custom JavaScript prompt section
 # POWERLEVEL9K_CUSTOM_JAVASCRIPT="echo -n '\ue781' JavaScript"
@@ -161,12 +159,31 @@ POWERLEVEL9K_VI_COMMAND_MODE_STRING="-- NORMAL --"
 # POWERLEVEL9K_CUSTOM_JAVASCRIPT_BACKGROUND="yellow"
 
 # Create a custom Python prompt section
-POWERLEVEL9K_CUSTOM_PYTHON="echo -n '\uf81f' Python"
-POWERLEVEL9K_CUSTOM_PYTHON_FOREGROUND="black"
-POWERLEVEL9K_CUSTOM_PYTHON_BACKGROUND="blue"
+#POWERLEVEL9K_CUSTOM_PYTHON="echo -n '\uf81f' Python"
+#POWERLEVEL9K_CUSTOM_PYTHON_FOREGROUND="black"
+#POWERLEVEL9K_CUSTOM_PYTHON_BACKGROUND="blue"
 
 # Load Nerd Fonts with Powerlevel9k theme for Zsh
 POWERLEVEL9K_MODE='nerdfont-complete'
 #source ~/powerlevel9k/powerlevel9k.zsh-theme
 #
 bindkey -v
+
+# Windows XSrv config
+export $(dbus-launch)
+export LIBGL_ALWAYS_INDIRECT=1
+
+export WSL_VERSION=$(wsl.exe -l -v | grep -a '[*]' | sed 's/[^0-9]*//g')
+export WSL_HOST=$(tail -1 /etc/resolv.conf | cut -d' ' -f2)
+export DISPLAY=$WSL_HOST:0
+
+
+source $HOME/.oh-my-zsh/custom/plugins/zsh-histdb/sqlite-history.zsh
+autoload -Uz add-zsh-hook
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+
+. $HOME/.asdf/asdf.sh
+
+. $HOME/.asdf/completions/asdf.bash
