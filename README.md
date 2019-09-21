@@ -24,6 +24,8 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/theme
 ## oh-my-zsh - Plugins
 ```console
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+cd ${ZSH_CUSTOM1:-$ZSH/custom}/plugins
+git clone https://github.com/djui/alias-tips.git
 ```
 
 # dotfiles Install Info
