@@ -65,7 +65,7 @@ eval "$(pyenv virtualenv-init -)"
 
 # pyenv virtualenvwrapper_lazy
 
-plugins=(alias-tips colorize common-aliases command-not-found docker-compose django extract git github git-flow gitignore git-prompt git-remote-branch gnu-utils jsontools heroku history history-substring-search nmap tmux tmuxinator pip pyenv pylint python postgres rsync ubuntu sudo vi-mode zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(alias-tips colorize common-aliases command-not-found docker-compose django extract git github git-flow gitignore git-prompt git-remote-branch gnu-utils jsontools heroku history history-substring-search nmap tmux tmuxinator pip pyenv pylint python postgres rsync ubuntu sudo vi-mode virtualenv zsh-autosuggestions zsh-syntax-highlighting)
 
 # User configuration
 
