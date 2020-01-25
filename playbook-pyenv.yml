@@ -1,0 +1,117 @@
+---
+- hosts: localhost
+  become: false
+  become_user: root
+  become_method: sudo
+  vars:
+    workspace: "."
+    git_install_from_source: true
+    git_reinstall_from_source: true
+    git_install_path: "/usr"
+    git_version: "2.24.1"
+    git_install_from_source_dependencies:
+      - gettext-devel
+      - expat-devel
+      - curl-devel
+      - zlib-devel
+      - perl-devel
+      - openssl-devel
+      - subversion-perl
+      - make
+      - gcc
+      - tmux
+      - neovim
+
+  tasks:
+    - name: ensure a list of packages installed
+      yum:
+        name: "{{ git_install_from_source_dependencies }}"
+
+    - name: Add the user 'barbosa' with a specific uid and a primary group of 'admin'
+      user:
+        name: barbosa
+        comment: Juliano Barbosa
+        uid: 1040
+        group: wheel
+
+    - name: Install pyenv
+      git:
+        repo: https://github.com/yyuu/pyenv.git
+        dest: "/home/barbosa/.pyenv"
+
+    - name: Install pyenv-virtualenv plugin
+      git:
+        repo: https://github.com/yyuu/pyenv-virtualenv.git
+        dest: "/home/barbosa/.pyenv/plugins/pyenv-virtualenv"
+
+    - name: Add path etc to .bashrc.
+      lineinfile:
+        dest: "/home/barbosa/.bashrc"
+        state: present
+        create: yes
+        line: "{{ item }}"
+      with_items:
+        - 'export PYENV_ROOT="$HOME/.pyenv"'
+        - 'export PATH="$PYENV_ROOT/bin:$PATH"'
+        - 'eval "$(pyenv init -)"'
+        - 'eval "$(pyenv virtualenv-init -)"'
+
+    - name: Ensure .pyenv permissions are set properly
+      file: path=/home/barbosa/.pyenv
+            recurse=yes
+            owner=barbosa
+            group=opc
+            state=directory
+
+    - name: Install default python version 2.7.16
+      become: yes
+      become_user: 'barbosa'
+      shell: . /home/barbosa/.bashrc && pyenv install 2.7.16
+        creates="/home/barbosa/.pyenv/versions/2.7.16"
+
+    - name: Install default python version 3.6.5
+      become: yes
+      become_user: 'barbosa'
+      shell: . /home/barbosa/.bashrc && pyenv install 3.6.5
+        creates="/home/barbosa/.pyenv/versions/3.6.5"
+
+    - name: Install default python version 3.8.0
+      become: yes
+      become_user: 'barbosa'
+      shell: . /home/barbosa/.bashrc && pyenv install 3.8.0
+        creates="/home/barbosa/.pyenv/versions/3.8.0"
+
+    - name: Create Virtual Env | jupyter3
+      become: yes
+      become_user: 'barbosa'
+      shell: . /home/barbosa/.bashrc && pyenv virtualenv 3.8.0 jupyter3
+
+    - name: Create Virtual Env | tools3
+      become: yes
+      become_user: 'barbosa'
+      shell: . /home/barbosa/.bashrc && pyenv virtualenv 3.8.0 tools3
+
+    - name: Create Virtual Env | neovim3
+      become: yes
+      become_user: 'barbosa'
+      shell: . /home/barbosa/.bashrc && pyenv virtualenv 3.8.0 neovim3
+
+    - name: Create Virtual Env | ipython2
+      become: yes
+      become_user: 'barbosa'
+      shell: . /home/barbosa/.bashrc && pyenv virtualenv 2.7.16 ipython2 
+
+    - name: Create Virtual Env | tools2
+      become: yes
+      become_user: 'barbosa'
+      shell: . /home/barbosa/.bashrc && pyenv virtualenv 2.7.16 tools2
+
+    - name: Create Virtual Env | ipython2
+      become: yes
+      become_user: 'barbosa'
+      shell: . /home/barbosa/.bashrc && pyenv virtualenv 2.7.16 tools2
+
+    - name: Create Virtual Env | neovim2
+      become: yes
+      become_user: 'barbosa'
+      shell: . /home/barbosa/.bashrc && pyenv virtualenv 2.7.16 neovim2
